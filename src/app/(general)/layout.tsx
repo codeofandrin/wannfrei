@@ -2,7 +2,9 @@ import Header from "@/components/Header"
 import "../globals.css"
 
 export const metadata = {
-  title: "Wann habe ich frei?"
+  title: "Wann habe ich frei?",
+  description:
+    "Erhalte einen Überblick über nationale, kantonale, gesetzliche und optionale Feiertage in der Schweiz."
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
