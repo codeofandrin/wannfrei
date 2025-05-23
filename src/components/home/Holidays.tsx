@@ -1,14 +1,87 @@
 "use client"
 
-import { useCallback } from "react"
+import { ReactElement, useCallback } from "react"
 import { useSearchParams, useRouter, usePathname } from "next/navigation"
 
 import { cantons } from "@/utils/constants"
+import { getNationalHolidayRows, getHolidayRowsFromCanton } from "@/utils/helpers"
+import { HolidayType } from "@/utils/enums"
+import type { HolidayRowType } from "@/utils/types"
 import Dropdown from "../common/Dropdown"
 
 interface HolidaysPropsType {
   cantonID: string | null
   year: string | null
+}
+
+function getHolidayRows(holidays: HolidayRowType[], year: string): ReactElement[] {
+  let oldMonthName = ""
+  let holidayRows: ReactElement[] = []
+  holidays.forEach(({ date, name, weekday, type, monthName }, i) => {
+    if (monthName !== oldMonthName) {
+      holidayRows.push(
+        <tr key={`month-header-${i}`}>
+          <td
+            className="bg-primary-100 border-primary-200 text-primary-600 border-y-1 px-4 py-4 text-left font-medium"
+            colSpan={4}>
+            {monthName} {year}
+          </td>
+        </tr>
+      )
+
+      oldMonthName = monthName
+    }
+
+    holidayRows.push(
+      <tr key={i}>
+        <td className="py-4 pl-4">{date}</td>
+        <td>{name}</td>
+        <td>{weekday}</td>
+        <td className="pr-4">{getTypeBadge(type)}</td>
+      </tr>
+    )
+  })
+
+  return holidayRows
+}
+
+function getTypeBadge(type: HolidayType): ReactElement {
+  let text
+  let textColor
+  let borderColor
+  let bgColor
+
+  switch (type) {
+    case HolidayType.by_law:
+      text = "gesetzlich"
+      textColor = "text-red-600"
+      borderColor = "border-red-400"
+      bgColor = "bg-red-100"
+      break
+
+    case HolidayType.partly_by_law:
+      text = "teils gesetzlich"
+      textColor = "text-yellow-700"
+      borderColor = "border-yellow-400"
+      bgColor = "bg-yellow-100"
+      break
+
+    case HolidayType.optional:
+      text = "optional"
+      textColor = "text-sky-700"
+      borderColor = "border-sky-400"
+      bgColor = "bg-sky-100"
+      break
+
+    default:
+      break
+  }
+
+  return (
+    <div className={`${textColor} ${borderColor} ${bgColor} w-fit rounded-full border-1 px-2 py-1`}>
+      <p className="text-xs">{text}</p>
+    </div>
+  )
 }
 
 export default function Holidays() {
@@ -28,7 +101,7 @@ export default function Holidays() {
   const cantonID = searchParams.get("canton")
   const year = searchParams.get("year")
   const currentYear = new Date().getFullYear()
-  const yearPlaceholder = year || currentYear.toString()
+  const fixedOrCurrentYear = year || currentYear.toString()
 
   let yearOptions = []
   for (let i = 0; i < 26; i++) {
@@ -38,9 +111,11 @@ export default function Holidays() {
   }
 
   let titleScope = "die gesamte Schweiz"
+  let holidays: HolidayRowType[] = getNationalHolidayRows(parseInt(fixedOrCurrentYear))
   if (cantonID) {
     const cantonName = cantons[cantonID as keyof typeof cantons]
     titleScope = `Kanton ${cantonName}`
+    holidays = getHolidayRowsFromCanton(cantonID, parseInt(fixedOrCurrentYear))
   }
 
   function handleSetYear(id: string) {
@@ -57,7 +132,7 @@ export default function Holidays() {
         <Dropdown
           className="!w-32"
           theme="secondary"
-          placeholder={yearPlaceholder as string}
+          placeholder={fixedOrCurrentYear as string}
           options={yearOptions}
           setValue={handleSetYear}
         />
@@ -65,7 +140,7 @@ export default function Holidays() {
       {/* Holidays Table */}
       <div className="mt-5">
         <div className="relative max-h-[500px] overflow-scroll rounded-lg shadow-lg">
-          <table className="min-w-[600px]">
+          <table className="w-full min-w-[600px]">
             <thead className="bg-neutral-200">
               <tr className="font-semibold">
                 <td className="py-4 pl-4">Datum</td>
@@ -75,7 +150,10 @@ export default function Holidays() {
               </tr>
             </thead>
             <tbody>
-              {/* <tr>
+              {getHolidayRows(holidays, fixedOrCurrentYear)}
+
+              {/* 
+              <tr>
                 <td className="text-left font-medium bg-primary-100 border-y-1 border-primary-200 text-primary-600 py-4 px-4" colSpan={4}>Januar 2025</td>
               </tr>
               <tr>
