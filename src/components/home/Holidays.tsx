@@ -119,7 +119,7 @@ export default function Holidays() {
   }
 
   function handleSetYear(id: string) {
-    router.push(`${pathname}?${createQueryString("year", id)}`)
+    router.push(`${pathname}?${createQueryString("year", id)}`, { scroll: false })
   }
 
   return (

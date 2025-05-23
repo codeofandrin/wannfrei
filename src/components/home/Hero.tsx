@@ -39,11 +39,11 @@ export default function Hero() {
   }
 
   function handleSetCanton(id: string) {
-    router.push(`${pathname}?${createQueryString("canton", id)}`)
+    router.push(`${pathname}?${createQueryString("canton", id)}`, { scroll: false })
   }
 
   function handleSetNational() {
-    router.push("/")
+    router.push("/", { scroll: false })
   }
 
   return (
