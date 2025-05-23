@@ -1,8 +1,7 @@
 import Link from "next/link"
 
 import LogoShort from "./common/LogoShort"
-
-const items = [{ text: "Legal Notice", link: "/legal" }]
+import GitHub from "@/assets/icons/GitHub.svg"
 
 export default function Footer() {
   // website content is based on year automatically
@@ -14,10 +13,15 @@ export default function Footer() {
       <div className="mt-3 text-sm text-neutral-400">
         <p>© {currentYear} wannfrei.ch.</p>
         <p>All Rights Reserved.</p>
-        <div className="mt-2">
+        <div className="mt-2 flex items-center justify-between">
           <Link href="/legal" className="underline">
             Legal Notice
           </Link>
+          <div>
+            <Link href="https://github.com/codeofandrin/wannfrei" target="_blank">
+              <GitHub className="h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
