@@ -385,7 +385,9 @@ export const cantonHolidays: CantonHolidaysType = {
     ]
 }
 
-export const nationalHolidays = [
+type NationHolidaysType = Array<{ name: string; date: string | null; type: HolidayType }>
+
+export const nationalHolidays: NationHolidaysType = [
     { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
     { name: "Karfreitag", date: null, type: HolidayType.partly_by_law },
     { name: "Auffahrt", date: null, type: HolidayType.by_law },
