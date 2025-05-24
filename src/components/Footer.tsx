@@ -11,11 +11,11 @@ export default function Footer() {
     <div className="mt-28">
       <LogoShort />
       <div className="mt-3 text-sm text-neutral-400">
-        <p>© {currentYear} wannfrei.ch.</p>
-        <p>All Rights Reserved.</p>
+        <p>© {currentYear} wannfrei.ch</p>
+        <p>Alle Rechte vorbehalten.</p>
         <div className="mt-2 flex items-center justify-between">
           <Link href="/legal" className="underline">
-            Legal Notice
+            Impressum
           </Link>
           <div>
             <Link href="https://github.com/codeofandrin/wannfrei" target="_blank">
