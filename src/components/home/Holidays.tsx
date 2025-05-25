@@ -84,6 +84,58 @@ function getTypeBadge(type: HolidayType): ReactElement {
   )
 }
 
+export function HolidaysFallback() {
+  let holidayRows = []
+  for (let i = 0; i < 5; i++) {
+    holidayRows.push(
+      <tr key={i}>
+        <td className="flex py-4 pl-4">
+          <div className="h-5 w-14 animate-pulse rounded-full bg-neutral-200" />
+        </td>
+        <td>
+          <div className="h-5 w-32 animate-pulse rounded-full bg-neutral-200" />
+        </td>
+        <td>
+          <div className="h-5 w-28 animate-pulse rounded-full bg-neutral-200" />
+        </td>
+        <td className="pr-4">
+          <div className="h-5 w-20 animate-pulse rounded-full bg-neutral-200" />
+        </td>
+      </tr>
+    )
+  }
+
+  return (
+    <div className="mt-24 flex flex-col">
+      <h1 className="font-brand text-2xl font-medium">
+        Feiertage für <span className="text-primary-800 animate-pulse font-bold">. . .</span>
+      </h1>
+      {/* Filters */}
+      <div className="mt-8">
+        <div className="flex w-32 animate-pulse cursor-not-allowed justify-center rounded-full border-1 border-neutral-300 bg-neutral-300 px-5 py-3 font-medium text-transparent">
+          placeholder
+        </div>
+      </div>
+      {/* Holidays Table */}
+      <div className="mt-5">
+        <div className="relative max-h-[500px] overflow-scroll rounded-lg shadow-lg">
+          <table className="w-full min-w-[600px]">
+            <thead className="bg-neutral-200">
+              <tr className="font-semibold">
+                <td className="py-4 pl-4">Datum</td>
+                <td>Feiertag</td>
+                <td>Wochentag</td>
+                <td className="pr-4">Typ</td>
+              </tr>
+            </thead>
+            <tbody>{holidayRows}</tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function Holidays() {
   const searchParams = useSearchParams()
   const router = useRouter()
