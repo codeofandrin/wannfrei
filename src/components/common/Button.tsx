@@ -14,7 +14,7 @@ export default function Button({ children, className = "", theme = "primary", ..
 
   return (
     <button
-      className={`${className} ${themeClasses} flex w-full justify-center rounded-full border-1 px-5 py-3 font-medium hover:cursor-pointer`}
+      className={`${className} ${themeClasses} flex w-full cursor-pointer justify-center rounded-full border-1 px-5 py-3 font-medium`}
       {...props}>
       {children}
     </button>
