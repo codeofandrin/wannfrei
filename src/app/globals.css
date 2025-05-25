@@ -62,3 +62,45 @@
     @apply bg-white text-neutral-800;
     font-family: Outfit;
 }
+
+/* Markdown content */
+
+.content h1 {
+    @apply font-brand pb-6 text-3xl font-[550] tracking-tight;
+}
+
+.content h2 {
+    @apply pb-3 text-2xl font-medium;
+}
+
+.content h3 {
+    @apply pb-3 text-lg font-medium;
+}
+
+.content h4 {
+    @apply mt-6 pb-2 text-base font-medium;
+}
+
+.content p {
+    @apply leading-normal text-neutral-500;
+}
+
+.content ul {
+    @apply my-3 ml-3 list-inside list-disc leading-normal text-neutral-500;
+}
+
+.content .spacer {
+    @apply h-3;
+}
+
+.content .spacer-lg {
+    @apply h-10;
+}
+
+.content .spacer-2xl {
+    @apply h-20;
+}
+
+.content strong {
+    @apply font-semibold;
+}

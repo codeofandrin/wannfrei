@@ -394,3 +394,7 @@ export const nationalHolidays: NationHolidaysType = [
     { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
     { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
 ]
+
+export class Email {
+    static general = "mail@andrin.software"
+}
