@@ -2,8 +2,8 @@ import Link from "next/link"
 
 export default function Logo() {
   return (
-    <Link href="/">
-      <div className="font-brand flex text-2xl/5 font-semibold tracking-tight">
+    <Link href="/" className="transition-opacity duration-300 hover:opacity-75">
+      <div className="font-brand flex text-2xl/5 font-semibold tracking-tight sm:text-3xl/6.5">
         <div className="flex flex-col text-right">
           <p>
             <span className="text-primary-600">w</span>ann

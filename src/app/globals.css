@@ -66,19 +66,19 @@
 /* Markdown content */
 
 .content h1 {
-    @apply font-brand pb-6 text-3xl font-[550] tracking-tight;
+    @apply font-brand pb-6 text-3xl font-[550] tracking-tight sm:text-4xl sm:font-semibold;
 }
 
 .content h2 {
-    @apply pb-3 text-2xl font-medium;
+    @apply pb-3 text-2xl font-medium sm:text-3xl;
 }
 
 .content h3 {
-    @apply pb-3 text-lg font-medium;
+    @apply pb-3 text-lg font-medium sm:text-xl;
 }
 
 .content h4 {
-    @apply mt-6 pb-2 text-base font-medium;
+    @apply mt-6 pb-2 text-base font-medium sm:text-lg;
 }
 
 .content p {
@@ -90,15 +90,15 @@
 }
 
 .content .spacer {
-    @apply h-3;
+    @apply h-3 sm:h-4;
 }
 
 .content .spacer-lg {
-    @apply h-10;
+    @apply h-10 sm:h-12;
 }
 
 .content .spacer-2xl {
-    @apply h-20;
+    @apply h-20 sm:h-24;
 }
 
 .content strong {

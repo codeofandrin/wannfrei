@@ -43,24 +43,25 @@ export default function Dropdown({
   }
 
   return (
-    <div className="relative inline-block w-full">
+    <div className="relative inline-block w-full sm:w-fit">
       <button
         onClick={handleDropdownOpen}
-        className={`${className} ${buttonThemeClasses} flex w-full items-center justify-center rounded-full border-1 px-5 py-3 font-medium hover:cursor-pointer`}
+        className={`${className} ${buttonThemeClasses} flex w-full items-center justify-center rounded-full border-1 px-5 py-3 font-medium transition-colors duration-300 hover:cursor-pointer sm:w-68 sm:py-2`}
         type="button">
         <p>{placeholder}</p>
         <SVGAngleDown className="ml-2 h-5 w-5" />
       </button>
 
       {isOpen && (
-        <div className={`${dropdownThemeClasses} absolute z-10 mt-2 w-full rounded-2xl shadow-lg`}>
+        <div
+          className={`${dropdownThemeClasses} absolute z-10 mt-2 w-full overflow-hidden rounded-2xl shadow-lg`}>
           <ul className="h-48 overflow-y-auto py-2 text-white">
             {options.map(({ id, value }, i) => (
               <li
                 onClick={() => handleSelect(id)}
                 key={i}
                 value={id}
-                className={`${optionThemeClasses} flex cursor-pointer items-center px-4 py-3 select-none`}>
+                className={`${optionThemeClasses} flex cursor-pointer items-center px-4 py-3 transition-colors duration-100 select-none`}>
                 {value}
               </li>
             ))}

@@ -22,7 +22,7 @@ function getHolidayRows(holidays: HolidayRowType[], year: string): ReactElement[
       holidayRows.push(
         <tr key={`month-header-${i}`}>
           <td
-            className="bg-primary-100 border-primary-200 text-primary-600 border-y-1 px-4 py-4 text-left font-medium"
+            className="bg-primary-100 border-primary-200 text-primary-600 border-y-1 py-4 pl-4 text-left font-medium sm:pl-8"
             colSpan={4}>
             {monthName} {year}
           </td>
@@ -34,10 +34,10 @@ function getHolidayRows(holidays: HolidayRowType[], year: string): ReactElement[
 
     holidayRows.push(
       <tr key={i}>
-        <td className="py-4 pl-4">{date}</td>
+        <td className="py-4 pl-4 sm:pl-8">{date}</td>
         <td>{name}</td>
         <td>{weekday}</td>
-        <td className="pr-4">{getTypeBadge(type)}</td>
+        <td className="pr-4 sm:pr-8">{getTypeBadge(type)}</td>
       </tr>
     )
   })
@@ -78,8 +78,8 @@ function getTypeBadge(type: HolidayType): ReactElement {
   }
 
   return (
-    <div className={`${textColor} ${borderColor} ${bgColor} w-fit rounded-full border-1 px-2 py-1`}>
-      <p className="text-xs">{text}</p>
+    <div className={`${textColor} ${borderColor} ${bgColor} w-fit rounded-full border-1 px-2 py-1 sm:px-3`}>
+      <p className="text-xs sm:text-sm">{text}</p>
     </div>
   )
 }
@@ -175,12 +175,12 @@ export default function Holidays() {
   }
 
   return (
-    <div className="mt-24 flex flex-col">
-      <h1 className="font-brand text-2xl font-medium">
+    <div className="mt-24 flex flex-col sm:mt-24">
+      <h1 className="font-brand text-2xl font-medium sm:text-center sm:text-3xl">
         Feiertage für <span className="text-primary-800 font-bold">{titleScope}</span>
       </h1>
       {/* Filters */}
-      <div className="mt-8">
+      <div className="mt-8 sm:mt-14">
         <Dropdown
           className="!w-32"
           theme="secondary"
@@ -190,15 +190,15 @@ export default function Holidays() {
         />
       </div>
       {/* Holidays Table */}
-      <div className="mt-5">
-        <div className="relative max-h-[500px] overflow-scroll rounded-lg shadow-lg">
+      <div className="mt-5 sm:mt-7">
+        <div className="relative max-h-[500px] overflow-scroll rounded-lg border-1 border-neutral-300 shadow-lg sm:max-h-[600px]">
           <table className="w-full min-w-[600px]">
             <thead className="bg-neutral-200">
               <tr className="font-semibold">
-                <td className="py-4 pl-4">Datum</td>
+                <td className="py-4 pl-4 sm:pl-8">Datum</td>
                 <td>Feiertag</td>
                 <td>Wochentag</td>
-                <td className="pr-4">Typ</td>
+                <td className="pr-4 sm:pr-8">Typ</td>
               </tr>
             </thead>
             <tbody>{getHolidayRows(holidays, fixedOrCurrentYear)}</tbody>

@@ -52,7 +52,7 @@ export default function RegionFilter() {
   }
 
   return (
-    <div className="mt-16 flex flex-col">
+    <div className="mt-16 flex flex-col sm:mt-32 sm:flex-row sm:items-center sm:justify-center">
       <Dropdown
         className={`${isCantonSelected && "!bg-primary-100"}`}
         placeholder={cantonPlaceholder}
@@ -62,7 +62,9 @@ export default function RegionFilter() {
         }))}
         setValue={handleSetCanton}
       />
-      <Button className={`${!isCantonSelected && "!bg-primary-100"} mt-5`} onClick={handleSetNational}>
+      <Button
+        className={`${!isCantonSelected && "!bg-primary-100"} mt-5 sm:mt-0 sm:ml-5`}
+        onClick={handleSetNational}>
         Gesamte Schweiz
       </Button>
     </div>
