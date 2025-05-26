@@ -1,7 +1,22 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, type Ref, type ReactElement, useRef } from "react"
 import SVGAngleDown from "@/assets/icons/AngleDown.svg"
+
+function useClickOutsideAction(ref: any, action: Function) {
+  useEffect(() => {
+    function handleClickOutside(event: Event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        action()
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [ref])
+}
 
 interface DropdownPropsType {
   theme?: string
@@ -19,6 +34,8 @@ export default function Dropdown({
   setValue
 }: DropdownPropsType) {
   const [isOpen, setIsOpen] = useState(false)
+  const dropdownListRef = useRef(null)
+  useClickOutsideAction(dropdownListRef, () => setIsOpen(false))
 
   let buttonThemeClasses = ""
   let dropdownThemeClasses = ""
@@ -33,7 +50,7 @@ export default function Dropdown({
     optionThemeClasses = "hover:bg-secondary-700"
   }
 
-  function handleDropdownOpen() {
+  function handleDropdownToggle() {
     setIsOpen(!isOpen)
   }
 
@@ -43,9 +60,9 @@ export default function Dropdown({
   }
 
   return (
-    <div className="relative inline-block w-full sm:w-fit">
+    <div className="relative inline-block w-full sm:w-fit" ref={dropdownListRef}>
       <button
-        onClick={handleDropdownOpen}
+        onClick={handleDropdownToggle}
         className={`${className} ${buttonThemeClasses} flex w-full items-center justify-center rounded-full border-1 px-5 py-3 font-medium transition-colors duration-300 hover:cursor-pointer sm:w-68 sm:py-2`}
         type="button">
         <p>{placeholder}</p>
