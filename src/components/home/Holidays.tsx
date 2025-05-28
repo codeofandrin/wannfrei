@@ -155,12 +155,24 @@ export function HolidaysFallback() {
       <div className="mt-5">
         <div className="relative max-h-[500px] overflow-scroll rounded-lg border-1 border-neutral-300 shadow-lg sm:max-h-[600px]">
           <table className="w-full min-w-[600px]">
-            <thead className="bg-neutral-200">
+            <thead className="sticky top-0 bg-neutral-200">
               <tr className="font-semibold">
-                <td className="py-4 pl-4 sm:pl-8">Datum</td>
-                <td>Feiertag</td>
-                <td>Wochentag</td>
-                <td className="pr-4 sm:pr-8">Typ</td>
+                <td className="relative py-4 pl-4 sm:pl-8">
+                  <p>Datum</p>
+                  <div className="absolute bottom-0 left-0 h-[1px] w-full bg-neutral-300" />
+                </td>
+                <td className="relative">
+                  <p>Feiertag</p>
+                  <div className="absolute bottom-0 left-0 h-[1px] w-full bg-neutral-300" />
+                </td>
+                <td className="relative">
+                  <p>Wochentag</p>
+                  <div className="absolute bottom-0 left-0 h-[1px] w-full bg-neutral-300" />
+                </td>
+                <td className="relative pr-4 sm:pr-8">
+                  <p>Typ</p>
+                  <div className="absolute bottom-0 left-0 h-[1px] w-full bg-neutral-300" />
+                </td>
               </tr>
             </thead>
             <tbody>{holidayRows}</tbody>
@@ -234,7 +246,7 @@ export default function Holidays() {
       {/* Filters */}
       <div className="mt-8 sm:mt-14 sm:flex sm:items-center sm:justify-between">
         <Dropdown
-          className="!w-32 sm:!w-28"
+          className="!bg-secondary-100 !w-32 sm:!w-28"
           theme="secondary"
           placeholder={fixedOrCurrentYear as string}
           options={yearOptions}
@@ -254,12 +266,24 @@ export default function Holidays() {
       <div className="mt-5">
         <div className="relative max-h-[500px] overflow-scroll rounded-lg border-1 border-neutral-300 shadow-lg sm:max-h-[600px]">
           <table className="w-full min-w-[600px]">
-            <thead className="bg-neutral-200">
+            <thead className="sticky top-0 bg-neutral-200">
               <tr className="font-semibold">
-                <td className="py-4 pl-4 sm:pl-8">Datum</td>
-                <td>Feiertag</td>
-                <td>Wochentag</td>
-                <td className="pr-4 sm:pr-8">Typ</td>
+                <td className="relative py-4 pl-4 sm:pl-8">
+                  <p>Datum</p>
+                  <div className="absolute bottom-0 left-0 h-[1px] w-full bg-neutral-300" />
+                </td>
+                <td className="relative">
+                  <p>Feiertag</p>
+                  <div className="absolute bottom-0 left-0 h-[1px] w-full bg-neutral-300" />
+                </td>
+                <td className="relative">
+                  <p>Wochentag</p>
+                  <div className="absolute bottom-0 left-0 h-[1px] w-full bg-neutral-300" />
+                </td>
+                <td className="relative pr-4 sm:pr-8">
+                  <p>Typ</p>
+                  <div className="absolute bottom-0 left-0 h-[1px] w-full bg-neutral-300" />
+                </td>
               </tr>
             </thead>
             <tbody>{getHolidayRows(holidays, fixedOrCurrentYear, searchValue)}</tbody>
