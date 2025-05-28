@@ -72,7 +72,7 @@ export default function Dropdown({
       {isOpen && (
         <div
           className={`${dropdownThemeClasses} absolute z-10 mt-2 w-full overflow-hidden rounded-2xl shadow-lg`}>
-          <ul className="h-48 overflow-y-auto py-2 text-white">
+          <ul className="h-48 overflow-y-auto py-2 text-white sm:h-60">
             {options.map(({ id, value }, i) => (
               <li
                 onClick={() => handleSelect(id)}
