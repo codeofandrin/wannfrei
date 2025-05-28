@@ -63,7 +63,7 @@ export default function Dropdown({
     <div className="relative inline-block w-full sm:w-fit" ref={dropdownListRef}>
       <button
         onClick={handleDropdownToggle}
-        className={`${className} ${buttonThemeClasses} flex w-full items-center justify-center rounded-full border-1 px-5 py-3 font-medium transition-colors duration-300 cursor-pointer sm:w-68 sm:py-2`}
+        className={`${className} ${buttonThemeClasses} flex w-full cursor-pointer items-center justify-center rounded-full border-1 px-5 py-3 font-medium transition-colors duration-300 sm:w-68 sm:py-2`}
         type="button">
         <p>{placeholder}</p>
         <SVGAngleDown className="ml-2 h-5 w-5" />

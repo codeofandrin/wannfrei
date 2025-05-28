@@ -89,17 +89,17 @@ export function HolidaysFallback() {
   for (let i = 0; i < 5; i++) {
     holidayRows.push(
       <tr key={i}>
-        <td className="flex py-4 pl-4">
-          <div className="h-5 w-14 animate-pulse rounded-full bg-neutral-200" />
+        <td className="flex py-4 pl-4 sm:pl-8">
+          <div className="h-5 w-14 animate-pulse rounded-full bg-neutral-200 sm:h-6 sm:w-20" />
         </td>
         <td>
-          <div className="h-5 w-32 animate-pulse rounded-full bg-neutral-200" />
+          <div className="h-5 w-32 animate-pulse rounded-full bg-neutral-200 sm:h-6 sm:w-44" />
         </td>
         <td>
-          <div className="h-5 w-28 animate-pulse rounded-full bg-neutral-200" />
+          <div className="h-5 w-28 animate-pulse rounded-full bg-neutral-200 sm:h-6 sm:w-32" />
         </td>
-        <td className="pr-4">
-          <div className="h-5 w-20 animate-pulse rounded-full bg-neutral-200" />
+        <td className="pr-4 sm:pr-8">
+          <div className="h-5 w-20 animate-pulse rounded-full bg-neutral-200 sm:h-6 sm:w-24" />
         </td>
       </tr>
     )
@@ -107,25 +107,25 @@ export function HolidaysFallback() {
 
   return (
     <div className="mt-24 flex flex-col">
-      <h1 className="font-brand text-2xl font-medium">
+      <h1 className="font-brand text-2xl font-medium sm:text-center sm:text-3xl">
         Feiertage für <span className="text-primary-800 animate-pulse font-bold">. . .</span>
       </h1>
       {/* Filters */}
-      <div className="mt-8">
-        <div className="flex w-32 animate-pulse cursor-not-allowed justify-center rounded-full border-1 border-neutral-300 bg-neutral-300 px-5 py-3 font-medium text-transparent">
+      <div className="mt-8 sm:mt-14">
+        <div className="flex w-32 animate-pulse cursor-not-allowed justify-center rounded-full border-1 border-neutral-300 bg-neutral-300 px-5 py-3 font-medium text-transparent sm:w-28 sm:py-2">
           placeholder
         </div>
       </div>
       {/* Holidays Table */}
-      <div className="mt-5">
-        <div className="relative max-h-[500px] overflow-scroll rounded-lg shadow-lg">
+      <div className="mt-5 sm:mt-7">
+        <div className="relative max-h-[500px] overflow-scroll rounded-lg border-1 border-neutral-300 shadow-lg sm:max-h-[600px]">
           <table className="w-full min-w-[600px]">
             <thead className="bg-neutral-200">
               <tr className="font-semibold">
-                <td className="py-4 pl-4">Datum</td>
+                <td className="py-4 pl-4 sm:pl-8">Datum</td>
                 <td>Feiertag</td>
                 <td>Wochentag</td>
-                <td className="pr-4">Typ</td>
+                <td className="pr-4 sm:pr-8">Typ</td>
               </tr>
             </thead>
             <tbody>{holidayRows}</tbody>
@@ -175,14 +175,14 @@ export default function Holidays() {
   }
 
   return (
-    <div className="mt-24 flex flex-col sm:mt-24">
+    <div className="mt-24 flex flex-col">
       <h1 className="font-brand text-2xl font-medium sm:text-center sm:text-3xl">
         Feiertage für <span className="text-primary-800 font-bold">{titleScope}</span>
       </h1>
       {/* Filters */}
       <div className="mt-8 sm:mt-14">
         <Dropdown
-          className="!w-32"
+          className="!w-32 sm:!w-28"
           theme="secondary"
           placeholder={fixedOrCurrentYear as string}
           options={yearOptions}
