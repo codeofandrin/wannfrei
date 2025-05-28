@@ -4,11 +4,6 @@ import { Suspense } from "react"
 
 import RegionFilter, { RegionFilterFallback } from "./RegionFilter"
 
-interface HeroPropsType {
-  cantonID: string | null
-  year: string | null
-}
-
 export default function Hero() {
   return (
     <div className="mt-28 sm:mt-36">

@@ -66,6 +66,13 @@ export default function middleware(req: NextRequest) {
                 }
                 break
 
+            case "search":
+                if (!value) {
+                    url.searchParams.delete(key)
+                    changed = true
+                }
+                break
+
             default:
                 url.searchParams.delete(key)
                 changed = true

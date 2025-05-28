@@ -48,7 +48,7 @@ export default function RegionFilter() {
   }
 
   function handleSetNational() {
-    router.push("/", { scroll: false })
+    router.push(`${pathname}?${createQueryString("canton", "")}`, { scroll: false })
   }
 
   return (

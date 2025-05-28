@@ -10,6 +10,8 @@ export default function Button({ children, className = "", theme = "primary", ..
   let themeClasses = ""
   if (theme === "primary") {
     themeClasses = "text-neutral-800 border-primary-600 bg-white hover:bg-primary-100"
+  } else if (theme === "secondary") {
+    themeClasses = "text-neutral-800 border-secondary-600 bg-white hover:bg-secondary-100"
   }
 
   return (
