@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect } from "react"
-import { useRouter } from "next/navigation"
 
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
@@ -18,8 +17,6 @@ interface GlobalErrorPropsType {
 }
 
 export default function GlobalError({ error, reset }: GlobalErrorPropsType) {
-  const router = useRouter()
-
   useEffect(() => {
     console.error(error)
   }, [error])
