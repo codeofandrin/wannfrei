@@ -81,7 +81,7 @@ export default function Dropdown({
       ) : (
         <div
           onClick={handleDropdownToggle}
-          className={`${className} ${buttonThemeClasses} flex w-full cursor-pointer items-center ${resetBtnActive !== null ? "justify-between pr-3 pl-5" : "justify-center px-5"} {} rounded-full border-1 py-3 font-medium transition-colors duration-300 sm:w-68 sm:py-2`}>
+          className={`${className} ${buttonThemeClasses} flex max-h-[50px] w-full cursor-pointer items-center justify-between rounded-full border-1 py-3 pr-3 pl-5 font-medium transition-colors duration-300 sm:max-h-[42px] sm:w-68 sm:py-2`}>
           <p>{placeholder}</p>
           <SVGAngleDown className="ml-2 h-5 w-5" />
         </div>
