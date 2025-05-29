@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 
-const VALID_PARAMS = ["canton", "year"]
+import { holidayTypes } from "./utils/constants"
 
 const VALID_CANTON_IDS = [
     "AG",
@@ -74,7 +74,7 @@ export default function middleware(req: NextRequest) {
                 break
 
             case "type":
-                if (!["by_law", "partly_by_law", "optional"].includes(value)) {
+                if (!(value in holidayTypes)) {
                     url.searchParams.delete(key)
                     changed = true
                 }
