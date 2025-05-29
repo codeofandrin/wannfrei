@@ -27,11 +27,13 @@ export default function GlobalError({ error, reset }: GlobalErrorPropsType) {
 
   return (
     <html lang="en">
-      <body className="flex h-screen flex-col p-7">
+      <body className="flex h-screen flex-col p-7 sm:px-14 sm:py-10 lg:px-20 xl:px-30">
         <Header />
-        <div className="mt-28">
-          <h1 className="font-brand text-4xl font-[550]">Es ist ein unerwarteter Fehler aufgetreten.</h1>
-          <Button className="mt-20" onClick={handleReset}>
+        <div className="mt-28 sm:mt-36 sm:flex sm:flex-col sm:items-center">
+          <h1 className="font-brand text-4xl font-[550] sm:text-center sm:text-5xl sm:font-semibold">
+            Es ist ein unerwarteter Fehler aufgetreten.
+          </h1>
+          <Button className="mt-16 sm:mt-20" onClick={handleReset}>
             Erneut versuchen
           </Button>
         </div>
