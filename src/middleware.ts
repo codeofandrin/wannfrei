@@ -73,6 +73,13 @@ export default function middleware(req: NextRequest) {
                 }
                 break
 
+            case "type":
+                if (!["by_law", "partly_by_law", "optional"].includes(value)) {
+                    url.searchParams.delete(key)
+                    changed = true
+                }
+                break
+
             default:
                 url.searchParams.delete(key)
                 changed = true

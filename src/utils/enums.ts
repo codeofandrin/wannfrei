@@ -1,5 +1,5 @@
 export enum HolidayType {
-    by_law = 0,
-    optional = 1,
-    partly_by_law = 2 // not by law in the whole canton
+    by_law = "by_law",
+    optional = "optional",
+    partly_by_law = "partly_by_law" // not by law in the whole canton
 }

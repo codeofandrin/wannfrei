@@ -30,6 +30,12 @@ export const cantons = {
     ZH: "Zürich"
 }
 
+export const holidayTypes: Record<string, string> = {
+    by_law: "gesetzlich",
+    optional: "optional",
+    partly_by_law: "teils gesetzlich"
+}
+
 type CantonHolidaysType = Record<string, Array<{ name: string; date: string | null; type: HolidayType }>>
 
 export const cantonHolidays: CantonHolidaysType = {

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, type Ref, type ReactElement, useRef } from "react"
 import SVGAngleDown from "@/assets/icons/AngleDown.svg"
+import SVGCross from "@/assets/icons/Cross.svg"
 
 function useClickOutsideAction(ref: any, action: Function) {
   useEffect(() => {
@@ -24,6 +25,8 @@ interface DropdownPropsType {
   placeholder: string
   options: { id: string; value: string }[]
   setValue: Function
+  resetValue?: Function | null
+  resetBtnActive?: boolean | null
 }
 
 export default function Dropdown({
@@ -31,7 +34,9 @@ export default function Dropdown({
   className = "",
   placeholder,
   options,
-  setValue
+  setValue,
+  resetValue,
+  resetBtnActive = null
 }: DropdownPropsType) {
   const [isOpen, setIsOpen] = useState(false)
   const dropdownListRef = useRef(null)
@@ -61,13 +66,26 @@ export default function Dropdown({
 
   return (
     <div className="relative inline-block w-full sm:w-fit" ref={dropdownListRef}>
-      <button
-        onClick={handleDropdownToggle}
-        className={`${className} ${buttonThemeClasses} flex w-full cursor-pointer items-center justify-center rounded-full border-1 px-5 py-3 font-medium transition-colors duration-300 sm:w-68 sm:py-2`}
-        type="button">
-        <p>{placeholder}</p>
-        <SVGAngleDown className="ml-2 h-5 w-5" />
-      </button>
+      {resetBtnActive ? (
+        <div
+          className={`${className} ${buttonThemeClasses} flex max-h-[50px] w-full cursor-pointer items-center justify-between rounded-full border-1 py-3 pr-3 pl-5 font-medium transition-colors duration-300 sm:max-h-[42px] sm:w-68 sm:py-2`}>
+          <div className="w-3/4" onClick={handleDropdownToggle}>
+            <p>{placeholder}</p>
+          </div>
+          <div
+            className="cursor-pointer rounded-full bg-red-600 p-1.5"
+            onClick={resetValue ? () => resetValue() : () => {}}>
+            <SVGCross className="h-4 w-4 text-white" />
+          </div>
+        </div>
+      ) : (
+        <div
+          onClick={handleDropdownToggle}
+          className={`${className} ${buttonThemeClasses} flex w-full cursor-pointer items-center ${resetBtnActive !== null ? "justify-between pr-3 pl-5" : "justify-center px-5"} {} rounded-full border-1 py-3 font-medium transition-colors duration-300 sm:w-68 sm:py-2`}>
+          <p>{placeholder}</p>
+          <SVGAngleDown className="ml-2 h-5 w-5" />
+        </div>
+      )}
 
       {isOpen && (
         <div

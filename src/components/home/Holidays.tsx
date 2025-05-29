@@ -5,14 +5,19 @@ import { useSearchParams, useRouter, usePathname } from "next/navigation"
 
 import MiniSearch from "minisearch"
 
-import { cantons } from "@/utils/constants"
+import { cantons, holidayTypes } from "@/utils/constants"
 import { getNationalHolidayRows, getHolidayRowsFromCanton } from "@/utils/helpers"
 import { HolidayType } from "@/utils/enums"
 import type { HolidayRowType } from "@/utils/types"
 import Dropdown from "../common/Dropdown"
 import SearchInput from "../common/SearchInput"
 
-function getHolidayRows(holidays: HolidayRowType[], year: string, searchFilter: string): ReactElement[] {
+function getHolidayRows(
+  holidays: HolidayRowType[],
+  year: string,
+  searchFilter: string,
+  typeFilter: string | null
+): ReactElement[] {
   let oldMonthName = ""
   let holidayRows: ReactElement[] = []
   let fuzzyResults: string[] = []
@@ -30,6 +35,12 @@ function getHolidayRows(holidays: HolidayRowType[], year: string, searchFilter: 
   }
 
   holidays.forEach(({ date, name, weekday, type, monthName }, i) => {
+    // type filter
+    if (typeFilter && type !== typeFilter) {
+      return
+    }
+
+    // search filter
     if (
       searchFilter &&
       !name.toLowerCase().includes(searchFilter.toLocaleLowerCase()) &&
@@ -144,8 +155,13 @@ export function HolidaysFallback() {
       </h1>
       {/* Filters */}
       <div className="mt-8 sm:mt-14 sm:flex sm:items-center sm:justify-between">
-        <div className="flex w-32 animate-pulse cursor-not-allowed justify-center rounded-full border-1 border-neutral-300 bg-neutral-300 px-5 py-3 font-medium text-transparent sm:w-28 sm:py-2">
-          placeholder
+        <div className="sm:flex sm:w-1/2 sm:items-center">
+          <div className="flex w-32 animate-pulse cursor-not-allowed justify-center rounded-full border-1 border-neutral-300 bg-neutral-300 px-5 py-3 font-medium text-transparent sm:w-28 sm:py-2">
+            placeholder
+          </div>
+          <div className="mt-3 flex w-48 animate-pulse cursor-not-allowed justify-center rounded-full border-1 border-neutral-300 bg-neutral-300 px-5 py-3 font-medium text-transparent sm:mt-0 sm:ml-3 sm:w-44 sm:py-2">
+            placeholder
+          </div>
         </div>
         <div className="mt-3 flex w-full animate-pulse cursor-not-allowed justify-center rounded-full border-1 border-neutral-300 bg-neutral-300 px-5 py-3 font-medium text-transparent sm:mt-0 sm:w-0 sm:py-2">
           placeholder
@@ -184,6 +200,7 @@ export function HolidaysFallback() {
 }
 
 export default function Holidays() {
+  // * States *
   const searchParams = useSearchParams()
   const router = useRouter()
   const pathname = usePathname()
@@ -196,6 +213,7 @@ export default function Holidays() {
     },
     [searchParams]
   )
+
   const searchFilter = searchParams.get("search") || ""
   const [searchValue, setSearchValue] = useState("")
   const searchFilterRef: Ref<HTMLInputElement> = useRef(null)
@@ -206,8 +224,11 @@ export default function Holidays() {
     }
   }, [])
 
+  // * Variables *
   const cantonID = searchParams.get("canton")
   const year = searchParams.get("year")
+  const type = searchParams.get("type")
+
   const currentYear = new Date().getFullYear()
   const fixedOrCurrentYear = year || currentYear.toString()
 
@@ -226,8 +247,13 @@ export default function Holidays() {
     holidays = getHolidayRowsFromCanton(cantonID, parseInt(fixedOrCurrentYear))
   }
 
+  // * Event Handlers *
   function handleSetYear(id: string) {
     router.push(`${pathname}?${createQueryString("year", id)}`, { scroll: false })
+  }
+
+  function handleSetType(id: string) {
+    router.push(`${pathname}?${createQueryString("type", id)}`, { scroll: false })
   }
 
   function handleSearchFilterChange(e: any) {
@@ -245,13 +271,30 @@ export default function Holidays() {
       </h1>
       {/* Filters */}
       <div className="mt-8 sm:mt-14 sm:flex sm:items-center sm:justify-between">
-        <Dropdown
-          className="!bg-secondary-100 !w-32 sm:!w-28"
-          theme="secondary"
-          placeholder={fixedOrCurrentYear as string}
-          options={yearOptions}
-          setValue={handleSetYear}
-        />
+        <div className="sm:flex sm:w-1/2 sm:items-center">
+          <Dropdown
+            className="!bg-secondary-100 !w-32 sm:!w-28"
+            theme="secondary"
+            placeholder={fixedOrCurrentYear as string}
+            options={yearOptions}
+            setValue={handleSetYear}
+          />
+          <div className="mt-3 sm:mt-0 sm:ml-3">
+            <Dropdown
+              className={`${type && "!bg-secondary-100"} !w-48 sm:!w-44`}
+              theme="secondary"
+              placeholder={type ? holidayTypes[type] : "Typ"}
+              options={[
+                { id: "by_law", value: holidayTypes["by_law"] },
+                { id: "partly_by_law", value: holidayTypes["partly_by_law"] },
+                { id: "optional", value: holidayTypes["optional"] }
+              ]}
+              setValue={handleSetType}
+              resetValue={() => handleSetType("")}
+              resetBtnActive={Boolean(type)}
+            />
+          </div>
+        </div>
         <div className="mt-3 sm:mt-0">
           <SearchInput
             value={searchValue}
@@ -286,7 +329,7 @@ export default function Holidays() {
                 </td>
               </tr>
             </thead>
-            <tbody>{getHolidayRows(holidays, fixedOrCurrentYear, searchValue)}</tbody>
+            <tbody>{getHolidayRows(holidays, fixedOrCurrentYear, searchValue, type)}</tbody>
           </table>
         </div>
       </div>
