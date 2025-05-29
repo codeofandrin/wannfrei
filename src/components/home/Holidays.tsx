@@ -167,6 +167,9 @@ export function HolidaysFallback() {
           <div className="mt-3 flex w-48 animate-pulse cursor-not-allowed justify-center rounded-full border-1 border-neutral-300 bg-neutral-300 px-5 py-3 font-medium text-transparent sm:mt-0 sm:ml-3 sm:w-44 sm:py-2">
             placeholder
           </div>
+          <div className="mt-3 flex w-48 animate-pulse cursor-not-allowed justify-center rounded-full border-1 border-neutral-300 bg-neutral-300 px-5 py-3 font-medium text-transparent sm:mt-0 sm:ml-3 sm:w-44 sm:py-2">
+            placeholder
+          </div>
         </div>
         <div className="mt-3 flex w-full animate-pulse cursor-not-allowed justify-center rounded-full border-1 border-neutral-300 bg-neutral-300 px-5 py-3 font-medium text-transparent sm:mt-0 sm:w-0 sm:py-2">
           placeholder
