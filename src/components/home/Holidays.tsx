@@ -84,7 +84,7 @@ function getHolidayRows(
         <td
           className="border-y-1 border-neutral-200 bg-neutral-100 py-4 pl-4 text-left text-neutral-500 sm:pl-8"
           colSpan={4}>
-          Keine Ergebnisse gefunden
+          Keine Ergebnisse gefunden.
         </td>
       </tr>
     )
