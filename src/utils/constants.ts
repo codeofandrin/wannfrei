@@ -1,5 +1,4 @@
 import { HolidayType } from "./enums"
-import type { HolidayRowType } from "./types"
 
 export const cantons = {
     AG: "Aargau",

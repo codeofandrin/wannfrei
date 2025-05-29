@@ -57,10 +57,10 @@ export default function middleware(req: NextRequest) {
 
             case "year":
                 const currentYear = new Date().getFullYear()
-                const valueAsInt = parseInt(value)
+                const yearAsInt = parseInt(value)
 
                 // check if value is a valid integer and if the year is in the range -5 to +20 from now
-                if (!(valueAsInt && valueAsInt >= currentYear - 5 && valueAsInt <= currentYear + 20)) {
+                if (!(yearAsInt && yearAsInt >= currentYear - 5 && yearAsInt <= currentYear + 20)) {
                     url.searchParams.delete(key)
                     changed = true
                 }
@@ -75,6 +75,14 @@ export default function middleware(req: NextRequest) {
 
             case "type":
                 if (!(value in holidayTypes)) {
+                    url.searchParams.delete(key)
+                    changed = true
+                }
+                break
+
+            case "weekday":
+                const weekdayAsInt = parseInt(value)
+                if (!(!isNaN(weekdayAsInt) && weekdayAsInt >= 0 && weekdayAsInt <= 6)) {
                     url.searchParams.delete(key)
                     changed = true
                 }

@@ -1,22 +1,22 @@
 "use client"
 
-import { ReactElement, useCallback, useRef, useEffect, useState, Ref } from "react"
-import { useSearchParams, useRouter, usePathname } from "next/navigation"
+import { ReactElement, useRef, useEffect, useState } from "react"
+import { useSearchParams } from "next/navigation"
 
 import MiniSearch from "minisearch"
 
-import { cantons, holidayTypes } from "@/utils/constants"
-import { getNationalHolidayRows, getHolidayRowsFromCanton } from "@/utils/helpers"
+import { cantons } from "@/utils/constants"
+import { getNationalHolidayRows, getHolidayRowsFromCanton, getWeekdayStr } from "@/utils/helpers"
 import { HolidayType } from "@/utils/enums"
 import type { HolidayRowType } from "@/utils/types"
-import Dropdown from "../common/Dropdown"
-import SearchInput from "../common/SearchInput"
+import HolidaysFilter from "./HolidaysFilter"
 
 function getHolidayRows(
   holidays: HolidayRowType[],
   year: string,
-  searchFilter: string,
-  typeFilter: string | null
+  typeFilter: string | null,
+  weekdayFilter: string | null,
+  searchFilter: string
 ): ReactElement[] {
   let oldMonthName = ""
   let holidayRows: ReactElement[] = []
@@ -37,6 +37,11 @@ function getHolidayRows(
   holidays.forEach(({ date, name, weekday, type, monthName }, i) => {
     // type filter
     if (typeFilter && type !== typeFilter) {
+      return
+    }
+
+    // weekday filter
+    if (weekdayFilter && weekday !== weekdayFilter) {
       return
     }
 
@@ -202,21 +207,8 @@ export function HolidaysFallback() {
 export default function Holidays() {
   // * States *
   const searchParams = useSearchParams()
-  const router = useRouter()
-  const pathname = usePathname()
-  const createQueryString = useCallback(
-    (key: string, value: string) => {
-      const params = new URLSearchParams(searchParams.toString())
-      params.set(key, value)
-
-      return params.toString()
-    },
-    [searchParams]
-  )
-
-  const searchFilter = searchParams.get("search") || ""
   const [searchValue, setSearchValue] = useState("")
-  const searchFilterRef: Ref<HTMLInputElement> = useRef(null)
+  const searchFilterRef: React.Ref<HTMLInputElement> = useRef(null)
   useEffect(() => {
     const currentSearchValue = searchFilterRef.current?.value
     if (currentSearchValue !== searchFilter) {
@@ -228,16 +220,13 @@ export default function Holidays() {
   const cantonID = searchParams.get("canton")
   const year = searchParams.get("year")
   const type = searchParams.get("type")
+  const weekdayNr = searchParams.get("weekday")
+  const weekday = weekdayNr ? getWeekdayStr(parseInt(weekdayNr)) : null
+
+  const searchFilter = searchParams.get("search") || ""
 
   const currentYear = new Date().getFullYear()
   const fixedOrCurrentYear = year || currentYear.toString()
-
-  let yearOptions = []
-  for (let i = 0; i < 26; i++) {
-    // range from now: -5 years, +20 years
-    let yearStr = (currentYear - 5 + i).toString()
-    yearOptions.push({ id: yearStr, value: yearStr })
-  }
 
   let titleScope = "die gesamte Schweiz"
   let holidays: HolidayRowType[] = getNationalHolidayRows(parseInt(fixedOrCurrentYear))
@@ -247,64 +236,20 @@ export default function Holidays() {
     holidays = getHolidayRowsFromCanton(cantonID, parseInt(fixedOrCurrentYear))
   }
 
-  // * Event Handlers *
-  function handleSetYear(id: string) {
-    router.push(`${pathname}?${createQueryString("year", id)}`, { scroll: false })
-  }
-
-  function handleSetType(id: string) {
-    router.push(`${pathname}?${createQueryString("type", id)}`, { scroll: false })
-  }
-
-  function handleSearchFilterChange(e: any) {
-    setSearchValue(e.target.value)
-  }
-
-  function handleSearchFilterLeave(e: any) {
-    router.push(`${pathname}?${createQueryString("search", e.target.value)}`, { scroll: false })
-  }
-
   return (
     <div className="mt-24 flex flex-col">
       <h1 className="font-brand text-2xl font-medium sm:text-center sm:text-3xl">
         Feiertage für <span className="text-primary-800 font-bold">{titleScope}</span>
       </h1>
       {/* Filters */}
-      <div className="mt-8 sm:mt-14 sm:flex sm:items-center sm:justify-between">
-        <div className="sm:flex sm:w-1/2 sm:items-center">
-          <Dropdown
-            className="!bg-secondary-100 !w-32 sm:!w-28"
-            theme="secondary"
-            placeholder={fixedOrCurrentYear as string}
-            options={yearOptions}
-            setValue={handleSetYear}
-          />
-          <div className="mt-3 sm:mt-0 sm:ml-3">
-            <Dropdown
-              className={`${type && "!bg-secondary-100"} !w-48 sm:!w-44`}
-              theme="secondary"
-              placeholder={type ? holidayTypes[type] : "Typ"}
-              options={[
-                { id: "by_law", value: holidayTypes["by_law"] },
-                { id: "partly_by_law", value: holidayTypes["partly_by_law"] },
-                { id: "optional", value: holidayTypes["optional"] }
-              ]}
-              setValue={handleSetType}
-              resetValue={() => handleSetType("")}
-              resetBtnActive={Boolean(type)}
-            />
-          </div>
-        </div>
-        <div className="mt-3 sm:mt-0">
-          <SearchInput
-            value={searchValue}
-            ref={searchFilterRef}
-            placeholder="Suche nach Feiertage"
-            onChange={handleSearchFilterChange}
-            onBlur={handleSearchFilterLeave}
-          />
-        </div>
-      </div>
+      <HolidaysFilter
+        year={fixedOrCurrentYear}
+        type={type}
+        weekday={weekday}
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+        searchFilterRef={searchFilterRef}
+      />
       {/* Holidays Table */}
       <div className="mt-5">
         <div className="relative max-h-[500px] overflow-scroll rounded-lg border-1 border-neutral-300 shadow-lg sm:max-h-[600px]">
@@ -329,7 +274,7 @@ export default function Holidays() {
                 </td>
               </tr>
             </thead>
-            <tbody>{getHolidayRows(holidays, fixedOrCurrentYear, searchValue, type)}</tbody>
+            <tbody>{getHolidayRows(holidays, fixedOrCurrentYear, type, weekday, searchValue)}</tbody>
           </table>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, type Ref, type ReactElement, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import SVGAngleDown from "@/assets/icons/AngleDown.svg"
 import SVGCross from "@/assets/icons/Cross.svg"
 
@@ -23,7 +23,7 @@ interface DropdownPropsType {
   theme?: string
   className?: string | undefined
   placeholder: string
-  options: { id: string; value: string }[]
+  options: { id: string | number; value: string }[]
   setValue: Function
   resetValue?: Function | null
   resetBtnActive?: boolean | null
@@ -59,7 +59,7 @@ export default function Dropdown({
     setIsOpen(!isOpen)
   }
 
-  function handleSelect(id: string) {
+  function handleSelect(id: string | number) {
     setIsOpen(false)
     setValue(id)
   }
