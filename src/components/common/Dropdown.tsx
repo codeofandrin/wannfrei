@@ -90,13 +90,13 @@ export default function Dropdown({
       {isOpen && (
         <div
           className={`${dropdownThemeClasses} absolute z-10 mt-2 w-full overflow-hidden rounded-2xl shadow-lg`}>
-          <ul className="max-h-40 overflow-y-auto py-2 text-white sm:max-h-60">
+          <ul className="max-h-80 overflow-y-auto py-2 text-white sm:max-h-50">
             {options.map(({ id, value }, i) => (
               <li
                 onClick={() => handleSelect(id)}
                 key={i}
                 value={id}
-                className={`${optionThemeClasses} flex cursor-pointer items-center px-4 py-3 transition-colors duration-100 select-none`}>
+                className={`${optionThemeClasses} flex cursor-pointer items-center px-4 py-4 transition-colors duration-100 select-none sm:py-3`}>
                 {value}
               </li>
             ))}
