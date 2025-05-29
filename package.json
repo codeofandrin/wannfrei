@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write --list-different .",
-    "typecheck": "tsc --noEmit --composite false",
+    "typecheck": "tsc --noEmit --noUnusedLocals --noUnusedParameters --composite false",
     "bump": "npm version -m 'Bump version to %s' $npm_config_vers",
     "bump:dev": "npm version $npm_config_vers --git-tag-version false && git commit -a -m 'Bump version to development'"
   },
