@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, type Ref } from "react"
+import { InputHTMLAttributes, useEffect, type Ref } from "react"
 
 import SVGSearch from "@/assets/icons/Search.svg"
 
@@ -13,7 +13,7 @@ export default function SearchInput({ value, placeholder = "Suchen", ref, ...pro
     <div>
       <div className="relative">
         <div className="text-neutral-700">
-          <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center pl-4 sm:pl-3 sm:focus:pl-4">
+          <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center pl-4 sm:pl-3.25">
             <SVGSearch className="text-secondary-600 h-4 w-4" />
           </div>
           <input
