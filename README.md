@@ -11,4 +11,4 @@
 
 </br>
 
-![demo](wannfrei_demo.mov)
+![demo](wannfrei_demo.gif)
