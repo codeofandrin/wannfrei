@@ -11,4 +11,4 @@
 
 </br>
 
-![demo](wannfrei_demo.gif)
+![showcase](wannfrei_showcase_2.png)
