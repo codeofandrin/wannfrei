@@ -6,14 +6,14 @@ export default function Logo() {
       <div className="font-brand flex text-2xl/5 font-semibold tracking-tight sm:text-3xl/6.5">
         <div className="flex flex-col text-right">
           <p>
-            <span className="text-primary-600">w</span>ann
+            <span className="text-primary-600 dark:text-primary-500">w</span>ann
           </p>
           <p>
-            <span className="text-secondary-600">f</span>rei
+            <span className="text-secondary-600 dark:text-secondary-500">f</span>rei
           </p>
         </div>
         <div className="relative ml-1">
-          <p className="absolute bottom-0 mt-auto text-neutral-400">.ch</p>
+          <p className="absolute bottom-0 mt-auto text-neutral-400 dark:text-neutral-700">.ch</p>
         </div>
       </div>
     </Link>

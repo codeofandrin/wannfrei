@@ -70,7 +70,7 @@ export default function HolidaysFilter({
       <div className="sm:flex sm:w-3/5 sm:flex-wrap sm:items-center sm:gap-3">
         {/* Year Filter */}
         <Dropdown
-          className="!bg-secondary-100 !w-48 sm:!w-44"
+          className="!bg-secondary-100 dark:!bg-secondary-600/20 !w-48 sm:!w-44"
           theme="secondary"
           placeholder={year}
           options={yearOptions}
@@ -79,7 +79,7 @@ export default function HolidaysFilter({
         {/* Type Filter */}
         <div className="mt-3 sm:mt-0">
           <Dropdown
-            className={`${type && "!bg-secondary-100"} !w-48 sm:!w-44`}
+            className={`${type && "!bg-secondary-100 dark:!bg-secondary-600/20"} !w-48 sm:!w-44`}
             theme="secondary"
             placeholder={type ? holidayTypes[type] : "Typ"}
             options={[
@@ -95,7 +95,7 @@ export default function HolidaysFilter({
         {/* Weekday Filter */}
         <div className="mt-3 sm:mt-0">
           <Dropdown
-            className={`${weekday && "!bg-secondary-100"} !w-48 sm:!w-44`}
+            className={`${weekday && "!bg-secondary-100 dark:!bg-secondary-600/20"} !w-48 sm:!w-44`}
             theme="secondary"
             placeholder={weekday ? weekday : "Wochentag"}
             options={[

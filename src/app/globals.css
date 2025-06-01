@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 @theme {
     /* *** Colors *** */
 
@@ -59,7 +61,7 @@
 }
 
 :root {
-    @apply bg-white text-neutral-800;
+    @apply bg-white text-neutral-800 dark:bg-neutral-950 dark:text-neutral-200;
     font-family: Outfit;
 }
 
@@ -82,11 +84,11 @@
 }
 
 .content p {
-    @apply leading-normal text-neutral-500;
+    @apply leading-normal text-neutral-500 dark:text-neutral-400;
 }
 
 .content ul {
-    @apply my-3 ml-3 list-inside list-disc leading-normal text-neutral-500;
+    @apply my-3 ml-3 list-inside list-disc leading-normal text-neutral-500 dark:text-neutral-400;
 }
 
 .content .spacer {

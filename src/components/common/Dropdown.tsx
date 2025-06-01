@@ -1,23 +1,9 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useRef } from "react"
+import useClickOutsideAction from "@/hooks/useClickOutsideAction"
 import SVGAngleDown from "@/assets/icons/AngleDown.svg"
 import SVGCross from "@/assets/icons/Cross.svg"
-
-function useClickOutsideAction(ref: any, action: Function) {
-  useEffect(() => {
-    function handleClickOutside(event: Event) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        action()
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [ref])
-}
 
 interface DropdownPropsType {
   theme?: string
@@ -46,13 +32,15 @@ export default function Dropdown({
   let dropdownThemeClasses = ""
   let optionThemeClasses = ""
   if (theme === "primary") {
-    buttonThemeClasses = "text-neutral-800 border-primary-600 bg-white hover:bg-primary-100"
+    buttonThemeClasses =
+      "text-neutral-800 dark:text-inherit border-primary-600 bg-white dark:bg-neutral-950 hover:bg-primary-100 dark:hover:bg-primary-600/20"
     dropdownThemeClasses = "bg-primary-800"
-    optionThemeClasses = "hover:bg-primary-700"
+    optionThemeClasses = "hover:bg-primary-700 dark:hover:bg-primary-900"
   } else if (theme === "secondary") {
-    buttonThemeClasses = "text-neutral-800 border-secondary-600 bg-white hover:bg-secondary-100"
+    buttonThemeClasses =
+      "text-neutral-800 dark:text-inherit border-secondary-600 bg-white dark:bg-neutral-950 hover:bg-secondary-100 dark:hover:bg-secondary-600/20"
     dropdownThemeClasses = "bg-secondary-800"
-    optionThemeClasses = "hover:bg-secondary-700"
+    optionThemeClasses = "hover:bg-secondary-700 dark:hover:bg-secondary-900"
   }
 
   function handleDropdownToggle() {
@@ -73,9 +61,9 @@ export default function Dropdown({
             <p>{placeholder}</p>
           </div>
           <div
-            className="cursor-pointer rounded-full bg-red-600 p-1.5"
+            className="cursor-pointer rounded-full bg-red-600 p-1.5 dark:bg-red-400"
             onClick={resetValue ? () => resetValue() : () => {}}>
-            <SVGCross className="h-4 w-4 text-white" />
+            <SVGCross className="h-4 w-4 text-white dark:text-neutral-950" />
           </div>
         </div>
       ) : (

@@ -26,7 +26,10 @@ export default function MarkdownContent({ children }: MarkdownContentPropsType) 
             }
 
             return (
-              <Link href={href} target="_blank" className="text-primary-600 hover:text-primary-800">
+              <Link
+                href={href}
+                target="_blank"
+                className="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-600 transition-colors duration-300">
                 {content}
               </Link>
             )

@@ -9,9 +9,11 @@ interface ButtonPropsType extends ButtonHTMLAttributes<HTMLButtonElement> {
 export default function Button({ children, className = "", theme = "primary", ...props }: ButtonPropsType) {
   let themeClasses = ""
   if (theme === "primary") {
-    themeClasses = "text-neutral-800 border-primary-600 bg-white hover:bg-primary-100"
+    themeClasses =
+      "text-neutral-800 dark:text-inherit border-primary-600 bg-white dark:bg-neutral-950 hover:bg-primary-100 dark:hover:bg-primary-600/20"
   } else if (theme === "secondary") {
-    themeClasses = "text-neutral-800 border-secondary-600 bg-white hover:bg-secondary-100"
+    themeClasses =
+      "text-neutral-800 dark:text-inherit border-secondary-600 bg-white dark:bg-neutral-950 hover:bg-secondary-100 dark:hover:bg-secondary-600/20"
   }
 
   return (
