@@ -61,7 +61,7 @@ export default function Dropdown({
             <p>{placeholder}</p>
           </div>
           <div
-            className="cursor-pointer rounded-full bg-red-600 p-1.5 dark:bg-red-400"
+            className="cursor-pointer rounded-full bg-red-600 p-1.5 transition-colors duration-300 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600"
             onClick={resetValue ? () => resetValue() : () => {}}>
             <SVGCross className="h-4 w-4 text-white dark:text-neutral-950" />
           </div>
