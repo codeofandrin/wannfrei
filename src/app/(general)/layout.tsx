@@ -8,7 +8,7 @@ import "../globals.css"
 export const metadata = {
   title: "Wann habe ich frei?",
   description:
-    "Erhalte einen Überblick über nationale, kantonale, gesetzliche und optionale Feiertage in der Schweiz."
+    "Erhalte einen Überblich über nationale, kantonale, gesetzliche und optionale Feiertage in der Schweiz. Wann ist ein arbeitsfreier Tag? - Erhalte hier alle Feiertage! Feiertage im Kanton Aargau, Kanton Appenzell Ausserrhoden, Kanton Appenzell Innerrhoden, Kanton Basel-Landschaft, Kanton Basel-Stadt, Kanton Bern, Kanton Freiburg, Kanton Genf, Kanton Glarus, Kanton Graubünden, Kanton Jura, Kanton Luzern, Kanton Neuenburg, Kanton Nidwalden, Kanton Obwalden, Kanton Schaffhausen, Kanton Schwyz, Kanton Solothurn, Kanton St. Gallen, Kanton Tessin, Kanton Thurgau, Kanton Uri, Kanton Waadt, Kanton Wallis, Kanton Zug, Kanton Zürich."
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
