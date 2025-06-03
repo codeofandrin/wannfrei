@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
+import { ThemeProvider } from "next-themes"
 
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
@@ -28,18 +29,20 @@ export default function GlobalError({ error, reset }: GlobalErrorPropsType) {
   return (
     <html lang="en">
       <body className="flex h-screen flex-col p-7 sm:px-14 sm:py-10 lg:px-20 xl:px-30">
-        <Header />
-        <div className="mt-28 sm:mt-36 sm:flex sm:flex-col sm:items-center">
-          <h1 className="font-brand text-4xl font-[550] sm:text-center sm:text-5xl sm:font-semibold">
-            Es ist ein unerwarteter Fehler aufgetreten.
-          </h1>
-          <Button className="mt-16 sm:mt-20" onClick={handleReset}>
-            Erneut versuchen
-          </Button>
-        </div>
-        <div className="mt-auto">
-          <Footer />
-        </div>
+        <ThemeProvider>
+          <Header />
+          <div className="mt-28 sm:mt-36 sm:flex sm:flex-col sm:items-center">
+            <h1 className="font-brand text-4xl font-[550] sm:text-center sm:text-5xl sm:font-semibold">
+              Es ist ein unerwarteter Fehler aufgetreten.
+            </h1>
+            <Button className="mt-16 sm:mt-20" onClick={handleReset}>
+              Erneut versuchen
+            </Button>
+          </div>
+          <div className="mt-auto">
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )
