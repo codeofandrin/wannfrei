@@ -14,13 +14,15 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html suppressHydrationWarning>
-      <body className="p-7 sm:px-14 sm:py-10 lg:px-20 xl:px-30">
-        <ThemeProvider>
-          <Header />
-          <div>{children}</div>
-          <Footer />
-          <Analytics />
-        </ThemeProvider>
+      <body className="flex flex-col items-center p-7 sm:px-14 sm:py-10 lg:px-20 xl:px-30">
+        <div className="w-full max-w-screen-xl">
+          <ThemeProvider>
+            <Header />
+            <div>{children}</div>
+            <Footer />
+            <Analytics />
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   )
