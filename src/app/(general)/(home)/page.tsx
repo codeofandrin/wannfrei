@@ -4,8 +4,10 @@ import Hero from "@/components/home/Hero"
 import Holidays, { HolidaysFallback } from "@/components/home/Holidays"
 
 export const metadata = {
-  keywords:
-    "Feiertage, Feiertage Schweiz, arbeitsfreie Tage, arbeitsfrei, freie Tage, Schweiz, Switzerland, Aargau, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel-Landschaft, Basel-Stadt, Bern, Freiburg, Genf, Glarus, Graubünden, Jura, Luzern, Neuenburg, Nidwalden, Obwalden, Schaffhausen, Schwyz, Solothurn, St. Gallen, Tessin, Thurgau, Uri, Waadt, Wallis, Zug, Zürich"
+  title: "Wann habe ich frei?",
+  description:
+    "Erhalte einen Überblich über nationale, kantonale, gesetzliche und optionale Feiertage in der Schweiz. Wann ist ein arbeitsfreier Tag? - Erhalte hier alle Feiertage! Feiertage im Kanton Aargau, Kanton Appenzell Ausserrhoden, Kanton Appenzell Innerrhoden, Kanton Basel-Landschaft, Kanton Basel-Stadt, Kanton Bern, Kanton Freiburg, Kanton Genf, Kanton Glarus, Kanton Graubünden, Kanton Jura, Kanton Luzern, Kanton Neuenburg, Kanton Nidwalden, Kanton Obwalden, Kanton Schaffhausen, Kanton Schwyz, Kanton Solothurn, Kanton St. Gallen, Kanton Tessin, Kanton Thurgau, Kanton Uri, Kanton Waadt, Kanton Wallis, Kanton Zug, Kanton Zürich.",
+  keywords: "Feiertage, Feiertage Schweiz, arbeitsfreie Tage, arbeitsfrei, freie Tage, Schweiz, Switzerland"
 }
 
 export default function Home() {
@@ -13,7 +15,7 @@ export default function Home() {
     <div>
       <Hero />
       <Suspense fallback={<HolidaysFallback />} key={"section-holidays"}>
-        <Holidays />
+        <Holidays year={null} cantonID={null} />
       </Suspense>
     </div>
   )

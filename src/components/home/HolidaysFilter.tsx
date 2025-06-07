@@ -1,13 +1,14 @@
-import { useCallback } from "react"
-import { useRouter, usePathname, useSearchParams } from "next/navigation"
+import { usePathname } from "next/navigation"
 
+import useRouter from "@/hooks/useRouter"
 import { holidayTypes } from "@/utils/constants"
-import { getWeekdayStr } from "@/utils/helpers"
+import { getWeekdayStr, getYearRange } from "@/utils/helpers"
 import Dropdown from "../common/Dropdown"
 import SearchInput from "../common/SearchInput"
 
 interface HolidaysFilterPropsType {
   year: string
+  cantonID: string | null
   type: string | null
   weekday: string | null
   searchValue: string
@@ -17,44 +18,32 @@ interface HolidaysFilterPropsType {
 
 export default function HolidaysFilter({
   year,
+  cantonID,
   type,
   weekday,
   searchValue,
   setSearchValue,
   searchFilterRef
 }: HolidaysFilterPropsType) {
-  // * States *
-  const searchParams = useSearchParams()
   const router = useRouter()
   const pathname = usePathname()
-  const createQueryString = useCallback(
-    (key: string, value: string) => {
-      const params = new URLSearchParams(searchParams.toString())
-      params.set(key, value)
 
-      return params.toString()
-    },
-    [searchParams]
-  )
-
-  const currentYear = new Date().getFullYear()
-  let yearOptions = []
-  for (let i = 0; i < 26; i++) {
-    // range from now: -5 years, +20 years
-    let yearStr = (currentYear - 5 + i).toString()
+  let yearOptions: { id: string; value: string }[] = []
+  getYearRange().forEach((year) => {
+    const yearStr = year.toString()
     yearOptions.push({ id: yearStr, value: yearStr })
-  }
+  })
 
   function handleSetYear(id: string) {
-    router.push(`${pathname}?${createQueryString("year", id)}`, { scroll: false })
+    router.push({ pathname: `/${id}/${cantonID || ""}`, options: { scroll: false } })
   }
 
   function handleSetType(id: string) {
-    router.push(`${pathname}?${createQueryString("type", id)}`, { scroll: false })
+    router.push({ pathname: pathname, query: { key: "type", value: id }, options: { scroll: false } })
   }
 
   function handleSetWeekday(id: string) {
-    router.push(`${pathname}?${createQueryString("weekday", id)}`, { scroll: false })
+    router.push({ pathname: pathname, query: { key: "weekday", value: id }, options: { scroll: false } })
   }
 
   function handleSearchFilterChange(e: any) {
@@ -62,7 +51,11 @@ export default function HolidaysFilter({
   }
 
   function handleSearchFilterLeave(e: any) {
-    router.push(`${pathname}?${createQueryString("search", e.target.value)}`, { scroll: false })
+    router.push({
+      pathname: pathname,
+      query: { key: "search", value: e.target.value },
+      options: { scroll: false }
+    })
   }
 
   return (

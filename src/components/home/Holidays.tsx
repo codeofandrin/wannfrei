@@ -208,7 +208,12 @@ export function HolidaysFallback() {
   )
 }
 
-export default function Holidays() {
+interface HolidaysPropsType {
+  year: string | null
+  cantonID: string | null
+}
+
+export default function Holidays({ year, cantonID }: HolidaysPropsType) {
   // * States *
   const searchParams = useSearchParams()
   const [searchValue, setSearchValue] = useState("")
@@ -221,8 +226,6 @@ export default function Holidays() {
   }, [])
 
   // * Variables *
-  const cantonID = searchParams.get("canton")
-  const year = searchParams.get("year")
   const type = searchParams.get("type")
   const weekdayNr = searchParams.get("weekday")
   const weekday = weekdayNr ? getWeekdayStr(parseInt(weekdayNr)) : null
@@ -248,6 +251,7 @@ export default function Holidays() {
       {/* Filters */}
       <HolidaysFilter
         year={fixedOrCurrentYear}
+        cantonID={cantonID}
         type={type}
         weekday={weekday}
         searchValue={searchValue}

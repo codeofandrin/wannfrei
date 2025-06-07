@@ -107,3 +107,16 @@ export function getNationalHolidayRows(year: number): HolidayRowType[] {
 
     return holidayRows
 }
+
+export function getYearRange(): number[] {
+    const currentYear = new Date().getFullYear()
+
+    let years = []
+    for (let i = 0; i < 26; i++) {
+        // range from now: -5 years, +20 years
+        let year = currentYear - 5 + i
+        years.push(year)
+    }
+
+    return years
+}

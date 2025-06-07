@@ -1,6 +1,6 @@
-import { useCallback } from "react"
-import { useSearchParams, useRouter, usePathname } from "next/navigation"
+import { useParams } from "next/navigation"
 
+import useRouter from "@/hooks/useRouter"
 import { cantons } from "@/utils/constants"
 import Dropdown from "../common/Dropdown"
 import Button from "../common/Button"
@@ -21,20 +21,12 @@ export function RegionFilterFallback() {
 }
 
 export default function RegionFilter() {
-  const searchParams = useSearchParams()
+  const params = useParams()
   const router = useRouter()
-  const pathname = usePathname()
-  const createQueryString = useCallback(
-    (key: string, value: string) => {
-      const params = new URLSearchParams(searchParams.toString())
-      params.set(key, value)
 
-      return params.toString()
-    },
-    [searchParams]
-  )
-
-  const cantonID = searchParams.get("canton")
+  const currentYear = new Date().getFullYear()
+  const year = params.year || currentYear
+  const cantonID = params.canton
 
   let cantonPlaceholder = CANTON_PLACEHOLDER
   let isCantonSelected = false
@@ -44,11 +36,11 @@ export default function RegionFilter() {
   }
 
   function handleSetCanton(id: string) {
-    router.push(`${pathname}?${createQueryString("canton", id)}`, { scroll: false })
+    router.push({ pathname: `/${year}/${id}`, options: { scroll: false } })
   }
 
   function handleSetNational() {
-    router.push(`${pathname}?${createQueryString("canton", "")}`, { scroll: false })
+    router.push({ pathname: `/${year}`, options: { scroll: false } })
   }
 
   return (
