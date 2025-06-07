@@ -3,6 +3,7 @@
 import MiniSearch from "minisearch"
 import { useQueryState } from "nuqs"
 
+import { Email } from "@/utils/constants"
 import { cantons } from "@/utils/constants"
 import { getNationalHolidayRows, getHolidayRowsFromCanton, getWeekdayStr } from "@/utils/helpers"
 import { HolidayType } from "@/utils/enums"
@@ -197,6 +198,14 @@ export default function Holidays({ year, cantonID }: HolidaysPropsType) {
             </thead>
             <tbody>{getHolidayRows(holidays, fixedOrCurrentYear, type, weekday, searchValue)}</tbody>
           </table>
+        </div>
+        {/* Report bug */}
+        <div className="mt-3 w-full text-right">
+          <a
+            href={`mailto:${Email.general}`}
+            className="hover:text-primary-400 dark:hover:text-primary-600 text-xs text-neutral-400 transition-colors duration-300 dark:text-neutral-600">
+            Fehler melden
+          </a>
         </div>
       </div>
     </div>
