@@ -1,9 +1,7 @@
 "use client"
 
-import { ReactElement, useRef, useEffect, useState } from "react"
-import { useSearchParams } from "next/navigation"
-
 import MiniSearch from "minisearch"
+import { useQueryState } from "nuqs"
 
 import { cantons } from "@/utils/constants"
 import { getNationalHolidayRows, getHolidayRowsFromCanton, getWeekdayStr } from "@/utils/helpers"
@@ -16,10 +14,10 @@ function getHolidayRows(
   year: string,
   typeFilter: string | null,
   weekdayFilter: string | null,
-  searchFilter: string
-): ReactElement[] {
+  searchFilter: string | null
+): React.ReactElement[] {
   let oldMonthName = ""
-  let holidayRows: ReactElement[] = []
+  let holidayRows: React.ReactElement[] = []
   let fuzzyResults: string[] = []
   if (searchFilter) {
     let miniSearch = new MiniSearch({
@@ -93,7 +91,7 @@ function getHolidayRows(
   return holidayRows
 }
 
-function getTypeBadge(type: HolidayType): ReactElement {
+function getTypeBadge(type: HolidayType): React.ReactElement {
   let text
   let textColor
   let borderColor
@@ -139,23 +137,13 @@ interface HolidaysPropsType {
 
 export default function Holidays({ year, cantonID }: HolidaysPropsType) {
   // * States *
-  const searchParams = useSearchParams()
-  const [searchValue, setSearchValue] = useState("")
-  const searchFilterRef: React.Ref<HTMLInputElement> = useRef(null)
-  useEffect(() => {
-    const currentSearchValue = searchFilterRef.current?.value
-    if (currentSearchValue !== searchFilter) {
-      setSearchValue(searchFilter)
-    }
-  }, [])
+  const [type, setType] = useQueryState("type")
+  const [weekdayNr, setWeekdayNr] = useQueryState("weekday")
+  const [searchValue, setSearchValue] = useQueryState("search")
 
   // * Variables *
-  const type = searchParams.get("type")
-  const weekdayNr = searchParams.get("weekday")
   const weekday = weekdayNr ? getWeekdayStr(parseInt(weekdayNr)) : null
-
-  const searchFilter = searchParams.get("search") || ""
-
+  // const searchFilter = searchParams.get("search") || ""
   const currentYear = new Date().getFullYear()
   const fixedOrCurrentYear = year || currentYear.toString()
 
@@ -179,8 +167,9 @@ export default function Holidays({ year, cantonID }: HolidaysPropsType) {
         type={type}
         weekday={weekday}
         searchValue={searchValue}
+        setType={setType}
+        setWeekdayNr={setWeekdayNr}
         setSearchValue={setSearchValue}
-        searchFilterRef={searchFilterRef}
       />
       {/* Holidays Table */}
       <div className="mt-5">

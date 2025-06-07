@@ -1,5 +1,3 @@
-import { usePathname } from "next/navigation"
-
 import useRouter from "@/hooks/useRouter"
 import { holidayTypes } from "@/utils/constants"
 import { getWeekdayStr, getYearRange } from "@/utils/helpers"
@@ -11,9 +9,10 @@ interface HolidaysFilterPropsType {
   cantonID: string | null
   type: string | null
   weekday: string | null
-  searchValue: string
+  searchValue: string | null
+  setType: Function
+  setWeekdayNr: Function
   setSearchValue: Function
-  searchFilterRef: React.Ref<HTMLInputElement>
 }
 
 export default function HolidaysFilter({
@@ -22,11 +21,11 @@ export default function HolidaysFilter({
   type,
   weekday,
   searchValue,
-  setSearchValue,
-  searchFilterRef
+  setType,
+  setWeekdayNr,
+  setSearchValue
 }: HolidaysFilterPropsType) {
   const router = useRouter()
-  const pathname = usePathname()
 
   let yearOptions: { id: string; value: string }[] = []
   getYearRange().forEach((year) => {
@@ -38,24 +37,21 @@ export default function HolidaysFilter({
     router.push({ pathname: `/${id}/${cantonID || ""}`, options: { scroll: false } })
   }
 
-  function handleSetType(id: string) {
-    router.push({ pathname: pathname, query: { key: "type", value: id }, options: { scroll: false } })
+  function handleSetType(id: string | null) {
+    setType(id)
   }
 
-  function handleSetWeekday(id: string) {
-    router.push({ pathname: pathname, query: { key: "weekday", value: id }, options: { scroll: false } })
+  function handleSetWeekday(id: string | null) {
+    setWeekdayNr(id)
   }
 
   function handleSearchFilterChange(e: any) {
-    setSearchValue(e.target.value)
-  }
-
-  function handleSearchFilterLeave(e: any) {
-    router.push({
-      pathname: pathname,
-      query: { key: "search", value: e.target.value },
-      options: { scroll: false }
-    })
+    const value = e.target.value
+    if (value === "") {
+      setSearchValue(null)
+    } else {
+      setSearchValue(value)
+    }
   }
 
   return (
@@ -81,7 +77,7 @@ export default function HolidaysFilter({
               { id: "optional", value: holidayTypes["optional"] }
             ]}
             setValue={handleSetType}
-            resetValue={() => handleSetType("")}
+            resetValue={() => handleSetType(null)}
             resetBtnActive={Boolean(type)}
           />
         </div>
@@ -102,7 +98,7 @@ export default function HolidaysFilter({
               { id: "0", value: getWeekdayStr(0) }
             ]}
             setValue={handleSetWeekday}
-            resetValue={() => handleSetWeekday("")}
+            resetValue={() => handleSetWeekday(null)}
             resetBtnActive={Boolean(weekday)}
           />
         </div>
@@ -110,11 +106,9 @@ export default function HolidaysFilter({
       {/* Search Filter */}
       <div className="mt-3 sm:mt-0">
         <SearchInput
-          value={searchValue}
-          ref={searchFilterRef}
+          value={searchValue || ""}
           placeholder="Suche nach Feiertage"
           onChange={handleSearchFilterChange}
-          onBlur={handleSearchFilterLeave}
         />
       </div>
     </div>
