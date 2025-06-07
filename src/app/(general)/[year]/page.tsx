@@ -2,7 +2,8 @@ import { Suspense } from "react"
 import type { Metadata } from "next"
 
 import Hero from "@/components/home/Hero"
-import Holidays, { HolidaysFallback } from "@/components/home/Holidays"
+import Holidays from "@/components/home/Holidays"
+import HolidaysFallback from "@/components/home/HolidaysFallback"
 
 type generateMetadataPropsType = { params: Promise<{ year: string }> }
 

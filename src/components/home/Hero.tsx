@@ -2,7 +2,8 @@
 
 import { Suspense } from "react"
 
-import RegionFilter, { RegionFilterFallback } from "./RegionFilter"
+import RegionFilter from "./RegionFilter"
+import RegionFilterFallback from "./RegionFilterFallback"
 
 export default function Hero() {
   return (

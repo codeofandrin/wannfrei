@@ -1,7 +1,8 @@
 import { Suspense } from "react"
 
 import Hero from "@/components/home/Hero"
-import Holidays, { HolidaysFallback } from "@/components/home/Holidays"
+import Holidays from "@/components/home/Holidays"
+import HolidaysFallback from "@/components/home/HolidaysFallback"
 
 export const metadata = {
   title: "Wann habe ich frei? - Feiertage Schweiz",

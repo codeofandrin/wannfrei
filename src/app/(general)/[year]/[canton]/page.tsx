@@ -3,7 +3,8 @@ import type { Metadata } from "next"
 
 import { cantons } from "@/utils/constants"
 import Hero from "@/components/home/Hero"
-import Holidays, { HolidaysFallback } from "@/components/home/Holidays"
+import Holidays from "@/components/home/Holidays"
+import HolidaysFallback from "@/components/home/HolidaysFallback"
 
 type generateStaticParamsPropsType = { params: { year: string } }
 
