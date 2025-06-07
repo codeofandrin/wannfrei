@@ -1,6 +1,8 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
+
+import { isInAlphabet } from "@/utils/helpers"
 import useClickOutsideAction from "@/hooks/useClickOutsideAction"
 import SVGAngleDown from "@/assets/icons/AngleDown.svg"
 import SVGCross from "@/assets/icons/Cross.svg"
@@ -25,8 +27,37 @@ export default function Dropdown({
   resetBtnActive = null
 }: DropdownPropsType) {
   const [isOpen, setIsOpen] = useState(false)
-  const dropdownListRef = useRef(null)
-  useClickOutsideAction(dropdownListRef, () => setIsOpen(false))
+  const dropdownRef = useRef(null)
+  const dropdownListRef = useRef<HTMLUListElement>(null)
+  const optionRefs = useRef<(HTMLLIElement | null)[]>(Array(options.length).fill(null))
+
+  useClickOutsideAction(dropdownRef, () => setIsOpen(false))
+
+  useEffect(() => {
+    function handleKeyPress(event: KeyboardEvent) {
+      if (isOpen) {
+        const key = event.key.toLowerCase()
+        if (isInAlphabet(key)) {
+          const idx = options.findIndex((opt) => opt.value.toLowerCase().startsWith(key))
+          if (idx !== -1 && optionRefs.current[idx] && dropdownListRef.current) {
+            const optionEl = optionRefs.current[idx]
+            const listEl = dropdownListRef.current
+            // Scroll so that the matched element is at the top
+            listEl.scrollTop = (optionEl as HTMLElement).offsetTop - listEl.offsetTop
+          }
+        }
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener("keydown", handleKeyPress)
+    }
+
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("keydown", handleKeyPress)
+    }
+  }, [isOpen])
 
   let buttonThemeClasses = ""
   let dropdownThemeClasses = ""
@@ -52,8 +83,15 @@ export default function Dropdown({
     setValue(id)
   }
 
+  // Helper to assign refs with correct type
+  function setOptionRef(i: number): React.RefCallback<HTMLLIElement> {
+    return (el) => {
+      optionRefs.current[i] = el
+    }
+  }
+
   return (
-    <div className="relative inline-block w-full sm:w-fit" ref={dropdownListRef}>
+    <div className="relative inline-block w-full sm:w-fit" ref={dropdownRef}>
       {resetBtnActive ? (
         <div
           className={`${className} ${buttonThemeClasses} flex max-h-[50px] w-full cursor-pointer items-center justify-between rounded-full border-1 py-3 pr-3 pl-5 font-medium transition-colors duration-300 sm:max-h-[42px] sm:w-68 sm:py-2`}>
@@ -78,16 +116,19 @@ export default function Dropdown({
       {isOpen && (
         <div
           className={`${dropdownThemeClasses} absolute z-10 mt-2 w-full overflow-hidden rounded-2xl shadow-lg`}>
-          <ul className="max-h-80 overflow-y-auto py-2 text-white sm:max-h-60">
-            {options.map(({ id, value }, i) => (
-              <li
-                onClick={() => handleSelect(id)}
-                key={i}
-                value={id}
-                className={`${optionThemeClasses} flex cursor-pointer items-center px-4 py-4 transition-colors duration-100 select-none sm:py-3`}>
-                {value}
-              </li>
-            ))}
+          <ul className="max-h-80 overflow-y-auto py-2 text-white sm:max-h-60" ref={dropdownListRef}>
+            {options.map(({ id, value }, i) => {
+              return (
+                <li
+                  ref={setOptionRef(i)}
+                  onClick={() => handleSelect(id)}
+                  key={i}
+                  value={id}
+                  className={`${optionThemeClasses} flex cursor-pointer items-center px-4 py-4 transition-colors duration-100 select-none sm:py-3`}>
+                  {value}
+                </li>
+              )
+            })}
           </ul>
         </div>
       )}

@@ -120,3 +120,7 @@ export function getYearRange(): number[] {
 
     return years
 }
+
+export function isInAlphabet(key: string): boolean {
+    return /^[a-z]$/.test(key)
+}
