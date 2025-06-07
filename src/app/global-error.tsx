@@ -27,7 +27,7 @@ export default function GlobalError({ error, reset }: GlobalErrorPropsType) {
   }
 
   return (
-    <html lang="en">
+    <html>
       <body className="flex h-screen justify-center p-7 sm:px-14 sm:py-10 lg:px-20 xl:px-30">
         <div className="flex h-full w-full max-w-screen-xl flex-col">
           <ThemeProvider>
