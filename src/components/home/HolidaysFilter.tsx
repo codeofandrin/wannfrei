@@ -55,8 +55,8 @@ export default function HolidaysFilter({
   }
 
   return (
-    <div className="mt-8 sm:mt-14 sm:flex sm:items-end sm:justify-between">
-      <div className="sm:flex sm:w-3/5 sm:flex-wrap sm:items-center sm:gap-3">
+    <div className="mt-8 sm:mt-14">
+      <div className="sm:flex sm:flex-wrap sm:items-center sm:gap-3">
         {/* Year Filter */}
         <Dropdown
           className="!bg-secondary-100 dark:!bg-secondary-600/20 !w-48 sm:!w-44"
@@ -104,7 +104,7 @@ export default function HolidaysFilter({
         </div>
       </div>
       {/* Search Filter */}
-      <div className="mt-3 sm:mt-0">
+      <div className="mt-3">
         <SearchInput
           value={searchValue || ""}
           placeholder="Suche nach Feiertage"
