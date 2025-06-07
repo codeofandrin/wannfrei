@@ -37,6 +37,8 @@ export default function Dropdown({
     function handleKeyPress(event: KeyboardEvent) {
       if (isOpen) {
         const key = event.key.toLowerCase()
+
+        // jump to element on keypress
         if (isInAlphabet(key)) {
           const idx = options.findIndex((opt) => opt.value.toLowerCase().startsWith(key))
           if (idx !== -1 && optionRefs.current[idx] && dropdownListRef.current) {
@@ -44,6 +46,10 @@ export default function Dropdown({
             const listEl = dropdownListRef.current
             // Scroll so that the matched element is at the top
             listEl.scrollTop = (optionEl as HTMLElement).offsetTop - listEl.offsetTop
+          }
+        } else {
+          if (key === "escape") {
+            setIsOpen(false)
           }
         }
       }
