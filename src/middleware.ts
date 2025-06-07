@@ -20,7 +20,6 @@ export default function middleware(req: NextRequest) {
                 break
 
             case "type":
-                console.log(`type value: ${value}`)
                 if (!(value in holidayTypes)) {
                     url.searchParams.delete(key)
                     changed = true

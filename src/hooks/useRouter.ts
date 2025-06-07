@@ -17,7 +17,6 @@ export default function useRouter() {
             params.set(query.key, query.value)
         }
         const queryParams = params.size > 0 ? `?${params.toString()}` : ""
-        console.log(queryParams)
         nextPush(`${pathname}${queryParams}`, options)
     }
 
