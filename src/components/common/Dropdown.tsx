@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
+import Link from "next/link"
 
 import { isInAlphabet } from "@/utils/helpers"
 import useClickOutsideAction from "@/hooks/useClickOutsideAction"
@@ -11,10 +12,11 @@ interface DropdownPropsType {
   theme?: string
   className?: string | undefined
   placeholder: string
-  options: { id: string | number; value: string }[]
-  setValue: Function
+  options: { id: string | number; value: string; link?: string | undefined }[]
+  setValue?: Function | null
   resetValue?: Function | null
   resetBtnActive?: boolean | null
+  areLinks?: boolean
 }
 
 export default function Dropdown({
@@ -22,9 +24,10 @@ export default function Dropdown({
   className = "",
   placeholder,
   options,
-  setValue,
+  setValue = null,
   resetValue,
-  resetBtnActive = null
+  resetBtnActive = null,
+  areLinks = false
 }: DropdownPropsType) {
   const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef(null)
@@ -86,7 +89,7 @@ export default function Dropdown({
 
   function handleSelect(id: string | number) {
     setIsOpen(false)
-    setValue(id)
+    setValue && setValue(id)
   }
 
   // Helper to assign refs with correct type
@@ -118,26 +121,36 @@ export default function Dropdown({
           <SVGAngleDown className="ml-2 h-5 w-5" />
         </div>
       )}
+      {/* Dropdown list */}
+      <div
+        className={`${dropdownThemeClasses} ${!isOpen && "hidden"} absolute z-10 mt-2 w-full overflow-hidden rounded-2xl shadow-lg`}>
+        <ul className="max-h-80 overflow-y-auto py-2 text-white sm:max-h-60" ref={dropdownListRef}>
+          {options.map(({ id, value, link }, i) => {
+            const className = `${optionThemeClasses} flex cursor-pointer items-center px-4 py-4 transition-colors duration-100 select-none sm:py-3`
 
-      {isOpen && (
-        <div
-          className={`${dropdownThemeClasses} absolute z-10 mt-2 w-full overflow-hidden rounded-2xl shadow-lg`}>
-          <ul className="max-h-80 overflow-y-auto py-2 text-white sm:max-h-60" ref={dropdownListRef}>
-            {options.map(({ id, value }, i) => {
+            if (areLinks) {
+              return (
+                <li ref={setOptionRef(i)} key={i} value={id} className={className}>
+                  <Link href={link as string} className="w-full">
+                    {value}
+                  </Link>
+                </li>
+              )
+            } else {
               return (
                 <li
                   ref={setOptionRef(i)}
                   onClick={() => handleSelect(id)}
                   key={i}
                   value={id}
-                  className={`${optionThemeClasses} flex cursor-pointer items-center px-4 py-4 transition-colors duration-100 select-none sm:py-3`}>
+                  className={className}>
                   {value}
                 </li>
               )
-            })}
-          </ul>
-        </div>
-      )}
+            }
+          })}
+        </ul>
+      </div>
     </div>
   )
 }

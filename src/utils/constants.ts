@@ -1,32 +1,32 @@
 import { HolidayType } from "./enums"
 
 export const cantons = {
-    ag: "Aargau",
-    ar: "Appenzell Ausserrhoden",
-    ai: "Appenzell Innerrhoden",
-    bl: "Basel-Landschaft",
-    bs: "Basel-Stadt",
-    be: "Bern",
-    fr: "Freiburg",
-    ge: "Genf",
-    gl: "Glarus",
-    gr: "Graubünden",
-    ju: "Jura",
-    lu: "Luzern",
-    ne: "Neuenburg",
-    nw: "Nidwalden",
-    ow: "Obwalden",
-    sh: "Schaffhausen",
-    sz: "Schwyz",
-    so: "Solothurn",
-    sg: "St. Gallen",
-    ti: "Tessin",
-    tg: "Thurgau",
-    ur: "Uri",
-    vd: "Waadt",
-    vs: "Wallis",
-    zg: "Zug",
-    zh: "Zürich"
+    aargau: "Aargau",
+    "appenzell-ausserrhoden": "Appenzell Ausserrhoden",
+    "appenzell-innerrhoden": "Appenzell Innerrhoden",
+    "basel-landschaft": "Basel-Landschaft",
+    "basel-stadt": "Basel-Stadt",
+    bern: "Bern",
+    freiburg: "Freiburg",
+    genf: "Genf",
+    glarus: "Glarus",
+    graubuenden: "Graubünden",
+    jura: "Jura",
+    luzern: "Luzern",
+    neuenburg: "Neuenburg",
+    nidwalden: "Nidwalden",
+    obwalden: "Obwalden",
+    schaffhausen: "Schaffhausen",
+    schwyz: "Schwyz",
+    solothurn: "Solothurn",
+    "st-gallen": "St. Gallen",
+    tessin: "Tessin",
+    thurgau: "Thurgau",
+    uri: "Uri",
+    waadt: "Waadt",
+    wallis: "Wallis",
+    zug: "Zug",
+    zuerich: "Zürich"
 }
 
 export const holidayTypes: Record<string, string> = {
@@ -38,7 +38,7 @@ export const holidayTypes: Record<string, string> = {
 type CantonHolidaysType = Record<string, Array<{ name: string; date: string | null; type: HolidayType }>>
 
 export const cantonHolidays: CantonHolidaysType = {
-    ag: [
+    aargau: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.partly_by_law },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -54,7 +54,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.partly_by_law }
     ],
-    ar: [
+    "appenzell-ausserrhoden": [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
         { name: "Ostermontag", date: null, type: HolidayType.by_law },
@@ -64,7 +64,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    ai: [
+    "appenzell-innerrhoden": [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
         { name: "Ostermontag", date: null, type: HolidayType.by_law },
@@ -78,7 +78,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    bl: [
+    "basel-landschaft": [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
         { name: "Ostermontag", date: null, type: HolidayType.by_law },
@@ -91,7 +91,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    bs: [
+    "basel-stadt": [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
         { name: "Ostermontag", date: null, type: HolidayType.by_law },
@@ -102,7 +102,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    be: [
+    bern: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.by_law },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -113,7 +113,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    fr: [
+    freiburg: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -129,7 +129,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.optional }
     ],
-    ge: [
+    genf: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -139,7 +139,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
     ],
-    gl: [
+    glarus: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -151,7 +151,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    gr: [
+    graubuenden: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
         { name: "Heilige Drei Könige", date: "01-06", type: HolidayType.partly_by_law },
@@ -168,7 +168,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    ju: [
+    jura: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.by_law },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -182,7 +182,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Allerheiligen", date: "11-01", type: HolidayType.by_law },
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
     ],
-    lu: [
+    luzern: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
         { name: "Josefstag", date: "03-19", type: HolidayType.partly_by_law },
@@ -198,7 +198,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    ne: [
+    neuenburg: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -210,7 +210,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
     ],
-    nw: [
+    nidwalden: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Josefstag", date: "03-19", type: HolidayType.by_law },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -225,7 +225,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.optional }
     ],
-    ow: [
+    obwalden: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -240,7 +240,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.optional }
     ],
-    sh: [
+    schaffhausen: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -252,7 +252,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    sz: [
+    schwyz: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Heilige Drei Könige", date: "01-06", type: HolidayType.by_law },
         { name: "Josefstag", date: "03-19", type: HolidayType.by_law },
@@ -268,7 +268,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    so: [
+    solothurn: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -284,7 +284,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.partly_by_law }
     ],
-    sg: [
+    "st-gallen": [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
         { name: "Ostermontag", date: null, type: HolidayType.by_law },
@@ -295,7 +295,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    ti: [
+    tessin: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Heilige Drei Könige", date: "01-06", type: HolidayType.by_law },
         { name: "Josefstag", date: "03-19", type: HolidayType.by_law },
@@ -311,7 +311,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    tg: [
+    thurgau: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.by_law },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -323,7 +323,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    ur: [
+    uri: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Heilige Drei Könige", date: "01-06", type: HolidayType.by_law },
         { name: "Josefstag", date: "03-19", type: HolidayType.by_law },
@@ -339,7 +339,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
     ],
-    vd: [
+    waadt: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.by_law },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -349,7 +349,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
     ],
-    vs: [
+    wallis: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Josefstag", date: "03-19", type: HolidayType.by_law },
         { name: "Auffahrt", date: null, type: HolidayType.by_law },
@@ -360,7 +360,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Mariä Empfängnis", date: "12-08", type: HolidayType.by_law },
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
     ],
-    zg: [
+    zug: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
         { name: "Josefstag", date: "03-19", type: HolidayType.partly_by_law },
@@ -376,7 +376,7 @@ export const cantonHolidays: CantonHolidaysType = {
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.optional }
     ],
-    zh: [
+    zuerich: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },

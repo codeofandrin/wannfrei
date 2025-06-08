@@ -148,18 +148,28 @@ export default function Holidays({ year, cantonID }: HolidaysPropsType) {
   const currentYear = new Date().getFullYear()
   const fixedOrCurrentYear = year || currentYear.toString()
 
-  let titleScope = "die gesamte Schweiz"
+  let titleScope = (
+    <>
+      in der <span className="text-primary-800 dark:text-primary-200 font-bold">gesamten Schweiz</span>
+    </>
+  )
   let holidays: HolidayRowType[] = getNationalHolidayRows(parseInt(fixedOrCurrentYear))
   if (cantonID) {
     const cantonName = cantons[cantonID as keyof typeof cantons]
-    titleScope = `Kanton ${cantonName}`
+    titleScope = (
+      <>
+        im <span className="text-primary-800 dark:text-primary-200 font-bold">Kanton {cantonName}</span>
+      </>
+    )
     holidays = getHolidayRowsFromCanton(cantonID, parseInt(fixedOrCurrentYear))
   }
 
   return (
     <div className="mt-24 flex flex-col">
       <h1 className="font-brand text-2xl font-medium sm:text-center sm:text-3xl">
-        Feiertage für <span className="text-primary-800 dark:text-primary-200 font-bold">{titleScope}</span>
+        Feiertage{" "}
+        <span className="text-secondary-800 dark:text-secondary-100 font-bold">{fixedOrCurrentYear}</span>{" "}
+        {titleScope}
       </h1>
       {/* Filters */}
       <HolidaysFilter

@@ -1,6 +1,5 @@
 import { useParams } from "next/navigation"
 
-import useRouter from "@/hooks/useRouter"
 import { cantons } from "@/utils/constants"
 import Dropdown from "../common/Dropdown"
 import Button from "../common/Button"
@@ -9,7 +8,6 @@ const CANTON_PLACEHOLDER = "Kanton wählen..."
 
 export default function RegionFilter() {
   const params = useParams()
-  const router = useRouter()
 
   const currentYear = new Date().getFullYear()
   const year = params.year || currentYear
@@ -22,14 +20,6 @@ export default function RegionFilter() {
     isCantonSelected = true
   }
 
-  function handleSetCanton(id: string) {
-    router.push({ pathname: `/${year}/${id}`, options: { scroll: false } })
-  }
-
-  function handleSetNational() {
-    router.push({ pathname: `/${year}`, options: { scroll: false } })
-  }
-
   return (
     <div className="mt-16 flex flex-col sm:mt-32 sm:flex-row sm:items-center sm:justify-center">
       <Dropdown
@@ -37,13 +27,14 @@ export default function RegionFilter() {
         placeholder={cantonPlaceholder}
         options={Object.entries(cantons).map(([id, name]) => ({
           id,
-          value: name
+          value: name,
+          link: `/${year}/${id}`
         }))}
-        setValue={handleSetCanton}
+        areLinks
       />
       <Button
-        className={`${!isCantonSelected && "!bg-primary-100 dark:!bg-primary-600/20"} mt-5 sm:mt-0 sm:ml-5`}
-        onClick={handleSetNational}>
+        href={`/${year}`}
+        className={`${!isCantonSelected && "!bg-primary-100 dark:!bg-primary-600/20"} mt-5 sm:mt-0 sm:ml-5`}>
         Gesamte Schweiz
       </Button>
     </div>

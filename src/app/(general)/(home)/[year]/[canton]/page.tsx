@@ -23,9 +23,11 @@ export async function generateMetadata({ params }: generateMetadataPropsType): P
   const cantonName = cantons[canton as keyof typeof cantons]
 
   return {
-    title: `Wann habe ich frei? - Feiertage Kanton ${cantonName} für ${year}`,
-    description: `Erhalte einen Überblick über gesetzliche und optionale Feiertage im Kanton ${cantonName} für ${year}`,
-    keywords: `Feiertage ${year}, Feiertage ${year} Kanton ${cantonName}, arbeitsfreie Tage ${year}, arbeitsfrei ${year}, freie Tage ${year}, Kanton ${cantonName}, ${cantonName}`
+    title: `Wann habe ich frei? - Feiertage ${year} im Kanton ${cantonName}`,
+    description: `Erhalte einen Überblick über gesetzliche und optionale Feiertage ${year} im Kanton ${cantonName}`,
+    keywords: `${year}, Feiertage ${year}, Feiertage ${year} Kanton ${cantonName}, arbeitsfreie Tage ${year}, arbeitsfrei ${year}, freie Tage ${year}, Kanton ${cantonName}, ${cantonName}`,
+    authors: [{ name: "Andrin Schaller" }],
+    publisher: "Andrin Schaller"
   }
 }
 
