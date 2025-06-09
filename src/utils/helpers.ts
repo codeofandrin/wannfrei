@@ -46,37 +46,72 @@ export function getMonthName(month: number): string {
 }
 
 function _getHolidayRow(name: string, date: string | null, type: HolidayType, year: number): HolidayRowType {
-    let tempDate
+    let tempDate = new Date(1900)
 
     if (date) {
         tempDate = new Date(`${year}-${date}`)
     } else {
-        const easterDateStr = easter(year).toString()
-        tempDate = new Date(easterDateStr)
+        const easterRelated = [
+            "Ostersonntag",
+            "Karfreitag",
+            "Ostermontag",
+            "Auffahrt",
+            "Pfingstmontag",
+            "Fronleichnam"
+        ]
+        if (easterRelated.includes(name)) {
+            const easterDateStr = easter(year).toString()
+            tempDate = new Date(easterDateStr)
 
-        switch (name) {
-            case "Karfreitag":
-                tempDate.setDate(tempDate.getDate() - 2)
-                break
+            switch (name) {
+                case "Karfreitag":
+                    tempDate.setDate(tempDate.getDate() - 2)
+                    break
 
-            case "Ostermontag":
-                tempDate.setDate(tempDate.getDate() + 1)
-                break
+                case "Ostermontag":
+                    tempDate.setDate(tempDate.getDate() + 1)
+                    break
 
-            case "Auffahrt":
-                tempDate.setDate(tempDate.getDate() + 39)
-                break
+                case "Auffahrt":
+                    tempDate.setDate(tempDate.getDate() + 39)
+                    break
 
-            case "Pfingstmontag":
-                tempDate.setDate(tempDate.getDate() + 50)
-                break
+                case "Pfingstmontag":
+                    tempDate.setDate(tempDate.getDate() + 50)
+                    break
 
-            case "Fronleichnam":
-                tempDate.setDate(tempDate.getDate() + 60)
-                break
+                case "Fronleichnam":
+                    tempDate.setDate(tempDate.getDate() + 60)
+                    break
 
-            default:
-                break
+                default:
+                    break
+            }
+        } else {
+            switch (name) {
+                case "Näfelser Fahrt":
+                    tempDate = getNthWeekdayOfMonth(year, 4, 4, 1)
+                    break
+
+                case "Sechseläuten":
+                    tempDate = getNthWeekdayOfMonth(year, 4, 1, 3)
+                    const easterDate = new Date(easter(year).toString())
+                    const easterMonday = new Date(easterDate.getDate() + 1)
+
+                    if (tempDate === easterMonday) {
+                        // if Sechseläuten is on Easter Monday it's on the 4th Monday of April
+                        tempDate = getNthWeekdayOfMonth(year, 4, 1, 4)
+                    }
+                    break
+
+                case "Genfer Bettag":
+                    tempDate = getNthWeekdayOfMonth(year, 9, 7, 1)
+                    tempDate = new Date(tempDate.setDate(tempDate.getDate() + 4))
+                    break
+
+                default:
+                    break
+            }
         }
     }
 
@@ -123,4 +158,30 @@ export function getYearRange(): number[] {
 
 export function isInAlphabet(key: string): boolean {
     return /^[a-z]$/.test(key)
+}
+
+export function getNthWeekdayOfMonth(year: number, month: number, weekday: number, n: number): Date {
+    // month: 1= January, ..., 12= December
+    // weekday: 1= Monday, ..., 7= Sunday
+    const jsMonth = month - 1
+    const firstOfMonth = new Date(year, jsMonth, 1)
+    const jsFirstWeekday = firstOfMonth.getDay()
+    const targetWeekday = weekday === 7 ? 0 : weekday
+
+    let diff = (targetWeekday - jsFirstWeekday + 7) % 7
+    // Add (n - 1) weeks to get the nth weekday
+    return new Date(year, jsMonth, 1 + diff + 7 * (n - 1))
+}
+
+export function sortByDateField<T>(array: T[], field: keyof T, ascending: boolean = true): T[] {
+    function parseDate(dateStr: string): number {
+        const [day, month, year] = dateStr.split(".").map(Number)
+        return new Date(year, month - 1, day).getTime() // Monate: 0-basiert
+    }
+
+    return array.sort((a, b) => {
+        const dateA = parseDate(a[field] as unknown as string)
+        const dateB = parseDate(b[field] as unknown as string)
+        return ascending ? dateA - dateB : dateB - dateA
+    })
 }

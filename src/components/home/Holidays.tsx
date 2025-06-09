@@ -5,7 +5,12 @@ import { useQueryState } from "nuqs"
 
 import { Email } from "@/utils/constants"
 import { cantons } from "@/utils/constants"
-import { getNationalHolidayRows, getHolidayRowsFromCanton, getWeekdayStr } from "@/utils/helpers"
+import {
+  getNationalHolidayRows,
+  getHolidayRowsFromCanton,
+  getWeekdayStr,
+  sortByDateField
+} from "@/utils/helpers"
 import { HolidayType } from "@/utils/enums"
 import type { HolidayRowType } from "@/utils/types"
 import HolidaysFilter from "./HolidaysFilter"
@@ -33,7 +38,7 @@ function getHolidayRows(
     })
   }
 
-  holidays.forEach(({ date, name, weekday, type, monthName }, i) => {
+  sortByDateField(holidays, "date").forEach(({ date, name, weekday, type, monthName }, i) => {
     // type filter
     if (typeFilter && type !== typeFilter) {
       return
