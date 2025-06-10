@@ -33,7 +33,7 @@ export default function RegionFilter() {
   return (
     <div className="mt-16 flex flex-col sm:mt-32 sm:items-center">
       <div>
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           <Dropdown
             className={`${isCantonSelected && "!bg-primary-100 dark:!bg-primary-600/20"} sm:!w-60`}
             placeholder={cantonPlaceholder}
