@@ -1,6 +1,8 @@
 import { easter } from "date-easter"
 
-import { cantonHolidays, nationalHolidays, municHolidays } from "./constants"
+import nationalHolidays from "@/data/nationalHolidays"
+import cantonHolidays from "@/data/cantonHolidays"
+import municHolidays from "@/data/municHolidays"
 import type { HolidayRowType } from "./types"
 import { HolidayType } from "./enums"
 
