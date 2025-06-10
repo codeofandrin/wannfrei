@@ -51,7 +51,19 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
     if (date) {
         tempDate = new Date(`${year}-${date}`)
     } else {
-        const easterRelated = ["Karfreitag", "Ostermontag", "Auffahrt", "Pfingstmontag", "Fronleichnam"]
+        const easterRelated = [
+            "Karfreitag",
+            "Ostermontag",
+            "Auffahrt",
+            "Pfingstmontag",
+            "Fronleichnam",
+            "Fronleichnam (Herrgottstag)",
+            "Fasnacht",
+            "Fasnachtsmontag",
+            "Fasnachtsdienstag",
+            "Fasnachtsmittwoch",
+            "Aschermittwoch"
+        ]
         if (easterRelated.includes(name)) {
             const easterDateStr = easter(year).toString()
             tempDate = new Date(easterDateStr)
@@ -74,7 +86,37 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                     break
 
                 case "Fronleichnam":
+                case "Fronleichnam (Herrgottstag)":
                     tempDate.setDate(tempDate.getDate() + 60)
+                    break
+
+                case "Aschermittwoch":
+                    tempDate.setDate(tempDate.getDate() - 46)
+                    break
+
+                case "Fasnacht":
+                    tempDate.setDate(tempDate.getDate() - 46) // Ash Wednesday
+                    // Monday after Ash Wednesday
+                    tempDate.setDate(tempDate.getDate() + 5)
+
+                    break
+
+                case "Fasnachtsmontag":
+                    tempDate.setDate(tempDate.getDate() - 46) // Ash Wednesday
+                    // Monday before Ash Wednesday
+                    tempDate.setDate(tempDate.getDate() - 2)
+                    break
+
+                case "Fasnachtsdienstag":
+                    tempDate.setDate(tempDate.getDate() - 46) // Ash Wednesday
+                    // Tuesday before Ash Wednesday
+                    tempDate.setDate(tempDate.getDate() - 1)
+                    break
+
+                case "Fasnachtsmittwoch":
+                    tempDate.setDate(tempDate.getDate() - 46) // Ash Wednesday
+                    // Wednesday after Ash Wednesday
+                    tempDate.setDate(tempDate.getDate() + 7)
                     break
 
                 default:
@@ -100,6 +142,11 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                 case "Genfer Bettag":
                     tempDate = getNthWeekdayOfMonth(year, 9, 7, 1)
                     tempDate = new Date(tempDate.setDate(tempDate.getDate() + 4))
+                    break
+
+                case "Bettagsmontag":
+                    tempDate = getNthWeekdayOfMonth(year, 9, 7, 3)
+                    tempDate = new Date(tempDate.setDate(tempDate.getDate() + 1))
                     break
 
                 default:
