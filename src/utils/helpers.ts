@@ -51,14 +51,7 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
     if (date) {
         tempDate = new Date(`${year}-${date}`)
     } else {
-        const easterRelated = [
-            "Ostersonntag",
-            "Karfreitag",
-            "Ostermontag",
-            "Auffahrt",
-            "Pfingstmontag",
-            "Fronleichnam"
-        ]
+        const easterRelated = ["Karfreitag", "Ostermontag", "Auffahrt", "Pfingstmontag", "Fronleichnam"]
         if (easterRelated.includes(name)) {
             const easterDateStr = easter(year).toString()
             tempDate = new Date(easterDateStr)
