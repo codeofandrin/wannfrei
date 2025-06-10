@@ -132,7 +132,7 @@ export default function Dropdown({
               return (
                 <li ref={setOptionRef(i)} key={i} value={id} className={className}>
                   <Link href={link as string} className="h-full w-full" scroll={false}>
-                    <p className="px-4 py-4">{value}</p>
+                    <p className="px-4 py-4 sm:py-3">{value}</p>
                   </Link>
                 </li>
               )
