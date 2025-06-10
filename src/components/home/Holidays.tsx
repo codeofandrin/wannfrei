@@ -75,9 +75,9 @@ function getHolidayRows(
     holidayRows.push(
       <tr key={i}>
         <td className="py-4 pl-4 sm:pl-8">{date}</td>
-        <td>{name}</td>
-        <td>{weekday}</td>
-        <td className="pr-4 sm:pr-8">{getTypeBadge(type)}</td>
+        <td className="pl-4">{name}</td>
+        <td className="pl-4">{weekday}</td>
+        <td className="px-4 sm:pr-8">{getTypeBadge(type)}</td>
       </tr>
     )
   })
@@ -197,15 +197,15 @@ export default function Holidays({ year, cantonID }: HolidaysPropsType) {
                   <p>Datum</p>
                   <div className="absolute bottom-0 left-0 h-[1px] w-full" />
                 </td>
-                <td className="relative">
+                <td className="relative pl-4">
                   <p>Feiertag</p>
                   <div className="absolute bottom-0 left-0 h-[1px] w-full" />
                 </td>
-                <td className="relative">
+                <td className="relative pl-4">
                   <p>Wochentag</p>
                   <div className="absolute bottom-0 left-0 h-[1px] w-full" />
                 </td>
-                <td className="relative pr-4 sm:pr-8">
+                <td className="relative px-4 sm:pr-8">
                   <p>Typ</p>
                   <div className="absolute bottom-0 left-0 h-[1px] w-full" />
                 </td>
