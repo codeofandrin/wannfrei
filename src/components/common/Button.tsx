@@ -28,7 +28,7 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href as string} className={elementClassName}>
+      <Link href={href as string} className={elementClassName} scroll={false}>
         {children}
       </Link>
     )
