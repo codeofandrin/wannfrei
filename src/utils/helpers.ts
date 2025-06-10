@@ -1,6 +1,6 @@
 import { easter } from "date-easter"
 
-import { cantonHolidays, nationalHolidays } from "./constants"
+import { cantonHolidays, nationalHolidays, municHolidays } from "./constants"
 import type { HolidayRowType } from "./types"
 import { HolidayType } from "./enums"
 
@@ -147,6 +147,11 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                 case "Bettagsmontag":
                     tempDate = getNthWeekdayOfMonth(year, 9, 7, 3)
                     tempDate = new Date(tempDate.setDate(tempDate.getDate() + 1))
+                    break
+
+                case "Maienzug":
+                    tempDate = getNthWeekdayOfMonth(year, 7, 5, 1)
+                    console.log(tempDate)
                     break
 
                 default:
