@@ -183,6 +183,17 @@ export function getNationalHolidayRows(year: number): HolidayRowType[] {
     return holidayRows
 }
 
+export function getHolidayRowsFromMunic(cantonID: string, municID: string, year: number): HolidayRowType[] {
+    const holidays = municHolidays[cantonID][municID]
+
+    let holidayRows: HolidayRowType[] = []
+    holidays.forEach(({ name, date, type }) => {
+        holidayRows.push(_getHolidayRow(name, date, type, year))
+    })
+
+    return holidayRows
+}
+
 export function getYearRange(): number[] {
     const currentYear = new Date().getFullYear()
 

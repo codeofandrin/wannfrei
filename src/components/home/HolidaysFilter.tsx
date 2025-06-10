@@ -6,6 +6,7 @@ import SearchInput from "../common/SearchInput"
 interface HolidaysFilterPropsType {
   year: string
   cantonID: string | null
+  municID: string | null
   type: string | null
   weekday: string | null
   searchValue: string | null
@@ -17,6 +18,7 @@ interface HolidaysFilterPropsType {
 export default function HolidaysFilter({
   year,
   cantonID,
+  municID,
   type,
   weekday,
   searchValue,
@@ -27,7 +29,15 @@ export default function HolidaysFilter({
   let yearOptions: { id: string; value: string; link: string }[] = []
   getYearRange().forEach((year) => {
     const yearStr = year.toString()
-    yearOptions.push({ id: yearStr, value: yearStr, link: `/${yearStr}/${cantonID || ""}` })
+    let link = `/${yearStr}`
+    if (cantonID) {
+      link += `/${cantonID}`
+      if (municID) {
+        link += `/${municID}`
+      }
+    }
+
+    yearOptions.push({ id: yearStr, value: yearStr, link })
   })
 
   function handleSetType(id: string | null) {
