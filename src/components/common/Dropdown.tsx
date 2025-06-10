@@ -131,7 +131,7 @@ export default function Dropdown({
             if (areLinks) {
               return (
                 <li ref={setOptionRef(i)} key={i} value={id} className={className}>
-                  <Link href={link as string} className="w-full">
+                  <Link href={link as string} className="w-full" scroll={false}>
                     {value}
                   </Link>
                 </li>
