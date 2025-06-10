@@ -64,7 +64,8 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
             "Fasnachtsmontag",
             "Fasnachtsdienstag",
             "Fasnachtsmittwoch",
-            "Aschermittwoch"
+            "Aschermittwoch",
+            "St. Burkard"
         ]
         if (easterRelated.includes(name)) {
             const easterDateStr = easter(year).toString()
@@ -121,6 +122,10 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                     tempDate.setDate(tempDate.getDate() + 7)
                     break
 
+                case "St. Burkard":
+                    tempDate.setDate(tempDate.getDate() + 43)
+                    break
+
                 default:
                     break
             }
@@ -153,7 +158,10 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
 
                 case "Maienzug":
                     tempDate = getNthWeekdayOfMonth(year, 7, 5, 1)
-                    console.log(tempDate)
+                    break
+
+                case "Jugendfest":
+                    tempDate = getNthWeekdayOfMonth(year, 7, 5, 2)
                     break
 
                 default:
