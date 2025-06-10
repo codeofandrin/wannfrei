@@ -86,7 +86,7 @@ function getHolidayRows(
     holidayRows.push(
       <tr key="no-results">
         <td
-          className="border-y-1 border-neutral-200 bg-neutral-100 py-4 pl-4 text-left text-neutral-500 sm:pl-8 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400"
+          className="border-t-1 border-neutral-200 bg-neutral-100 py-4 pl-4 text-left text-neutral-500 sm:pl-8 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400"
           colSpan={4}>
           Keine Ergebnisse gefunden.
         </td>
