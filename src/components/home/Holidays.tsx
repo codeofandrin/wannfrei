@@ -4,7 +4,7 @@ import MiniSearch from "minisearch"
 import { useQueryState } from "nuqs"
 
 import { Email, munics } from "@/utils/constants"
-import { cantons } from "@/utils/constants"
+import { cantons, cantonAbbrs } from "@/utils/constants"
 import {
   getNationalHolidayRows,
   getHolidayRowsFromCanton,
@@ -165,10 +165,14 @@ export default function Holidays({ year, cantonID = null, municID = null }: Holi
     if (municID) {
       const municsOfCanton = munics[cantonID as keyof typeof munics]
       const municName = municsOfCanton[municID as keyof typeof municsOfCanton]
+      const cantonAbbr = cantonAbbrs[cantonID as keyof typeof cantonAbbrs]
+
       titleScope = (
         <>
-          in der{" "}
-          <span className="text-primary-800 dark:text-primary-200 font-bold">Gemeinde {municName}</span>
+          in{" "}
+          <span className="text-primary-800 dark:text-primary-200 font-bold">
+            {municName}, {cantonAbbr}
+          </span>
         </>
       )
       holidays = getHolidayRowsFromMunic(cantonID, municID, parseInt(fixedOrCurrentYear))
