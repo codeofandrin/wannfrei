@@ -126,13 +126,13 @@ export default function Dropdown({
         className={`${dropdownThemeClasses} ${!isOpen && "hidden"} absolute z-10 mt-2 w-full overflow-hidden rounded-2xl shadow-lg`}>
         <ul className="max-h-80 overflow-y-auto py-2 text-white sm:max-h-60" ref={dropdownListRef}>
           {options.map(({ id, value, link }, i) => {
-            const className = `${optionThemeClasses} flex cursor-pointer items-center px-4 py-4 transition-colors duration-100 select-none sm:py-3`
+            const className = `${optionThemeClasses} flex cursor-pointer items-center transition-colors duration-100 select-none`
 
             if (areLinks) {
               return (
                 <li ref={setOptionRef(i)} key={i} value={id} className={className}>
-                  <Link href={link as string} className="w-full" scroll={false}>
-                    {value}
+                  <Link href={link as string} className="h-full w-full" scroll={false}>
+                    <p className="px-4 py-4">{value}</p>
                   </Link>
                 </li>
               )
@@ -143,7 +143,7 @@ export default function Dropdown({
                   onClick={() => handleSelect(id)}
                   key={i}
                   value={id}
-                  className={className}>
+                  className={`${className} px-4 py-4 sm:py-3`}>
                   {value}
                 </li>
               )
