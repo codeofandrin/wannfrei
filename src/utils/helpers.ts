@@ -164,6 +164,10 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                     tempDate = getNthWeekdayOfMonth(year, 7, 5, 2)
                     break
 
+                case "Kinderfest":
+                    tempDate = getNthWeekdayOfMonth(year, 7, 5, 1)
+                    break
+
                 default:
                     throw Error(`'date' is not set nor replaced for '${name}'`)
                     break
