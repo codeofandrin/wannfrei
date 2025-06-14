@@ -2307,7 +2307,210 @@ const municHolidays: MunicHolidaysType = {
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ]
     },
-    "appenzell-ausserrhoden": { "": [] },
+    "appenzell-ausserrhoden": {
+        buehler: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        gais: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        grub: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        heiden: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        herisau: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        hundwil: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        lutzenberg: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        rehetobel: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        reute: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        schoenengrund: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        schwellbrunn: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        speicher: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        stein: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        teufen: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        trogen: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        urnaesch: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Alter Silvester", date: "01-13", type: HolidayType.optional },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        wald: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        waldstatt: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Alter Silvester", date: "01-13", type: HolidayType.optional },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        walzenhausen: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        wolfhalden: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ]
+    },
     "appenzell-innerrhoden": { "": [] },
     "basel-landschaft": { "": [] },
     "basel-stadt": { "": [] },
