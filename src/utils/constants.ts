@@ -284,7 +284,13 @@ export const munics = {
         walzenhausen: "Walzenhausen",
         wolfhalden: "Wolfhalden"
     },
-    "appenzell-innerrhoden": {},
+    "appenzell-innerrhoden": {
+        "schwende-ruete": "Schwende-Rüte",
+        appenzell: "Appenzell",
+        oberegg: "Oberegg",
+        gonten: "Gonten",
+        "schlatt-haslen": "Schlatt-Haslen"
+    },
     "basel-landschaft": {},
     "basel-stadt": {},
     bern: {},
