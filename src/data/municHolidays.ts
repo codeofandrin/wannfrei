@@ -3324,6 +3324,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Auffahrt", date: null, type: HolidayType.by_law },
             { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
             { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Allerheiligen", date: "11-01", type: HolidayType.by_law },
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
