@@ -65,7 +65,8 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
             "Fasnachtsdienstag",
             "Fasnachtsmittwoch",
             "Aschermittwoch",
-            "St. Burkard"
+            "St. Burkard",
+            "Banntag Liestal"
         ]
         if (easterRelated.includes(name)) {
             const easterDateStr = easter(year).toString()
@@ -124,6 +125,12 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
 
                 case "St. Burkard":
                     tempDate.setDate(tempDate.getDate() + 43)
+                    break
+
+                case "Banntag Liestal":
+                    tempDate.setDate(tempDate.getDate() + 39) // Ascension day ("Auffahrt")
+                    // Monday before Ascension day
+                    tempDate.setDate(tempDate.getDate() - 3)
                     break
 
                 default:
