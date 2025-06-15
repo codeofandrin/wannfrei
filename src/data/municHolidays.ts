@@ -3551,8 +3551,51 @@ const municHolidays: MunicHolidaysType = {
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ]
     },
-    "basel-stadt": { "": [] },
     bern: { "": [] },
+    "basel-stadt": {
+        basel: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Fasnacht", date: null, type: HolidayType.optional },
+            { name: "Fasnachtsdienstag", date: null, type: HolidayType.optional },
+            { name: "Fasnachtsmittwoch", date: null, type: HolidayType.optional },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        bettingen: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Fasnacht", date: null, type: HolidayType.optional },
+            { name: "Fasnachtsdienstag", date: null, type: HolidayType.optional },
+            { name: "Fasnachtsmittwoch", date: null, type: HolidayType.optional },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        riehen: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Fasnacht", date: null, type: HolidayType.optional },
+            { name: "Fasnachtsdienstag", date: null, type: HolidayType.optional },
+            { name: "Fasnachtsmittwoch", date: null, type: HolidayType.optional },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ]
+    },
     freiburg: { "": [] },
     genf: { "": [] },
     glarus: { "": [] },

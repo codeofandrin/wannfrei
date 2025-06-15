@@ -379,8 +379,12 @@ export const munics = {
         zunzgen: "Zunzgen",
         zwingen: "Zwingen"
     },
-    "basel-stadt": {},
     bern: {},
+    "basel-stadt": {
+        basel: "Basel",
+        bettingen: "Bettingen",
+        riehen: "Riehen"
+    },
     freiburg: {},
     genf: {},
     glarus: {},
