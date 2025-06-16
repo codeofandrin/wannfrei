@@ -263,3 +263,8 @@ export function sortByDateField<T>(array: T[], field: keyof T, ascending: boolea
         return ascending ? dateA - dateB : dateB - dateA
     })
 }
+
+export function isMunicEqCantAndCapCity(municID: string): boolean {
+    const cities = ["basel", "bern"]
+    return cities.includes(municID)
+}

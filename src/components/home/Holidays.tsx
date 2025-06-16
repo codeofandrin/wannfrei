@@ -10,7 +10,8 @@ import {
   getHolidayRowsFromCanton,
   getWeekdayStr,
   sortByDateField,
-  getHolidayRowsFromMunic
+  getHolidayRowsFromMunic,
+  isMunicEqCantAndCapCity
 } from "@/utils/helpers"
 import { HolidayType } from "@/utils/enums"
 import type { HolidayRowType } from "@/utils/types"
@@ -167,14 +168,22 @@ export default function Holidays({ year, cantonID = null, municID = null }: Holi
       const municName = municsOfCanton[municID as keyof typeof municsOfCanton]
       const cantonAbbr = cantonAbbrs[cantonID as keyof typeof cantonAbbrs]
 
-      titleScope = (
-        <>
-          in{" "}
-          <span className="text-primary-800 dark:text-primary-200 font-bold">
-            {municName}, {cantonAbbr}
-          </span>
-        </>
-      )
+      if (isMunicEqCantAndCapCity(municID)) {
+        titleScope = (
+          <>
+            in <span className="text-primary-800 dark:text-primary-200 font-bold">Stadt {municName}</span>
+          </>
+        )
+      } else {
+        titleScope = (
+          <>
+            in{" "}
+            <span className="text-primary-800 dark:text-primary-200 font-bold">
+              {municName}, {cantonAbbr}
+            </span>
+          </>
+        )
+      }
       holidays = getHolidayRowsFromMunic(cantonID, municID, parseInt(fixedOrCurrentYear))
     } else {
       const cantonName = cantons[cantonID as keyof typeof cantons]
