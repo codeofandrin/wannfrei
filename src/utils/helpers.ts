@@ -175,6 +175,10 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                     tempDate = getNthWeekdayOfMonth(year, 7, 5, 1)
                     break
 
+                case "Solennität Burgdorf":
+                    tempDate = getNthWeekdayOfMonth(year, 6, 1, -1)
+                    break
+
                 default:
                     throw Error(`'date' is not set nor replaced for '${name}'`)
                     break
@@ -242,13 +246,20 @@ export function getNthWeekdayOfMonth(year: number, month: number, weekday: numbe
     // month: 1= January, ..., 12= December
     // weekday: 1= Monday, ..., 7= Sunday
     const jsMonth = month - 1
-    const firstOfMonth = new Date(year, jsMonth, 1)
-    const jsFirstWeekday = firstOfMonth.getDay()
-    const targetWeekday = weekday === 7 ? 0 : weekday
+    const targetWeekday = weekday === 7 ? 0 : weekday // Convert to JS weekday: Sunday = 0
 
-    let diff = (targetWeekday - jsFirstWeekday + 7) % 7
-    // Add (n - 1) weeks to get the nth weekday
-    return new Date(year, jsMonth, 1 + diff + 7 * (n - 1))
+    if (n === -1) {
+        // Get the last day of the month
+        const lastOfMonth = new Date(year, month, 0) // Day 0 of next month = last day of current month
+        const jsLastWeekday = lastOfMonth.getDay()
+        const diff = (jsLastWeekday - targetWeekday + 7) % 7
+        return new Date(year, month, 0 - diff) // lastOfMonth minus diff days
+    } else {
+        const firstOfMonth = new Date(year, jsMonth, 1)
+        const jsFirstWeekday = firstOfMonth.getDay()
+        const diff = (targetWeekday - jsFirstWeekday + 7) % 7
+        return new Date(year, jsMonth, 1 + diff + 7 * (n - 1))
+    }
 }
 
 export function sortByDateField<T>(array: T[], field: keyof T, ascending: boolean = true): T[] {
