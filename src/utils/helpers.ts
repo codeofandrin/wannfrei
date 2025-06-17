@@ -179,6 +179,12 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                     tempDate = getNthWeekdayOfMonth(year, 6, 1, -1)
                     break
 
+                case "Ausschiesset":
+                    tempDate = getNthWeekdayOfMonth(year, 9, 7, -2)
+                    // Monday after 4th Sunday in September
+                    tempDate = new Date(tempDate.setDate(tempDate.getDate() + 1))
+                    break
+
                 default:
                     throw Error(`'date' is not set nor replaced for '${name}'`)
                     break
@@ -248,12 +254,18 @@ export function getNthWeekdayOfMonth(year: number, month: number, weekday: numbe
     const jsMonth = month - 1
     const targetWeekday = weekday === 7 ? 0 : weekday // Convert to JS weekday: Sunday = 0
 
-    if (n === -1) {
+    if (n < 0) {
+        // Last, second last, etc. weekday of the month
         // Get the last day of the month
-        const lastOfMonth = new Date(year, month, 0) // Day 0 of next month = last day of current month
+        const lastOfMonth = new Date(year, month, 0)
         const jsLastWeekday = lastOfMonth.getDay()
         const diff = (jsLastWeekday - targetWeekday + 7) % 7
-        return new Date(year, month, 0 - diff) // lastOfMonth minus diff days
+        const lastTargetWeekdayDate = new Date(year, month, 0 - diff)
+        return new Date(
+            lastTargetWeekdayDate.getFullYear(),
+            lastTargetWeekdayDate.getMonth(),
+            lastTargetWeekdayDate.getDate() - 7 * (-n - 1) // Subtract 0 for -1, 7 for -2, etc.
+        )
     } else {
         const firstOfMonth = new Date(year, jsMonth, 1)
         const jsFirstWeekday = firstOfMonth.getDay()
