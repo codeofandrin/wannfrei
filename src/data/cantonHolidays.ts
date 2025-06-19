@@ -101,7 +101,6 @@ const cantonHolidays: CantonHolidaysType = {
     ],
     genf: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
-        { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
         { name: "Ostermontag", date: null, type: HolidayType.by_law },
         { name: "Auffahrt", date: null, type: HolidayType.by_law },
