@@ -155,12 +155,12 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
 
                 case "Genfer Bettag":
                     tempDate = getNthWeekdayOfMonth(year, 9, 7, 1)
-                    tempDate = new Date(tempDate.setDate(tempDate.getDate() + 4))
+                    tempDate.setDate(tempDate.getDate() + 4)
                     break
 
                 case "Bettagsmontag":
                     tempDate = getNthWeekdayOfMonth(year, 9, 7, 3)
-                    tempDate = new Date(tempDate.setDate(tempDate.getDate() + 1))
+                    tempDate.setDate(tempDate.getDate() + 1)
                     break
 
                 case "Maienzug":
@@ -182,7 +182,15 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                 case "Ausschiesset":
                     tempDate = getNthWeekdayOfMonth(year, 9, 7, -2)
                     // Monday after 4th Sunday in September
-                    tempDate = new Date(tempDate.setDate(tempDate.getDate() + 1))
+                    tempDate.setDate(tempDate.getDate() + 1)
+                    break
+
+                case "Solennität Murten":
+                    tempDate = new Date(`${year}-06-22`)
+                    // if it's a Sunday it's on Saturday instead
+                    if (tempDate.getDay() === 0) {
+                        tempDate.setDate(tempDate.getDate() - 1)
+                    }
                     break
 
                 default:
