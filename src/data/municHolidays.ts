@@ -7802,7 +7802,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        fribourg: [
+        freiburg: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },

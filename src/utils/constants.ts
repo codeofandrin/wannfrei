@@ -757,7 +757,7 @@ export const munics = {
         ferpicloz: "Ferpicloz",
         fetigny: "Fétigny",
         fraeschels: "Fräschels",
-        fribourg: "Fribourg",
+        freiburg: "Freiburg",
         gibloux: "Gibloux",
         giffers: "Giffers",
         givisiez: "Givisiez",
