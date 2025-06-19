@@ -9559,7 +9559,53 @@ const municHolidays: MunicHolidaysType = {
             { name: "Wiederherstellung der Republik Genf", date: "12-31", type: HolidayType.by_law }
         ]
     },
-    glarus: { "": [] },
+    glarus: {
+        glarus: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
+            { name: "Näfelser Fahrt", date: null, type: HolidayType.by_law },
+            { name: "Fasnachtsmontag", date: null, type: HolidayType.optional },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Landsgemeinde", date: null, type: HolidayType.optional },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Allerheiligen", date: "11-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        "glarus-nord": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
+            { name: "Näfelser Fahrt", date: null, type: HolidayType.by_law },
+            { name: "Fasnachtsmontag", date: null, type: HolidayType.optional },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Landsgemeinde", date: null, type: HolidayType.optional },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Allerheiligen", date: "11-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        "glarus-sued": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
+            { name: "Näfelser Fahrt", date: null, type: HolidayType.by_law },
+            { name: "Fasnachtsmontag", date: null, type: HolidayType.optional },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Landsgemeinde", date: null, type: HolidayType.optional },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Allerheiligen", date: "11-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ]
+    },
     graubuenden: { "": [] },
     jura: { "": [] },
     luzern: { "": [] },

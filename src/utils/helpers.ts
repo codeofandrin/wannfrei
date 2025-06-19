@@ -192,6 +192,9 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                         tempDate.setDate(tempDate.getDate() - 1)
                     }
                     break
+                case "Landsgemeinde":
+                    tempDate = getNthWeekdayOfMonth(year, 5, 7, 1)
+                    break
 
                 default:
                     throw Error(`'date' is not set nor replaced for '${name}'`)

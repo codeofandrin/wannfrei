@@ -117,6 +117,7 @@ const cantonHolidays: CantonHolidaysType = {
         { name: "Fasnachtsmontag", date: null, type: HolidayType.optional },
         { name: "Karfreitag", date: null, type: HolidayType.by_law },
         { name: "Ostermontag", date: null, type: HolidayType.by_law },
+        { name: "Landsgemeinde", date: null, type: HolidayType.optional },
         { name: "Auffahrt", date: null, type: HolidayType.by_law },
         { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
         { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },

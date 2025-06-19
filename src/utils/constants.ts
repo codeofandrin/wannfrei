@@ -891,7 +891,11 @@ export const munics = {
         versoix: "Versoix",
         veyrier: "Veyrier"
     },
-    glarus: {},
+    glarus: {
+        glarus: "Glarus",
+        "glarus-nord": "Glarus Nord",
+        "glarus-sued": "Glarus Süd"
+    },
     graubuenden: {},
     jura: {},
     luzern: {},
