@@ -192,8 +192,13 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                         tempDate.setDate(tempDate.getDate() - 1)
                     }
                     break
+
                 case "Landsgemeinde":
                     tempDate = getNthWeekdayOfMonth(year, 5, 7, 1)
+                    break
+
+                case "St. Martinsmontag":
+                    tempDate = getNthWeekdayOfMonth(year, 11, 1, -3)
                     break
 
                 default:
