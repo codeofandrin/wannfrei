@@ -1157,7 +1157,19 @@ export const munics = {
         "val-de-ruz": "Val-de-Ruz",
         "val-de-travers": "Val-de-Travers"
     },
-    nidwalden: {},
+    nidwalden: {
+        beckenried: "Beckenried",
+        buochs: "Buochs",
+        dallenwil: "Dallenwil",
+        emmetten: "Emmetten",
+        ennetburgen: "Ennetbürgen",
+        ennetmoos: "Ennetmoos",
+        hergiswil: "Hergiswil",
+        oberdorf: "Oberdorf",
+        stans: "Stans",
+        stansstad: "Stansstad",
+        wolfenschiessen: "Wolfenschiessen"
+    },
     obwalden: {},
     schaffhausen: {},
     schwyz: {},
