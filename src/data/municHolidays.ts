@@ -12759,7 +12759,393 @@ const municHolidays: MunicHolidaysType = {
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ]
     },
-    neuenburg: { "": [] },
+    neuenburg: {
+        boudry: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "brot-plamboz": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        cornaux: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        cortaillod: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        cressier: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "la-brevine": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "la-chaux-de-fonds": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "la-chaux-du-milieu": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "la-cote-aux-fees": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "la-grande-beroche": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "la-sagne": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        latena: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "le-cerneux-pequignot": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "le-landeron": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Fronleichnam", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "le-locle": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "les-planchettes": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "les-ponts-de-martel": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "les-verrieres": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        lignieres: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        milvignes: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        neuenburg: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        rochefort: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "val-de-ruz": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        "val-de-travers": [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            {
+                name: "Jahrestag der Ausrufung der Republik Neuenburg",
+                date: "03-01",
+                type: HolidayType.by_law
+            },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Tag der Arbeit", date: "05-01", type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Bettagsmontag", date: null, type: HolidayType.optional },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ]
+    },
     nidwalden: { "": [] },
     obwalden: { "": [] },
     schaffhausen: { "": [] },
