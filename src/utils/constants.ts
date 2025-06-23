@@ -1170,7 +1170,15 @@ export const munics = {
         stansstad: "Stansstad",
         wolfenschiessen: "Wolfenschiessen"
     },
-    obwalden: {},
+    obwalden: {
+        alpnach: "Alpnach",
+        engelberg: "Engelberg",
+        giswil: "Giswil",
+        kerns: "Kerns",
+        lungern: "Lungern",
+        sachseln: "Sachseln",
+        sarnen: "Sarnen"
+    },
     schaffhausen: {},
     schwyz: {},
     solothurn: {},
