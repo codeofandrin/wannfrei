@@ -201,6 +201,10 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                     tempDate = getNthWeekdayOfMonth(year, 11, 1, -3)
                     break
 
+                case "Chilbi Einsiedeln":
+                    tempDate = getNthWeekdayOfMonth(year, 8, 7, -1)
+                    break
+
                 default:
                     throw Error(`'date' is not set nor replaced for '${name}'`)
                     break
@@ -303,7 +307,12 @@ export function sortByDateField<T>(array: T[], field: keyof T, ascending: boolea
     })
 }
 
-export function isMunicEqCantAndCapCity(municID: string): boolean {
+export function isMunicEqCantAndCity(municID: string): boolean {
     const cities = ["basel", "bern", "freiburg", "genf", "luzern", "neuenburg", "schaffhausen"]
+    return cities.includes(municID)
+}
+
+export function isMunicEqCant(municID: string): boolean {
+    const cities = ["schwyz"]
     return cities.includes(municID)
 }

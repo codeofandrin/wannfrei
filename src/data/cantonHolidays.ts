@@ -239,7 +239,6 @@ const cantonHolidays: CantonHolidaysType = {
     schwyz: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "Heilige Drei Könige", date: "01-06", type: HolidayType.by_law },
-        { name: "St. Meinradstag", date: "01-21", type: HolidayType.partly_by_law },
         { name: "Fasnachtsmontag", date: null, type: HolidayType.optional },
         { name: "Fasnachtsdienstag", date: null, type: HolidayType.optional },
         { name: "St. Josef", date: "03-19", type: HolidayType.by_law },
@@ -250,9 +249,7 @@ const cantonHolidays: CantonHolidaysType = {
         { name: "Fronleichnam", date: null, type: HolidayType.by_law },
         { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
         { name: "Mariä Himmelfahrt", date: "08-15", type: HolidayType.by_law },
-        { name: "Engelweihe", date: "09-14", type: HolidayType.partly_by_law },
         { name: "Allerheiligen", date: "11-01", type: HolidayType.by_law },
-        { name: "St. Martin", date: "11-11", type: HolidayType.partly_by_law },
         { name: "Mariä Empfängnis", date: "12-08", type: HolidayType.by_law },
         { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
         { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }

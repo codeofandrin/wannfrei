@@ -11,7 +11,8 @@ import {
   getWeekdayStr,
   sortByDateField,
   getHolidayRowsFromMunic,
-  isMunicEqCantAndCapCity
+  isMunicEqCantAndCity,
+  isMunicEqCant
 } from "@/utils/helpers"
 import { HolidayType } from "@/utils/enums"
 import type { HolidayRowType } from "@/utils/types"
@@ -168,10 +169,16 @@ export default function Holidays({ year, cantonID = null, municID = null }: Holi
       const municName = municsOfCanton[municID as keyof typeof municsOfCanton]
       const cantonAbbr = cantonAbbrs[cantonID as keyof typeof cantonAbbrs]
 
-      if (isMunicEqCantAndCapCity(municID)) {
+      if (isMunicEqCantAndCity(municID)) {
         titleScope = (
           <>
             in <span className="text-primary-800 dark:text-primary-200 font-bold">Stadt {municName}</span>
+          </>
+        )
+      } else if (isMunicEqCant(municID)) {
+        titleScope = (
+          <>
+            in <span className="text-primary-800 dark:text-primary-200 font-bold">Gemeinde {municName}</span>
           </>
         )
       } else {
