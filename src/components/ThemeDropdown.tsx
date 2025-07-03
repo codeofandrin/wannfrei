@@ -33,7 +33,7 @@ export default function ThemeDropdown() {
   }
 
   const dropdownItemClass =
-    "flex cursor-pointer items-center px-3 py-3 transition-colors duration-100 select-none sm:py-3"
+    "flex cursor-pointer items-center px-3 py-3 transition-colors duration-100 select-none sm:py-3 hover:bg-neutral-300 hover:dark:bg-neutral-800"
   let placeholder
   if (theme === "system") {
     placeholder = (
