@@ -1,6 +1,6 @@
 <p align="center">
     <div align="center">
-        <img src="src/app/icon.png" height="50px">
+        <img src="src/app/icon.png" width="50px">
     </div>
     <h1 align="center"><a href="https://wannfrei.ch" alt="wannfrei.ch" >wannfrei.ch</a></h1>
     <p align="center">
