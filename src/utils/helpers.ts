@@ -308,7 +308,17 @@ export function sortByDateField<T>(array: T[], field: keyof T, ascending: boolea
 }
 
 export function isMunicEqCantAndCity(municID: string): boolean {
-    const cities = ["basel", "bern", "freiburg", "genf", "luzern", "neuenburg", "schaffhausen", "solothurn"]
+    const cities = [
+        "basel",
+        "bern",
+        "freiburg",
+        "genf",
+        "luzern",
+        "neuenburg",
+        "schaffhausen",
+        "solothurn",
+        "st-gallen"
+    ]
     return cities.includes(municID)
 }
 
