@@ -345,7 +345,9 @@ const cantonHolidays: CantonHolidaysType = {
     wallis: [
         { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
         { name: "St. Josef", date: "03-19", type: HolidayType.by_law },
+        { name: "Ostermontag", date: null, type: HolidayType.optional },
         { name: "Auffahrt", date: null, type: HolidayType.by_law },
+        { name: "Pfingstmontag", date: null, type: HolidayType.optional },
         { name: "Fronleichnam (Herrgottstag)", date: null, type: HolidayType.by_law },
         { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
         { name: "Mariä Himmelfahrt", date: "08-15", type: HolidayType.by_law },
