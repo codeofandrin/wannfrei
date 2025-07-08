@@ -205,6 +205,10 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                     tempDate = getNthWeekdayOfMonth(year, 8, 7, -1)
                     break
 
+                case "Chilbi Payerne":
+                    tempDate = getNthWeekdayOfMonth(year, 8, 1, 3)
+                    break
+
                 default:
                     throw Error(`'date' is not set nor replaced for '${name}'`)
                     break
