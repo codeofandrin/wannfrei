@@ -2055,7 +2055,19 @@ export const munics = {
         zermatt: "Zermatt",
         zwischbergen: "Zwischbergen"
     },
-    zug: {},
+    zug: {
+        baar: "Baar",
+        cham: "Cham",
+        huenenberg: "Hünenberg",
+        menzingen: "Menzingen",
+        neuheim: "Neuheim",
+        oberaegeri: "Oberägeri",
+        risch: "Risch",
+        steinhausen: "Steinhausen",
+        unteraegeri: "Unterägeri",
+        walchwil: "Walchwil",
+        zug: "Zug"
+    },
     zuerich: {}
 }
 

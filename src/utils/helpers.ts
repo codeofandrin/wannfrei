@@ -321,7 +321,8 @@ export function isMunicEqCantAndCity(municID: string): boolean {
         "neuenburg",
         "schaffhausen",
         "solothurn",
-        "st-gallen"
+        "st-gallen",
+        "zug"
     ]
     return cities.includes(municID)
 }
