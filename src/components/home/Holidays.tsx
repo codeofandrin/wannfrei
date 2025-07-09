@@ -218,7 +218,7 @@ export default function Holidays({ year, cantonID }: HolidaysPropsType) {
         <div className="mt-3 w-full text-right">
           <a
             href={`mailto:${Email.general}`}
-            className="hover:text-primary-400 dark:hover:text-primary-600 text-xs text-neutral-400 transition-colors duration-300 dark:text-neutral-600">
+            className="hover:text-primary-600 dark:hover:text-primary-500 text-xs text-neutral-400 transition-colors duration-300 dark:text-neutral-500">
             Fehler melden
           </a>
         </div>
