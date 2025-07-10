@@ -29,7 +29,7 @@ export default async function Year({ params }: YearPropsType) {
     <div>
       <Hero />
       <Suspense fallback={<HolidaysFallback />} key={"section-holidays"}>
-        <Holidays year={year} cantonID={null} />
+        <Holidays year={year} />
       </Suspense>
     </div>
   )

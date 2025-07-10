@@ -3,13 +3,16 @@
 import MiniSearch from "minisearch"
 import { useQueryState } from "nuqs"
 
-import { Email } from "@/utils/constants"
-import { cantons } from "@/utils/constants"
+import { Email, munics } from "@/utils/constants"
+import { cantons, cantonAbbrs } from "@/utils/constants"
 import {
   getNationalHolidayRows,
   getHolidayRowsFromCanton,
   getWeekdayStr,
-  sortByDateField
+  sortByDateField,
+  getHolidayRowsFromMunic,
+  isMunicEqCantAndCity,
+  isMunicEqCant
 } from "@/utils/helpers"
 import { HolidayType } from "@/utils/enums"
 import type { HolidayRowType } from "@/utils/types"
@@ -138,10 +141,11 @@ function getTypeBadge(type: HolidayType): React.ReactElement {
 
 interface HolidaysPropsType {
   year: string | null
-  cantonID: string | null
+  cantonID?: string | null
+  municID?: string | null
 }
 
-export default function Holidays({ year, cantonID }: HolidaysPropsType) {
+export default function Holidays({ year, cantonID = null, municID = null }: HolidaysPropsType) {
   // * States *
   const [type, setType] = useQueryState("type")
   const [weekdayNr, setWeekdayNr] = useQueryState("weekday")
@@ -160,13 +164,43 @@ export default function Holidays({ year, cantonID }: HolidaysPropsType) {
   )
   let holidays: HolidayRowType[] = getNationalHolidayRows(parseInt(fixedOrCurrentYear))
   if (cantonID) {
-    const cantonName = cantons[cantonID as keyof typeof cantons]
-    titleScope = (
-      <>
-        im <span className="text-primary-800 dark:text-primary-200 font-bold">Kanton {cantonName}</span>
-      </>
-    )
-    holidays = getHolidayRowsFromCanton(cantonID, parseInt(fixedOrCurrentYear))
+    if (municID) {
+      const municsOfCanton = munics[cantonID as keyof typeof munics]
+      const municName = municsOfCanton[municID as keyof typeof municsOfCanton]
+      const cantonAbbr = cantonAbbrs[cantonID as keyof typeof cantonAbbrs]
+
+      if (isMunicEqCantAndCity(municID)) {
+        titleScope = (
+          <>
+            in <span className="text-primary-800 dark:text-primary-200 font-bold">Stadt {municName}</span>
+          </>
+        )
+      } else if (isMunicEqCant(municID)) {
+        titleScope = (
+          <>
+            in <span className="text-primary-800 dark:text-primary-200 font-bold">Gemeinde {municName}</span>
+          </>
+        )
+      } else {
+        titleScope = (
+          <>
+            in{" "}
+            <span className="text-primary-800 dark:text-primary-200 font-bold">
+              {municName}, {cantonAbbr}
+            </span>
+          </>
+        )
+      }
+      holidays = getHolidayRowsFromMunic(cantonID, municID, parseInt(fixedOrCurrentYear))
+    } else {
+      const cantonName = cantons[cantonID as keyof typeof cantons]
+      titleScope = (
+        <>
+          im <span className="text-primary-800 dark:text-primary-200 font-bold">Kanton {cantonName}</span>
+        </>
+      )
+      holidays = getHolidayRowsFromCanton(cantonID, parseInt(fixedOrCurrentYear))
+    }
   }
 
   return (
@@ -180,6 +214,7 @@ export default function Holidays({ year, cantonID }: HolidaysPropsType) {
       <HolidaysFilter
         year={fixedOrCurrentYear}
         cantonID={cantonID}
+        municID={municID}
         type={type}
         weekday={weekday}
         searchValue={searchValue}

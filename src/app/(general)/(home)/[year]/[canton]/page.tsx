@@ -6,16 +6,6 @@ import Hero from "@/components/home/Hero"
 import Holidays from "@/components/home/Holidays"
 import HolidaysFallback from "@/components/home/HolidaysFallback"
 
-type generateStaticParamsPropsType = { params: { year: string } }
-
-export async function generateStaticParams({ params: { year } }: generateStaticParamsPropsType) {
-  let newParams: Array<{ year: string; canton: string }> = []
-  Object.keys(cantons).forEach((cantonID) => {
-    newParams.push({ year: year, canton: cantonID })
-  })
-  return newParams
-}
-
 type generateMetadataPropsType = { params: Promise<{ year: string; canton: string }> }
 
 export async function generateMetadata({ params }: generateMetadataPropsType): Promise<Metadata> {

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
+import { useParams } from "next/navigation"
 
 import { isInAlphabet } from "@/utils/helpers"
 import useClickOutsideAction from "@/hooks/useClickOutsideAction"
@@ -17,6 +18,7 @@ interface DropdownPropsType {
   resetValue?: Function | null
   resetBtnActive?: boolean | null
   areLinks?: boolean
+  disabled?: boolean
 }
 
 export default function Dropdown({
@@ -27,12 +29,14 @@ export default function Dropdown({
   setValue = null,
   resetValue,
   resetBtnActive = null,
-  areLinks = false
+  areLinks = false,
+  disabled = false
 }: DropdownPropsType) {
   const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef(null)
   const dropdownListRef = useRef<HTMLUListElement>(null)
   const optionRefs = useRef<(HTMLLIElement | null)[]>(Array(options.length).fill(null))
+  const params = useParams()
 
   useClickOutsideAction(dropdownRef, () => setIsOpen(false))
 
@@ -72,22 +76,22 @@ export default function Dropdown({
   let dropdownThemeClasses = ""
   let optionThemeClasses = ""
   if (theme === "primary") {
-    buttonThemeClasses =
-      "text-neutral-800 dark:text-inherit border-primary-600 bg-white dark:bg-neutral-950 hover:bg-primary-100 dark:hover:bg-primary-600/20"
+    buttonThemeClasses = `${disabled ? "text-neutral-300 dark:text-neutral-800 border-neutral-300 dark:border-neutral-800" : "text-neutral-800 dark:text-inherit border-primary-600 hover:bg-primary-100 dark:hover:bg-primary-600/20"} bg-white dark:bg-neutral-950`
     dropdownThemeClasses = "bg-primary-800"
     optionThemeClasses = "hover:bg-primary-700 dark:hover:bg-primary-900"
   } else if (theme === "secondary") {
-    buttonThemeClasses =
-      "text-neutral-800 dark:text-inherit border-secondary-600 bg-white dark:bg-neutral-950 hover:bg-secondary-100 dark:hover:bg-secondary-600/20"
+    buttonThemeClasses = `${disabled ? "text-neutral-300 dark:text-neutral-800 border-neutral-300 dark:border-neutral-800" : "text-neutral-800 dark:text-inherit border-secondary-600 hover:bg-secondary-100 dark:hover:bg-secondary-600/20"} bg-white dark:bg-neutral-950`
     dropdownThemeClasses = "bg-secondary-800"
     optionThemeClasses = "hover:bg-secondary-700 dark:hover:bg-secondary-900"
   }
 
   function handleDropdownToggle() {
+    if (disabled) return
     setIsOpen(!isOpen)
   }
 
   function handleSelect(id: string | number) {
+    if (disabled) return
     setIsOpen(false)
     setValue && setValue(id)
   }
@@ -103,20 +107,28 @@ export default function Dropdown({
     <div className="relative inline-block w-full sm:w-fit" ref={dropdownRef}>
       {resetBtnActive ? (
         <div
-          className={`${className} ${buttonThemeClasses} flex max-h-[50px] w-full cursor-pointer items-center justify-between rounded-full border-1 py-3 pr-3 pl-5 font-medium transition-colors duration-300 sm:max-h-[42px] sm:w-68 sm:py-2`}>
+          className={`${className} ${buttonThemeClasses} flex max-h-[50px] w-full ${disabled ? "cursor-not-allowed" : "cursor-pointer"} items-center justify-between rounded-full border-1 py-3 pr-3 pl-5 font-medium transition-colors duration-300 sm:max-h-[42px] sm:w-68 sm:py-2`}>
           <div className="w-3/4" onClick={handleDropdownToggle}>
             <p>{placeholder}</p>
           </div>
-          <div
-            className="cursor-pointer rounded-full bg-red-600 p-1.5 transition-colors duration-300 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600"
-            onClick={resetValue ? () => resetValue() : () => {}}>
-            <SVGCross className="h-4 w-4 text-white dark:text-neutral-950" />
-          </div>
+          {areLinks ? (
+            <div className="cursor-pointer rounded-full bg-red-600 p-1.5 transition-colors duration-300 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600">
+              <Link href={`/${params.year}/${params.canton}`} scroll={false}>
+                <SVGCross className="h-4 w-4 text-white dark:text-neutral-950" />
+              </Link>
+            </div>
+          ) : (
+            <div
+              className="cursor-pointer rounded-full bg-red-600 p-1.5 transition-colors duration-300 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600"
+              onClick={resetValue ? () => resetValue() : () => {}}>
+              <SVGCross className="h-4 w-4 text-white dark:text-neutral-950" />
+            </div>
+          )}
         </div>
       ) : (
         <div
           onClick={handleDropdownToggle}
-          className={`${className} ${buttonThemeClasses} flex max-h-[50px] w-full cursor-pointer items-center justify-between rounded-full border-1 py-3 pr-3 pl-5 font-medium transition-colors duration-300 sm:max-h-[42px] sm:w-68 sm:py-2`}>
+          className={`${className} ${buttonThemeClasses} flex max-h-[50px] w-full ${disabled ? "cursor-not-allowed" : "cursor-pointer"} items-center justify-between rounded-full border-1 py-3 pr-3 pl-5 font-medium transition-colors duration-300 sm:max-h-[42px] sm:w-68 sm:py-2`}>
           <p>{placeholder}</p>
           <SVGAngleDown className="ml-2 h-5 w-5" />
         </div>

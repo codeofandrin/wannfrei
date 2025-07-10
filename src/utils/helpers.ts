@@ -1,6 +1,8 @@
 import { easter } from "date-easter"
 
-import { cantonHolidays, nationalHolidays } from "./constants"
+import nationalHolidays from "@/data/nationalHolidays"
+import cantonHolidays from "@/data/cantonHolidays"
+import municHolidays from "@/data/municHolidays"
 import type { HolidayRowType } from "./types"
 import { HolidayType } from "./enums"
 
@@ -62,7 +64,9 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
             "Fasnachtsmontag",
             "Fasnachtsdienstag",
             "Fasnachtsmittwoch",
-            "Aschermittwoch"
+            "Aschermittwoch",
+            "St. Burkard",
+            "Banntag Liestal"
         ]
         if (easterRelated.includes(name)) {
             const easterDateStr = easter(year).toString()
@@ -119,6 +123,16 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
                     tempDate.setDate(tempDate.getDate() + 7)
                     break
 
+                case "St. Burkard":
+                    tempDate.setDate(tempDate.getDate() + 43)
+                    break
+
+                case "Banntag Liestal":
+                    tempDate.setDate(tempDate.getDate() + 39) // Ascension day ("Auffahrt")
+                    // Monday before Ascension day
+                    tempDate.setDate(tempDate.getDate() - 3)
+                    break
+
                 default:
                     break
             }
@@ -141,15 +155,62 @@ function _getHolidayRow(name: string, date: string | null, type: HolidayType, ye
 
                 case "Genfer Bettag":
                     tempDate = getNthWeekdayOfMonth(year, 9, 7, 1)
-                    tempDate = new Date(tempDate.setDate(tempDate.getDate() + 4))
+                    tempDate.setDate(tempDate.getDate() + 4)
                     break
 
                 case "Bettagsmontag":
                     tempDate = getNthWeekdayOfMonth(year, 9, 7, 3)
-                    tempDate = new Date(tempDate.setDate(tempDate.getDate() + 1))
+                    tempDate.setDate(tempDate.getDate() + 1)
+                    break
+
+                case "Maienzug":
+                    tempDate = getNthWeekdayOfMonth(year, 7, 5, 1)
+                    break
+
+                case "Jugendfest":
+                    tempDate = getNthWeekdayOfMonth(year, 7, 5, 2)
+                    break
+
+                case "Kinderfest":
+                    tempDate = getNthWeekdayOfMonth(year, 7, 5, 1)
+                    break
+
+                case "Solennität Burgdorf":
+                    tempDate = getNthWeekdayOfMonth(year, 6, 1, -1)
+                    break
+
+                case "Ausschiesset":
+                    tempDate = getNthWeekdayOfMonth(year, 9, 7, -2)
+                    // Monday after 4th Sunday in September
+                    tempDate.setDate(tempDate.getDate() + 1)
+                    break
+
+                case "Solennität Murten":
+                    tempDate = new Date(`${year}-06-22`)
+                    // if it's a Sunday it's on Saturday instead
+                    if (tempDate.getDay() === 0) {
+                        tempDate.setDate(tempDate.getDate() - 1)
+                    }
+                    break
+
+                case "Landsgemeinde":
+                    tempDate = getNthWeekdayOfMonth(year, 5, 7, 1)
+                    break
+
+                case "St. Martinsmontag":
+                    tempDate = getNthWeekdayOfMonth(year, 11, 1, -3)
+                    break
+
+                case "Chilbi Einsiedeln":
+                    tempDate = getNthWeekdayOfMonth(year, 8, 7, -1)
+                    break
+
+                case "Chilbi Payerne":
+                    tempDate = getNthWeekdayOfMonth(year, 8, 1, 3)
                     break
 
                 default:
+                    throw Error(`'date' is not set nor replaced for '${name}'`)
                     break
             }
         }
@@ -183,6 +244,17 @@ export function getNationalHolidayRows(year: number): HolidayRowType[] {
     return holidayRows
 }
 
+export function getHolidayRowsFromMunic(cantonID: string, municID: string, year: number): HolidayRowType[] {
+    const holidays = municHolidays[cantonID][municID]
+
+    let holidayRows: HolidayRowType[] = []
+    holidays.forEach(({ name, date, type }) => {
+        holidayRows.push(_getHolidayRow(name, date, type, year))
+    })
+
+    return holidayRows
+}
+
 export function getYearRange(): number[] {
     const currentYear = new Date().getFullYear()
 
@@ -204,13 +276,26 @@ export function getNthWeekdayOfMonth(year: number, month: number, weekday: numbe
     // month: 1= January, ..., 12= December
     // weekday: 1= Monday, ..., 7= Sunday
     const jsMonth = month - 1
-    const firstOfMonth = new Date(year, jsMonth, 1)
-    const jsFirstWeekday = firstOfMonth.getDay()
-    const targetWeekday = weekday === 7 ? 0 : weekday
+    const targetWeekday = weekday === 7 ? 0 : weekday // Convert to JS weekday: Sunday = 0
 
-    let diff = (targetWeekday - jsFirstWeekday + 7) % 7
-    // Add (n - 1) weeks to get the nth weekday
-    return new Date(year, jsMonth, 1 + diff + 7 * (n - 1))
+    if (n < 0) {
+        // Last, second last, etc. weekday of the month
+        // Get the last day of the month
+        const lastOfMonth = new Date(year, month, 0)
+        const jsLastWeekday = lastOfMonth.getDay()
+        const diff = (jsLastWeekday - targetWeekday + 7) % 7
+        const lastTargetWeekdayDate = new Date(year, month, 0 - diff)
+        return new Date(
+            lastTargetWeekdayDate.getFullYear(),
+            lastTargetWeekdayDate.getMonth(),
+            lastTargetWeekdayDate.getDate() - 7 * (-n - 1) // Subtract 0 for -1, 7 for -2, etc.
+        )
+    } else {
+        const firstOfMonth = new Date(year, jsMonth, 1)
+        const jsFirstWeekday = firstOfMonth.getDay()
+        const diff = (targetWeekday - jsFirstWeekday + 7) % 7
+        return new Date(year, jsMonth, 1 + diff + 7 * (n - 1))
+    }
 }
 
 export function sortByDateField<T>(array: T[], field: keyof T, ascending: boolean = true): T[] {
@@ -224,4 +309,26 @@ export function sortByDateField<T>(array: T[], field: keyof T, ascending: boolea
         const dateB = parseDate(b[field] as unknown as string)
         return ascending ? dateA - dateB : dateB - dateA
     })
+}
+
+export function isMunicEqCantAndCity(municID: string): boolean {
+    const cities = [
+        "basel",
+        "bern",
+        "freiburg",
+        "genf",
+        "luzern",
+        "neuenburg",
+        "schaffhausen",
+        "solothurn",
+        "st-gallen",
+        "zug",
+        "zuerich"
+    ]
+    return cities.includes(municID)
+}
+
+export function isMunicEqCant(municID: string): boolean {
+    const cities = ["schwyz"]
+    return cities.includes(municID)
 }
