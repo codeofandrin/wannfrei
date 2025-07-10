@@ -24759,7 +24759,7 @@ const municHolidays: MunicHolidaysType = {
         ]
     },
     zuerich: {
-        "adliswil": [
+        adliswil: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24771,7 +24771,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "aesch": [
+        aesch: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24807,7 +24807,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "altikon": [
+        altikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24819,7 +24819,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "andelfingen": [
+        andelfingen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24831,7 +24831,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "bachenbuelach": [
+        bachenbuelach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24843,7 +24843,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "bachs": [
+        bachs: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24855,7 +24855,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "baeretswil": [
+        baeretswil: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24867,7 +24867,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "bassersdorf": [
+        bassersdorf: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24879,7 +24879,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "bauma": [
+        bauma: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24891,7 +24891,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "benken": [
+        benken: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24915,7 +24915,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "birmensdorf": [
+        birmensdorf: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24927,7 +24927,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "bonstetten": [
+        bonstetten: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24939,7 +24939,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "boppelsen": [
+        boppelsen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24951,7 +24951,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "bruetten": [
+        bruetten: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24963,7 +24963,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "bubikon": [
+        bubikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24987,7 +24987,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "buchs": [
+        buchs: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -24999,7 +24999,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "buelach": [
+        buelach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25011,7 +25011,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "dachsen": [
+        dachsen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25023,7 +25023,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "daegerlen": [
+        daegerlen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25035,7 +25035,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "daellikon": [
+        daellikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25047,7 +25047,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "daenikon": [
+        daenikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25059,7 +25059,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "daettlikon": [
+        daettlikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25071,7 +25071,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "dielsdorf": [
+        dielsdorf: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25083,7 +25083,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "dietikon": [
+        dietikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25095,7 +25095,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "dietlikon": [
+        dietlikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25107,7 +25107,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "dinhard": [
+        dinhard: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25119,7 +25119,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "dorf": [
+        dorf: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25131,7 +25131,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "duebendorf": [
+        duebendorf: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25143,7 +25143,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "duernten": [
+        duernten: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25155,7 +25155,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "egg": [
+        egg: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25167,7 +25167,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "eglisau": [
+        eglisau: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25179,7 +25179,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "elgg": [
+        elgg: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25203,7 +25203,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "elsau": [
+        elsau: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25215,7 +25215,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "embrach": [
+        embrach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25227,7 +25227,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "erlenbach": [
+        erlenbach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25239,7 +25239,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "faellanden": [
+        faellanden: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25251,7 +25251,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "fehraltorf": [
+        fehraltorf: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25263,7 +25263,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "feuerthalen": [
+        feuerthalen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25275,7 +25275,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "fischenthal": [
+        fischenthal: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25287,7 +25287,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "flaach": [
+        flaach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25299,7 +25299,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "flurlingen": [
+        flurlingen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25323,7 +25323,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "geroldswil": [
+        geroldswil: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25335,7 +25335,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "glattfelden": [
+        glattfelden: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25347,7 +25347,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "gossau": [
+        gossau: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25359,7 +25359,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "greifensee": [
+        greifensee: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25371,7 +25371,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "grueningen": [
+        grueningen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25383,7 +25383,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "hagenbuch": [
+        hagenbuch: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25407,7 +25407,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "hedingen": [
+        hedingen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25419,7 +25419,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "henggart": [
+        henggart: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25431,7 +25431,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "herrliberg": [
+        herrliberg: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25443,7 +25443,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "hettlingen": [
+        hettlingen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25455,7 +25455,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "hinwil": [
+        hinwil: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25467,7 +25467,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "hittnau": [
+        hittnau: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25479,7 +25479,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "hochfelden": [
+        hochfelden: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25491,7 +25491,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "hombrechtikon": [
+        hombrechtikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25503,7 +25503,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "horgen": [
+        horgen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Fasnacht", date: null, type: HolidayType.optional },
@@ -25516,7 +25516,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "hoeri": [
+        hoeri: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25528,7 +25528,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "huentwangen": [
+        huentwangen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25540,7 +25540,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "huettikon": [
+        huettikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25576,7 +25576,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "kilchberg": [
+        kilchberg: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25588,7 +25588,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "kleinandelfingen": [
+        kleinandelfingen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25600,7 +25600,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "kloten": [
+        kloten: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25612,7 +25612,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "knonau": [
+        knonau: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25624,7 +25624,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "kuesnacht": [
+        kuesnacht: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25660,7 +25660,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "lindau": [
+        lindau: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25672,7 +25672,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "lufingen": [
+        lufingen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25684,7 +25684,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "maennedorf": [
+        maennedorf: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25696,7 +25696,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "marthalen": [
+        marthalen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25708,7 +25708,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "maschwanden": [
+        maschwanden: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25720,7 +25720,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "maur": [
+        maur: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25732,7 +25732,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "meilen": [
+        meilen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25744,7 +25744,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "mettmenstetten": [
+        mettmenstetten: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25756,7 +25756,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "moenchaltorf": [
+        moenchaltorf: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25768,7 +25768,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "neerach": [
+        neerach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25780,7 +25780,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "neftenbach": [
+        neftenbach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25792,7 +25792,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "niederglatt": [
+        niederglatt: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25804,7 +25804,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "niederhasli": [
+        niederhasli: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25816,7 +25816,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "niederweningen": [
+        niederweningen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25828,7 +25828,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "nuerensdorf": [
+        nuerensdorf: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25840,7 +25840,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "oberembrach": [
+        oberembrach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25852,7 +25852,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "oberengstringen": [
+        oberengstringen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25864,7 +25864,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "oberglatt": [
+        oberglatt: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25876,7 +25876,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "oberrieden": [
+        oberrieden: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25888,7 +25888,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "oberweningen": [
+        oberweningen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25900,7 +25900,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "obfelden": [
+        obfelden: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25936,7 +25936,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "opfikon": [
+        opfikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25948,7 +25948,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "ossingen": [
+        ossingen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25960,7 +25960,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "otelfingen": [
+        otelfingen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25972,7 +25972,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "ottenbach": [
+        ottenbach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25984,7 +25984,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "pfaeffikon": [
+        pfaeffikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -25996,7 +25996,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "pfungen": [
+        pfungen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26008,7 +26008,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "rafz": [
+        rafz: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26020,7 +26020,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "regensberg": [
+        regensberg: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26032,7 +26032,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "regensdorf": [
+        regensdorf: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26044,7 +26044,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "rheinau": [
+        rheinau: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26056,7 +26056,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "richterswil": [
+        richterswil: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26068,7 +26068,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "rickenbach": [
+        rickenbach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26080,7 +26080,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "rifferswil": [
+        rifferswil: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26092,7 +26092,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "rorbas": [
+        rorbas: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26104,7 +26104,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "ruemlang": [
+        ruemlang: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26116,7 +26116,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "rueschlikon": [
+        rueschlikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26128,7 +26128,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "russikon": [
+        russikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26140,7 +26140,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "rueti": [
+        rueti: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26152,7 +26152,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "schlatt": [
+        schlatt: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26164,7 +26164,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "schleinikon": [
+        schleinikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26176,7 +26176,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "schlieren": [
+        schlieren: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26188,7 +26188,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "schoefflisdorf": [
+        schoefflisdorf: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26200,7 +26200,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "schwerzenbach": [
+        schwerzenbach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26212,7 +26212,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "seegraeben": [
+        seegraeben: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26224,7 +26224,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "seuzach": [
+        seuzach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26236,7 +26236,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "stadel": [
+        stadel: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26248,7 +26248,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "stammheim": [
+        stammheim: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26260,7 +26260,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "staefa": [
+        staefa: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26272,7 +26272,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "stallikon": [
+        stallikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26284,7 +26284,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "steinmaur": [
+        steinmaur: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26308,7 +26308,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "thalwil": [
+        thalwil: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26320,7 +26320,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "truellikon": [
+        truellikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26332,7 +26332,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "truttikon": [
+        truttikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26344,7 +26344,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "turbenthal": [
+        turbenthal: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26368,7 +26368,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "uitikon": [
+        uitikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26380,7 +26380,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "unterengstringen": [
+        unterengstringen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26392,7 +26392,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "urdorf": [
+        urdorf: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26404,7 +26404,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "uster": [
+        uster: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26416,7 +26416,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "volken": [
+        volken: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26428,7 +26428,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "volketswil": [
+        volketswil: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26440,7 +26440,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "waedenswil": [
+        waedenswil: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Fasnacht", date: null, type: HolidayType.optional },
@@ -26453,7 +26453,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "wald": [
+        wald: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26465,7 +26465,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "wallisellen": [
+        wallisellen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26489,7 +26489,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "wasterkingen": [
+        wasterkingen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26501,7 +26501,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "weiach": [
+        weiach: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26513,7 +26513,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "weiningen": [
+        weiningen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26525,7 +26525,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "weisslingen": [
+        weisslingen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26549,7 +26549,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "wetzikon": [
+        wetzikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26561,7 +26561,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "wiesendangen": [
+        wiesendangen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26573,7 +26573,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "wil": [
+        wil: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26585,7 +26585,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "wila": [
+        wila: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26597,7 +26597,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "wildberg": [
+        wildberg: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26609,7 +26609,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "winkel": [
+        winkel: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26621,7 +26621,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "winterthur": [
+        winterthur: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26633,7 +26633,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "zell": [
+        zell: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26645,7 +26645,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "zollikon": [
+        zollikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26657,7 +26657,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "zumikon": [
+        zumikon: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -26669,7 +26669,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        "zuerich": [
+        zuerich: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
