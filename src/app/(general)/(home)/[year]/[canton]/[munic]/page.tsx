@@ -13,7 +13,6 @@ export async function generateMetadata({ params }: generateMetadataPropsType): P
   const { year, canton, munic } = await params
 
   const municsInCanton = munics[canton as keyof typeof munics]
-  console.log(municsInCanton)
   let municName = municsInCanton[munic as keyof typeof municsInCanton] as string
 
   if (isMunicEqCantAndCity(munic)) {
