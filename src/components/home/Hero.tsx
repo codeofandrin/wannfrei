@@ -13,7 +13,8 @@ export default function Hero() {
         <span className="text-secondary-600 dark:text-secondary-500">frei</span>?
       </h1>
       <h2 className="mt-8 font-medium text-neutral-500 sm:mt-10 sm:text-center sm:text-xl dark:text-neutral-500">
-        Erhalte einen Überblick über nationale, kantonale, gesetzliche und optionale Feiertage in der Schweiz.
+        Erhalte einen Überblick über nationale, kantonale, regionale, gesetzliche und optionale Feiertage in
+        der Schweiz.
       </h2>
       <Suspense fallback={<RegionFilterFallback />} key={"section-region-filter"}>
         <RegionFilter />
