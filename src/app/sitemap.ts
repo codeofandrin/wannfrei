@@ -3,6 +3,8 @@ import type { MetadataRoute } from "next"
 import { getYearRange } from "@/utils/helpers"
 import { cantons } from "@/utils/constants"
 
+export const revalidate = 86400
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const entries: MetadataRoute.Sitemap = [
         {
