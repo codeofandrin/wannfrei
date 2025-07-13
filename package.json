@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "preview": "vercel pull --yes --environment=preview && vercel build && vercel deploy --archive=tgz --prebuilt",
     "start": "next start",
     "format": "prettier --write --list-different .",
     "typecheck": "tsc --noEmit --noUnusedLocals --noUnusedParameters --composite false",
