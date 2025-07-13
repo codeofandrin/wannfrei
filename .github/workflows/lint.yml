@@ -1,0 +1,15 @@
+name: Lint
+on:
+  push:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  Lint:
+    runs-on: ubuntu:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Formatter
+        run: npx prettier --check .
+      - name: Run Typechecker
+        run: npx tsc --noEmit --noUnusedLocals --noUnusedParameters --composite false
