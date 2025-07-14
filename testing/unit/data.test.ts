@@ -7,8 +7,8 @@ test("all munics in munic holidays", () => {
     for (const canton in munics) {
         const cantonMunics = munics[canton as keyof typeof munics]
         for (const cantonMunic in cantonMunics) {
-            expect.soft(canton).toBeOneOf(Object.keys(municHolidays))
-            expect.soft(cantonMunic).toBeOneOf(Object.keys(municHolidays[canton]))
+            expect.soft(canton).toBeOneOfShort(Object.keys(municHolidays))
+            expect.soft(cantonMunic).toBeOneOfShort(Object.keys(municHolidays[canton]))
         }
     }
 })
