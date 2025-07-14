@@ -10,7 +10,9 @@
     "format": "prettier --write --list-different .",
     "typecheck": "tsc --noEmit --noUnusedLocals --noUnusedParameters --composite false",
     "bump": "npm version -m 'Bump version to %s' $npm_config_vers",
-    "bump:dev": "npm version $npm_config_vers --git-tag-version false && git commit -a -m 'Bump version to development'"
+    "bump:dev": "npm version $npm_config_vers --git-tag-version false && git commit -a -m 'Bump version to development'",
+    "unit-test": "vitest",
+    "unit-test:preview": "vitest ; npx vite preview --outDir .vitest/report/html"
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
@@ -31,10 +33,17 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.7",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4.6.0",
+    "@vitest/ui": "^3.2.4",
+    "jsdom": "^26.1.0",
     "tailwindcss": "^4.1.7",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
   }
 }
