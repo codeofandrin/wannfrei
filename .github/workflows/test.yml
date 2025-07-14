@@ -33,4 +33,4 @@ jobs:
           echo GITHUB_ACTIONS=true >> .env
 
       - name: Run unit-tests
-        run: npm unit-test
+        run: npm run unit-test
