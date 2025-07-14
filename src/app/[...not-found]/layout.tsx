@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation"
+import { redirect, notFound } from "next/navigation"
 
 export default function RootLayout() {
-  redirect("/")
+  notFound()
 }

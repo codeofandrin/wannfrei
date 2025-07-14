@@ -6,7 +6,6 @@ import { getStaticPageYearRange } from "@/utils/helpers"
 // - wrong routes are handled in page.tsx
 // - range from current year: -1 ... +3 years
 // - every January 1st cron job rebuilds website to update static pages in year range
-export const dynamic = "auto"
 export const dynamicParams = true
 export const revalidate = 86400
 

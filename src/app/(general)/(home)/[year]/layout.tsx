@@ -1,6 +1,5 @@
 import { getYearRange } from "@/utils/helpers"
 
-export const dynamic = "error"
 export const dynamicParams = false
 
 export async function generateStaticParams() {

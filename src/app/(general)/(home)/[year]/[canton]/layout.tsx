@@ -1,6 +1,5 @@
 import { cantons } from "@/utils/constants"
 
-export const dynamic = "error"
 export const dynamicParams = false
 
 type generateStaticParamsPropsType = { params: { year: string } }
