@@ -3,12 +3,12 @@ import react from "@vitejs/plugin-react"
 import tsconfigPaths from "vite-tsconfig-paths"
 
 export default defineConfig({
-  plugins: [tsconfigPaths(), react()],
-  test: {
-    environment: "jsdom",
-    watch: false,
-    dir: "./testing/unit",
-    reporters: ["default", "html"],
-    outputFile: "./.vitest/report/html/index.html"
-  }
+    plugins: [tsconfigPaths(), react()],
+    test: {
+        environment: "jsdom",
+        watch: false,
+        dir: "./testing/unit",
+        setupFiles: "./testing/vitest-setup.ts",
+        reporters: ["default"],
+    }
 })
