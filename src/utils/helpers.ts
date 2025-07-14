@@ -5,6 +5,7 @@ import cantonHolidays from "@/data/cantonHolidays"
 import municHolidays from "@/data/municHolidays"
 import type { HolidayRowType } from "./types"
 import { HolidayType } from "./enums"
+import { cantons } from "./constants"
 
 export function getMonthStr(month: number, leadingZero: boolean = true): string {
     const monthStr = month.toString()
@@ -268,6 +269,19 @@ export function getYearRange(): number[] {
     return years
 }
 
+export function getStaticPageYearRange(): string[] {
+    const currentYear = new Date().getFullYear()
+
+    let years = []
+    for (let i = 0; i < 5; i++) {
+        // range from now: -1 year, +3 years
+        let year = currentYear - 1 + i
+        years.push(year.toString())
+    }
+
+    return years
+}
+
 export function isInAlphabet(key: string): boolean {
     return /^[a-z]$/.test(key)
 }
@@ -331,4 +345,13 @@ export function isMunicEqCantAndCity(municID: string): boolean {
 export function isMunicEqCant(municID: string): boolean {
     const cities = ["schwyz"]
     return cities.includes(municID)
+}
+
+export function getSitemapIds(): { id: string }[] {
+    const ids = [{ id: "home" }, { id: "legal" }]
+    for (const canton of Object.keys(cantons)) {
+        ids.push({ id: canton })
+    }
+
+    return ids
 }
