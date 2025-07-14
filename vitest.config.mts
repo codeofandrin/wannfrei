@@ -9,7 +9,6 @@ export default defineConfig({
         watch: false,
         dir: "./testing/unit",
         setupFiles: "./testing/vitest-setup.ts",
-        reporters: ["default", "html"],
-        outputFile: ".vitest/report/html/index.html"
+        reporters: ["default"],
     }
 })
