@@ -6,9 +6,9 @@ export default defineConfig({
     plugins: [tsconfigPaths(), react()],
     test: {
         environment: "jsdom",
-        watch: true,
+        watch: false,
         dir: "./testing/unit",
         setupFiles: "./testing/vitest-setup.ts",
-        reporters: ["default"],
+        reporters: ["default"]
     }
 })
