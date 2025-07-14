@@ -1,41 +1,65 @@
 import type { MetadataRoute } from "next"
 
-import { getYearRange } from "@/utils/helpers"
-import { cantons } from "@/utils/constants"
+import { getYearRange, getSitemapIds } from "@/utils/helpers"
+import { munics } from "@/utils/constants"
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    const entries: MetadataRoute.Sitemap = [
-        {
-            url: "https://www.wannfrei.ch",
-            lastModified: new Date(),
-            changeFrequency: "weekly",
-            priority: 1
-        },
-        {
-            url: "https://www.wannfrei.ch/legal",
-            lastModified: new Date(),
-            changeFrequency: "weekly",
-            priority: 0.5
-        }
-    ]
+export const revalidate = 86400
 
-    getYearRange().forEach((year) => {
-        entries.push({
-            url: `https://www.wannfrei.ch/${year}`,
-            lastModified: new Date(),
-            changeFrequency: "weekly",
-            priority: 0.8
-        })
+export async function generateSitemaps() {
+    return getSitemapIds()
+}
 
-        Object.keys(cantons).forEach((cantonID) => {
+type ParamsType = { id: string }
+
+export default function sitemap({ id }: ParamsType): MetadataRoute.Sitemap {
+    const entries: MetadataRoute.Sitemap = []
+    switch (id) {
+        case "home":
             entries.push({
-                url: `https://www.wannfrei.ch/${year}/${cantonID}`,
+                url: "https://www.wannfrei.ch",
                 lastModified: new Date(),
                 changeFrequency: "weekly",
-                priority: 0.8
+                priority: 1
             })
-        })
-    })
+            getYearRange().forEach((year) => {
+                entries.push({
+                    url: `https://www.wannfrei.ch/${year}`,
+                    lastModified: new Date(),
+                    changeFrequency: "weekly",
+                    priority: 0.8
+                })
+            })
+            break
+
+        case "legal":
+            entries.push({
+                url: "https://www.wannfrei.ch/legal",
+                lastModified: new Date(),
+                changeFrequency: "weekly",
+                priority: 0.5
+            })
+            break
+
+        default:
+            getYearRange().forEach((year) => {
+                entries.push({
+                    url: `https://www.wannfrei.ch/${year}/${id}`,
+                    lastModified: new Date(),
+                    changeFrequency: "weekly",
+                    priority: 0.8
+                })
+
+                for (const municID of Object.keys(munics[id as keyof typeof munics])) {
+                    entries.push({
+                        url: `https://www.wannfrei.ch/${year}/${id}/${municID}`,
+                        lastModified: new Date(),
+                        changeFrequency: "weekly",
+                        priority: 0.8
+                    })
+                }
+            })
+            break
+    }
 
     return entries
 }
