@@ -497,6 +497,41 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
+        eggenwil: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.optional },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.optional },
+            { name: "Fronleichnam", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Mariä Himmelfahrt", date: "08-15", type: HolidayType.by_law },
+            { name: "Allerheiligen", date: "11-01", type: HolidayType.by_law },
+            { name: "Mariä Empfängnis", date: "12-08", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
+        ],
+        egliswil: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Berchtoldstag", date: "01-02", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
+        ehrendingen: [
+            { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
+            { name: "Karfreitag", date: null, type: HolidayType.by_law },
+            { name: "Ostermontag", date: null, type: HolidayType.by_law },
+            { name: "Auffahrt", date: null, type: HolidayType.by_law },
+            { name: "Pfingstmontag", date: null, type: HolidayType.by_law },
+            { name: "Fronleichnam", date: null, type: HolidayType.by_law },
+            { name: "Bundesfeier", date: "08-01", type: HolidayType.by_law },
+            { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
+            { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
+        ],
         eiken: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -5687,7 +5722,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.by_law }
         ],
-        niederonz: [
+        niederoenz: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.by_law },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
@@ -15465,7 +15500,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law },
             { name: "Stephanstag", date: "12-26", type: HolidayType.optional }
         ],
-        "oberg oesgen": [
+        obergoesgen: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "Berchtoldstag", date: "01-02", type: HolidayType.optional },
             { name: "Karfreitag", date: null, type: HolidayType.by_law },
