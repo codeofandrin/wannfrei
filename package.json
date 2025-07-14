@@ -12,7 +12,7 @@
     "bump": "npm version -m 'Bump version to %s' $npm_config_vers",
     "bump:dev": "npm version $npm_config_vers --git-tag-version false && git commit -a -m 'Bump version to development'",
     "unit-test": "vitest",
-    "unit-test:preview": "vitest ; npx vite preview --outDir .vitest/report/html"
+    "unit-test:preview": "vitest --ui"
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
