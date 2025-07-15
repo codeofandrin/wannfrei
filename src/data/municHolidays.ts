@@ -24229,7 +24229,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Mariä Empfängnis", date: "12-08", type: HolidayType.by_law },
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
         ],
-        siders: [
+        sierre: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "St. Josef", date: "03-19", type: HolidayType.by_law },
             { name: "Ostermontag", date: null, type: HolidayType.optional },
@@ -24255,7 +24255,7 @@ const municHolidays: MunicHolidaysType = {
             { name: "Mariä Empfängnis", date: "12-08", type: HolidayType.by_law },
             { name: "Weihnachtstag", date: "12-25", type: HolidayType.by_law }
         ],
-        sitten: [
+        sion: [
             { name: "Neujahrstag", date: "01-01", type: HolidayType.by_law },
             { name: "St. Josef", date: "03-19", type: HolidayType.by_law },
             { name: "Ostermontag", date: null, type: HolidayType.optional },
