@@ -5,9 +5,9 @@ import Hero from "@/components/home/Hero"
 import Holidays from "@/components/home/Holidays"
 import HolidaysFallback from "@/components/home/HolidaysFallback"
 
-type generateMetadataPropsType = { params: Promise<{ year: string }> }
+type MetadataParamsType = { params: Promise<{ year: string }> }
 
-export async function generateMetadata({ params }: generateMetadataPropsType): Promise<Metadata> {
+export async function generateMetadata({ params }: MetadataParamsType): Promise<Metadata> {
   const { year } = await params
 
   return {

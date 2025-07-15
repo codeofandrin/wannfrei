@@ -1,15 +1,43 @@
 import { Suspense } from "react"
 import type { Metadata } from "next"
+import { redirect } from "next/navigation"
 
 import { munics, cantonAbbrs } from "@/utils/constants"
-import { isMunicEqCantAndCity, isMunicEqCant } from "@/utils/helpers"
+import {
+  isMunicEqCantAndCity,
+  isMunicEqCant,
+  isMunicParamValid,
+  getStaticPageYearRange
+} from "@/utils/helpers"
 import Hero from "@/components/home/Hero"
 import Holidays from "@/components/home/Holidays"
 import HolidaysFallback from "@/components/home/HolidaysFallback"
 
-type generateMetadataPropsType = { params: Promise<{ year: string; canton: string; munic: string }> }
+// ISR strategy with revalidation every 1 day
+// - if not in generateStaticParams, generate on demand
+// - wrong routes are handled in page.tsx
+// - range from current year: -1 ... +3 years
+// - every January 1st cron job rebuilds website to update static pages in year range
+export const revalidate = 86400
 
-export async function generateMetadata({ params }: generateMetadataPropsType): Promise<Metadata> {
+type StaticParamsType = { params: { canton: string } }
+
+export async function generateStaticParams({ params: { canton } }: StaticParamsType) {
+  const staticYears = getStaticPageYearRange()
+
+  let newParams: Array<{ year: string; canton: string; munic: string }> = []
+  for (const staticYear of staticYears) {
+    for (const municID of Object.keys(munics[canton as keyof typeof munics])) {
+      newParams.push({ year: staticYear, canton: canton, munic: municID })
+    }
+  }
+
+  return newParams
+}
+
+type MetadataParamsType = { params: Promise<{ year: string; canton: string; munic: string }> }
+
+export async function generateMetadata({ params }: MetadataParamsType): Promise<Metadata> {
   const { year, canton, munic } = await params
 
   const municsInCanton = munics[canton as keyof typeof munics]
@@ -38,6 +66,10 @@ interface MunicPropsType {
 }
 export default async function Munic({ params }: MunicPropsType) {
   const { year, canton, munic } = await params
+
+  if (!isMunicParamValid(canton, munic)) {
+    redirect("/")
+  }
 
   return (
     <div>
