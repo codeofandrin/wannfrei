@@ -2,7 +2,7 @@ import { Suspense } from "react"
 import type { Metadata } from "next"
 import { redirect } from "next/navigation"
 
-import { munics, cantonAbbrs } from "@/utils/constants"
+import { munics, cantonAbbrs, staticPageMunics } from "@/utils/constants"
 import {
   isMunicEqCantAndCity,
   isMunicEqCant,
@@ -28,7 +28,9 @@ export async function generateStaticParams({ params: { canton } }: StaticParamsT
   let newParams: Array<{ year: string; canton: string; munic: string }> = []
   for (const staticYear of staticYears) {
     for (const municID of Object.keys(munics[canton as keyof typeof munics])) {
-      newParams.push({ year: staticYear, canton: canton, munic: municID })
+      if (staticPageMunics.includes(municID)) {
+        newParams.push({ year: staticYear, canton: canton, munic: municID })
+      }
     }
   }
 
