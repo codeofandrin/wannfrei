@@ -15,7 +15,7 @@ import HolidaysFallback from "@/components/home/HolidaysFallback"
 
 // ISR strategy with revalidation every 1 day
 // - if not in generateStaticParams, generate on demand
-// - wrong routes are handled in page.tsx
+// - wrong routes are handled manually in page component
 // - range from current year: -1 ... +3 years
 // - every January 1st cron job rebuilds website to update static pages in year range
 export const revalidate = 86400
