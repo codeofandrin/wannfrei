@@ -5,7 +5,7 @@ import cantonHolidays from "@/data/cantonHolidays"
 import municHolidays from "@/data/municHolidays"
 import type { HolidayRowType } from "./types"
 import { HolidayType } from "./enums"
-import { cantons } from "./constants"
+import { cantons, munics } from "./constants"
 
 export function getMonthStr(month: number, leadingZero: boolean = true): string {
     const monthStr = month.toString()
@@ -354,4 +354,16 @@ export function getSitemapIds(): { id: string }[] {
     }
 
     return ids
+}
+
+export function isMunicParamValid(canton: string, munic: string): boolean {
+    return munic in munics[canton as keyof typeof munics]
+}
+
+export function isCantonParamValid(canton: string): boolean {
+    return canton in cantons
+}
+
+export function isYearParamValid(year: string): boolean {
+    return getYearRange().includes(parseInt(year))
 }

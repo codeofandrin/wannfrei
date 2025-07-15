@@ -1,10 +1,11 @@
+import { redirect } from "next/navigation"
+
 import { cantons } from "@/utils/constants"
+import { isCantonParamValid } from "@/utils/helpers"
 
-export const dynamicParams = false
+type StaticParamsType = { params: { year: string } }
 
-type generateStaticParamsPropsType = { params: { year: string } }
-
-export async function generateStaticParams({ params: { year } }: generateStaticParamsPropsType) {
+export async function generateStaticParams({ params: { year } }: StaticParamsType) {
   let newParams: Array<{ year: string; canton: string }> = []
   Object.keys(cantons).forEach((cantonID) => {
     newParams.push({ year: year, canton: cantonID })
@@ -12,6 +13,17 @@ export async function generateStaticParams({ params: { year } }: generateStaticP
   return newParams
 }
 
-export default function CantonLayout({ children }: { children: React.ReactNode }) {
+interface CantonPropsType {
+  children: React.ReactNode
+  params: Promise<{ year: string; canton: string }>
+}
+
+export default async function CantonLayout({ children, params }: CantonPropsType) {
+  const { canton } = await params
+
+  if (!isCantonParamValid(canton)) {
+    redirect("/")
+  }
+
   return <>{children}</>
 }
