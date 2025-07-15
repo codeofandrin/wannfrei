@@ -8,6 +8,8 @@ on:
 jobs:
   Lint:
     runs-on: ubuntu-latest
+    # only when it's not a version tag
+    if: "!startsWith(github.ref, 'refs/tags/v')"
 
     strategy:
       matrix:
