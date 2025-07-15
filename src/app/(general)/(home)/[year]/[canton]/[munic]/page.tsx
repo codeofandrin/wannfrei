@@ -20,23 +20,6 @@ import HolidaysFallback from "@/components/home/HolidaysFallback"
 // - every January 1st cron job rebuilds website to update static pages in year range
 export const revalidate = 86400
 
-type StaticParamsType = { params: { canton: string } }
-
-export async function generateStaticParams({ params: { canton } }: StaticParamsType) {
-  const staticYears = getStaticPageYearRange()
-
-  let newParams: Array<{ year: string; canton: string; munic: string }> = []
-  for (const staticYear of staticYears) {
-    for (const municID of Object.keys(munics[canton as keyof typeof munics])) {
-      if (staticPageMunics.includes(municID)) {
-        newParams.push({ year: staticYear, canton: canton, munic: municID })
-      }
-    }
-  }
-
-  return newParams
-}
-
 type MetadataParamsType = { params: Promise<{ year: string; canton: string; munic: string }> }
 
 export async function generateMetadata({ params }: MetadataParamsType): Promise<Metadata> {
@@ -61,6 +44,23 @@ export async function generateMetadata({ params }: MetadataParamsType): Promise<
     authors: [{ name: "Andrin Schaller" }],
     publisher: "Andrin Schaller"
   }
+}
+
+type StaticParamsType = { params: { canton: string } }
+
+export async function generateStaticParams({ params: { canton } }: StaticParamsType) {
+  const staticYears = getStaticPageYearRange()
+
+  let newParams: Array<{ year: string; canton: string; munic: string }> = []
+  for (const staticYear of staticYears) {
+    for (const municID of Object.keys(munics[canton as keyof typeof munics])) {
+      if (staticPageMunics.includes(municID)) {
+        newParams.push({ year: staticYear, canton: canton, munic: municID })
+      }
+    }
+  }
+
+  return newParams
 }
 
 interface MunicPropsType {
