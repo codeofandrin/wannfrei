@@ -357,7 +357,7 @@ export function getSitemapIds(): { id: string }[] {
 }
 
 export function isMunicParamValid(canton: string, munic: string): boolean {
-    return munic in munics[canton as keyof typeof munics]
+    return isCantonParamValid(canton) && munic in munics[canton as keyof typeof munics]
 }
 
 export function isCantonParamValid(canton: string): boolean {
