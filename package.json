@@ -3,8 +3,8 @@
   "version": "1.6.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "rm -r .next | next dev",
+    "build": "rm -r .next | next build",
     "preview": "vercel pull --yes --environment=preview && vercel build && vercel deploy --archive=tgz --prebuilt",
     "start": "next start",
     "format": "prettier --write --list-different .",
