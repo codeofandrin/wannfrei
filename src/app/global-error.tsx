@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import { ThemeProvider } from "next-themes"
+import * as Sentry from "@sentry/nextjs"
 
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
@@ -19,6 +20,7 @@ interface GlobalErrorPropsType {
 
 export default function GlobalError({ error, reset }: GlobalErrorPropsType) {
   useEffect(() => {
+    Sentry.captureException(error)
     console.error(error)
   }, [error])
 

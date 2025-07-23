@@ -42,3 +42,5 @@ next-env.d.ts
 
 # Vitest
 .vitest
+# Sentry Config File
+.env.sentry-build-plugin
