@@ -25,7 +25,7 @@ Sentry.init({
     debug: false,
 
     // disabled in development
-    enabled: process.env.NODE_ENV !== "development",
+    enabled: process.env.NODE_ENV !== "development"
 })
 
 export const onRouterTransitionStart = Sentry.captureRouterTransitionStart
