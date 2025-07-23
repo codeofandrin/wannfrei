@@ -21,6 +21,7 @@ interface GlobalErrorPropsType {
 export default function GlobalError({ error, reset }: GlobalErrorPropsType) {
   useEffect(() => {
     Sentry.captureException(error)
+    console.error(error)
   }, [error])
 
   function handleReset() {

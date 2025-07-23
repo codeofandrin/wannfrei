@@ -16,6 +16,9 @@ const nextConfig = {
         )
 
         return config
+    },
+    compiler: {
+        removeConsole: false
     }
 }
 
