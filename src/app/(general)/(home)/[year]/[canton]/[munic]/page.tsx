@@ -25,6 +25,10 @@ type MetadataParamsType = { params: Promise<{ year: string; canton: string; muni
 export async function generateMetadata({ params }: MetadataParamsType): Promise<Metadata> {
   const { year, canton, munic } = await params
 
+  if (!isMunicParamValid(canton, munic)) {
+    return {}
+  }
+
   const municsInCanton = munics[canton as keyof typeof munics]
   let municName = municsInCanton[munic as keyof typeof municsInCanton] as string
 
