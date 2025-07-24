@@ -2332,3 +2332,7 @@ export const staticPageMunics = [
 export class Email {
     static general = "mail@andrin.software"
 }
+
+export class URL {
+    static apiBaseUrl = "https://api.wannfrei.ch"
+}
