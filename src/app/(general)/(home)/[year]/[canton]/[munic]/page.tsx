@@ -2,23 +2,11 @@ import { Suspense } from "react"
 import type { Metadata } from "next"
 import { redirect } from "next/navigation"
 
-import { munics, cantonAbbrs, staticPageMunics } from "@/utils/constants"
-import {
-  isMunicEqCantAndCity,
-  isMunicEqCant,
-  isMunicParamValid,
-  getStaticPageYearRange
-} from "@/utils/helpers"
+import { munics, cantonAbbrs } from "@/utils/constants"
+import { isMunicEqCantAndCity, isMunicEqCant, isMunicParamValid } from "@/utils/helpers"
 import Hero from "@/components/home/Hero"
 import Holidays from "@/components/home/Holidays"
 import HolidaysFallback from "@/components/home/HolidaysFallback"
-
-// ISR strategy with revalidation every 1 week
-// - if not in generateStaticParams, generate on demand
-// - wrong routes are handled manually in page component
-// - range from current year: -1 ... +3 years
-// - every January 1st cron job rebuilds website to update static pages in year range
-export const revalidate = 604800
 
 type MetadataParamsType = { params: Promise<{ year: string; canton: string; munic: string }> }
 
@@ -48,23 +36,6 @@ export async function generateMetadata({ params }: MetadataParamsType): Promise<
     authors: [{ name: "Andrin Schaller" }],
     publisher: "Andrin Schaller"
   }
-}
-
-type StaticParamsType = { params: { canton: string } }
-
-export async function generateStaticParams({ params: { canton } }: StaticParamsType) {
-  const staticYears = getStaticPageYearRange()
-
-  let newParams: Array<{ year: string; canton: string; munic: string }> = []
-  for (const staticYear of staticYears) {
-    for (const municID of Object.keys(munics[canton as keyof typeof munics])) {
-      if (staticPageMunics.includes(municID)) {
-        newParams.push({ year: staticYear, canton: canton, munic: municID })
-      }
-    }
-  }
-
-  return newParams
 }
 
 interface MunicPropsType {

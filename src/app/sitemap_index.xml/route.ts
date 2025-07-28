@@ -1,7 +1,5 @@
 import { getSitemapIds } from "@/utils/helpers"
 
-export const revalidate = 86400 // every 1 day
-
 export async function GET() {
     const idObjects = getSitemapIds()
 
