@@ -3,8 +3,6 @@ import type { MetadataRoute } from "next"
 import { getYearRange, getSitemapIds } from "@/utils/helpers"
 import { munics } from "@/utils/constants"
 
-export const revalidate = 604800 // every week
-
 export async function generateSitemaps() {
     return getSitemapIds()
 }
