@@ -1,3 +1,7 @@
+"use client"
+
+import { useRouter } from "next/navigation"
+
 import { holidayTypes } from "@/utils/constants"
 import { getWeekdayStr, getYearRange } from "@/utils/helpers"
 import Dropdown from "../common/Dropdown"
@@ -26,19 +30,25 @@ export default function HolidaysFilter({
   setWeekdayNr,
   setSearchValue
 }: HolidaysFilterPropsType) {
-  let yearOptions: { id: string; value: string; link: string }[] = []
+  const router = useRouter()
+
+  let yearOptions: { id: string; value: string }[] = []
   getYearRange().forEach((year) => {
     const yearStr = year.toString()
-    let link = `/${yearStr}`
+    yearOptions.push({ id: yearStr, value: yearStr })
+  })
+
+  function handleSetYear(id: string) {
+    let newPath = `/${id}`
     if (cantonID) {
-      link += `/${cantonID}`
+      newPath += `/${cantonID}`
       if (municID) {
-        link += `/${municID}`
+        newPath += `/${municID}`
       }
     }
 
-    yearOptions.push({ id: yearStr, value: yearStr, link })
-  })
+    router.push(newPath, { scroll: false })
+  }
 
   function handleSetType(id: string | null) {
     setType(id)
@@ -66,7 +76,7 @@ export default function HolidaysFilter({
           theme="secondary"
           placeholder={year}
           options={yearOptions}
-          areLinks
+          setValue={handleSetYear}
         />
         {/* Type Filter */}
         <div className="mt-3 sm:mt-0">

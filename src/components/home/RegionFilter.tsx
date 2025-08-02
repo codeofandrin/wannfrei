@@ -1,4 +1,6 @@
-import { useParams } from "next/navigation"
+"use client"
+
+import { useParams, useRouter } from "next/navigation"
 
 import { cantons, munics } from "@/utils/constants"
 import Dropdown from "../common/Dropdown"
@@ -9,6 +11,7 @@ const MUNIC_PLACEHOLDER = "Gemeinde wählen..."
 
 export default function RegionFilter() {
   const params = useParams()
+  const router = useRouter()
 
   const currentYear = new Date().getFullYear()
   const year = params.year || currentYear
@@ -30,6 +33,22 @@ export default function RegionFilter() {
     }
   }
 
+  function handleCantonSelect(id: string) {
+    router.push(`/${year}/${id}`, { scroll: false })
+  }
+
+  function handleMunicSelect(id: string) {
+    router.push(`/${year}/${cantonID}/${id}`, { scroll: false })
+  }
+
+  function handleNationalSelect() {
+    router.push(`/${year}`, { scroll: false })
+  }
+
+  function resetMunic() {
+    router.push(`/${year}/${cantonID}`, { scroll: false })
+  }
+
   return (
     <div className="mt-16 flex flex-col sm:mt-32 sm:items-center">
       <div>
@@ -39,10 +58,9 @@ export default function RegionFilter() {
             placeholder={cantonPlaceholder}
             options={Object.entries(cantons).map(([id, name]) => ({
               id,
-              value: name,
-              link: `/${year}/${id}`
+              value: name
             }))}
-            areLinks
+            setValue={handleCantonSelect}
           />
           <Dropdown
             className={`${isMunicSelected && "!bg-primary-100 dark:!bg-primary-600/20"} mt-5 sm:mt-0 sm:ml-5`}
@@ -51,18 +69,18 @@ export default function RegionFilter() {
               cantonID
                 ? Object.entries(munics[cantonID as keyof typeof munics]).map(([id, name]) => ({
                     id,
-                    value: name,
-                    link: `/${year}/${cantonID}/${id}`
+                    value: name
                   }))
                 : [{ id: "null", value: "null", link: "null" }]
             }
-            areLinks
+            setValue={handleMunicSelect}
+            resetValue={resetMunic}
             resetBtnActive={Boolean(municID)}
             disabled={!cantonID}
           />
         </div>
         <Button
-          href={`/${year}`}
+          onClick={handleNationalSelect}
           className={`${!isCantonSelected && "!bg-primary-100 dark:!bg-primary-600/20"} mt-5 !w-full`}>
           Gesamte Schweiz
         </Button>
