@@ -1,6 +1,6 @@
 {
   "name": "wannfrei",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "private": true,
   "scripts": {
     "dev": "rm -r .next | next dev",
