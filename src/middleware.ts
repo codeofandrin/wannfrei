@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { holidayTypes } from "./utils/constants"
 
 export const config = {
-    matcher: "/:path*"
+    matcher: ["/((?!_next/|monitoring|.*\\.png$).*)"]
 }
 
 export default function middleware(req: NextRequest) {
