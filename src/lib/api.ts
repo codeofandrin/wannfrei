@@ -48,4 +48,18 @@ async function request(
     return { isError, errorData, successData: response?.data }
 }
 
+export async function getCantonMunics(canton: string): Promise<APIRequestResponseType> {
+    return await request("GET", `/munics/cantons/${canton}`)
+}
 
+export async function getNationalHolidays(): Promise<APIRequestResponseType> {
+    return await request("GET", "/holidays/national")
+}
+
+export async function getCantonHolidays(cantonID: string): Promise<APIRequestResponseType> {
+    return await request("GET", `/holidays/cantons/${cantonID}`)
+}
+
+export async function getMunicHolidays(cantonID: string, municID: string): Promise<APIRequestResponseType> {
+    return await request("GET", `/holidays/cantons/${cantonID}/munics/${municID}`)
+}

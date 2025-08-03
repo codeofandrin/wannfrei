@@ -2237,5 +2237,5 @@ export class Email {
 }
 
 export class URL {
-    static apiBaseUrl = "https://api.wannfrei.ch"
+    static apiBaseUrl = process.env.IS_DEV ? "http://localhost:8000" : "https://api.wannfrei.ch"
 }
