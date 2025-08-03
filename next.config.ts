@@ -22,7 +22,7 @@ const nextConfig = {
     }
 }
 
-export default withSentryConfig(nextConfig, {
+const sentryConfig = withSentryConfig(nextConfig, {
     // For all available options, see:
     // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
@@ -51,5 +51,7 @@ export default withSentryConfig(nextConfig, {
     // See the following for more information:
     // https://docs.sentry.io/product/crons/
     // https://vercel.com/docs/cron-jobs
-    automaticVercelMonitors: true
+    automaticVercelMonitors: false
 })
+
+export default process.env.IS_DEV ? nextConfig : sentryConfig
