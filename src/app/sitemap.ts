@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 
-import { getYearRange, getSitemapIds } from "@/utils/helpers"
+import { getSitemapYearRange, getSitemapIds } from "@/utils/helpers"
 import { munics } from "@/utils/constants"
 
 export async function generateSitemaps() {
@@ -10,6 +10,7 @@ export async function generateSitemaps() {
 type ParamsType = { id: string }
 
 export default function sitemap({ id }: ParamsType): MetadataRoute.Sitemap {
+    const yearRange = getSitemapYearRange()
     const entries: MetadataRoute.Sitemap = []
     switch (id) {
         case "home":
@@ -19,7 +20,7 @@ export default function sitemap({ id }: ParamsType): MetadataRoute.Sitemap {
                 changeFrequency: "weekly",
                 priority: 1
             })
-            getYearRange().forEach((year) => {
+            yearRange.forEach((year) => {
                 entries.push({
                     url: `https://www.wannfrei.ch/${year}`,
                     lastModified: new Date(),
@@ -39,7 +40,7 @@ export default function sitemap({ id }: ParamsType): MetadataRoute.Sitemap {
             break
 
         default:
-            getYearRange().forEach((year) => {
+            yearRange.forEach((year) => {
                 entries.push({
                     url: `https://www.wannfrei.ch/${year}/${id}`,
                     lastModified: new Date(),
