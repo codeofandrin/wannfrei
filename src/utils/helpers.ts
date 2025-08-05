@@ -269,6 +269,19 @@ export function getYearRange(): number[] {
     return years
 }
 
+export function getSitemapYearRange(): number[] {
+    const currentYear = new Date().getFullYear()
+
+    let years = []
+    for (let i = 0; i < 7; i++) {
+        // range from now: -1 year, +5 years
+        let year = currentYear - 1 + i
+        years.push(year)
+    }
+
+    return years
+}
+
 export function getStaticPageYearRange(): string[] {
     const currentYear = new Date().getFullYear()
 
