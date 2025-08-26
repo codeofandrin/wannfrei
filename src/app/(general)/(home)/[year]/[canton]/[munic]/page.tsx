@@ -5,7 +5,7 @@ import { redirect } from "next/navigation"
 import { munics, cantonAbbrs } from "@/utils/constants"
 import { isMunicEqCantAndCity, isMunicEqCant, isMunicParamValid } from "@/utils/helpers"
 import Hero from "@/components/home/Hero"
-import Holidays from "@/components/home/Holidays"
+import MunicHolidays from "@/components/home/MunicHolidays"
 import HolidaysFallback from "@/components/home/HolidaysFallback"
 
 type MetadataParamsType = { params: Promise<{ year: string; canton: string; munic: string }> }
@@ -52,7 +52,7 @@ export default async function Munic({ params }: MunicPropsType) {
     <div>
       <Hero />
       <Suspense fallback={<HolidaysFallback />} key={"section-holidays"}>
-        <Holidays year={year} cantonID={canton} municID={munic} />
+        <MunicHolidays year={year} cantonID={canton} municID={munic} />
       </Suspense>
     </div>
   )

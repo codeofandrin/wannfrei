@@ -1,7 +1,6 @@
 "use client"
 
 import { useRouter, useSearchParams } from "next/navigation"
-import { useCallback } from "react"
 
 import { holidayTypes } from "@/utils/constants"
 import { getWeekdayStr, getYearRange } from "@/utils/helpers"
@@ -13,7 +12,6 @@ interface HolidaysFilterPropsType {
   cantonID: string | null
   municID: string | null
   type: string | null
-  weekdayNr: string | null
   weekday: string | null
   searchValue: string | null
   setType: Function
@@ -26,7 +24,6 @@ export default function HolidaysFilter({
   cantonID,
   municID,
   type,
-  weekdayNr,
   weekday,
   searchValue,
   setType,

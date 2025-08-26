@@ -34,6 +34,8 @@ async function request(
         response = err.response
     }
 
+    console.log(response)
+
     let errorData: APIErrorDataType | null = null
     if (isError) {
         if (response && response.status >= 400 && response.status < 500) {
