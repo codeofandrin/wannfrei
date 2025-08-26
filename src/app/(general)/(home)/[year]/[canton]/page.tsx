@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 
 import { cantons } from "@/utils/constants"
 import Hero from "@/components/home/Hero"
-import Holidays from "@/components/home/Holidays"
+import CantonHolidays from "@/components/home/CantonHolidays"
 import HolidaysFallback from "@/components/home/HolidaysFallback"
 
 type generateMetadataPropsType = { params: Promise<{ year: string; canton: string }> }
@@ -31,7 +31,7 @@ export default async function Canton({ params }: CantonPropsType) {
     <div>
       <Hero />
       <Suspense fallback={<HolidaysFallback />} key={"section-holidays"}>
-        <Holidays year={year} cantonID={canton} />
+        <CantonHolidays year={year} cantonID={canton} />
       </Suspense>
     </div>
   )
