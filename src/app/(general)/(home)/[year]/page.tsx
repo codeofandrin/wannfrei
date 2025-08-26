@@ -2,7 +2,7 @@ import { Suspense } from "react"
 import type { Metadata } from "next"
 
 import Hero from "@/components/home/Hero"
-import Holidays from "@/components/home/Holidays"
+import NationalHolidays from "@/components/home/NationalHolidays"
 import HolidaysFallback from "@/components/home/HolidaysFallback"
 
 type MetadataParamsType = { params: Promise<{ year: string }> }
@@ -29,7 +29,7 @@ export default async function Year({ params }: YearPropsType) {
     <div>
       <Hero />
       <Suspense fallback={<HolidaysFallback />} key={"section-holidays"}>
-        <Holidays year={year} />
+        <NationalHolidays year={year} />
       </Suspense>
     </div>
   )

@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 
 import Hero from "@/components/home/Hero"
-import Holidays from "@/components/home/Holidays"
+import NationalHolidays from "@/components/home/NationalHolidays"
 import HolidaysFallback from "@/components/home/HolidaysFallback"
 
 export const metadata = {
@@ -19,7 +19,7 @@ export default function Home() {
     <div>
       <Hero />
       <Suspense fallback={<HolidaysFallback />} key={"section-holidays"}>
-        <Holidays year={null} cantonID={null} />
+        <NationalHolidays year={null} />
       </Suspense>
     </div>
   )

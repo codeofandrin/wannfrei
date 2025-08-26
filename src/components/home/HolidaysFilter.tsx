@@ -1,6 +1,7 @@
 "use client"
 
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
+import { useCallback } from "react"
 
 import { holidayTypes } from "@/utils/constants"
 import { getWeekdayStr, getYearRange } from "@/utils/helpers"
@@ -12,6 +13,7 @@ interface HolidaysFilterPropsType {
   cantonID: string | null
   municID: string | null
   type: string | null
+  weekdayNr: string | null
   weekday: string | null
   searchValue: string | null
   setType: Function
@@ -24,6 +26,7 @@ export default function HolidaysFilter({
   cantonID,
   municID,
   type,
+  weekdayNr,
   weekday,
   searchValue,
   setType,
@@ -31,6 +34,7 @@ export default function HolidaysFilter({
   setSearchValue
 }: HolidaysFilterPropsType) {
   const router = useRouter()
+  const searchParams = useSearchParams()
 
   let yearOptions: { id: string; value: string }[] = []
   getYearRange().forEach((year) => {
@@ -46,6 +50,9 @@ export default function HolidaysFilter({
         newPath += `/${municID}`
       }
     }
+
+    const params = new URLSearchParams(searchParams.toString()).toString()
+    newPath += `?${params}`
 
     router.push(newPath, { scroll: false })
   }

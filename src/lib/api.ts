@@ -33,7 +33,6 @@ async function request(
         isError = true
         response = err.response
     }
-    console.log(response)
 
     let errorData: APIErrorDataType | null = null
     if (isError) {
@@ -52,14 +51,28 @@ export async function getCantonMunics(canton: string): Promise<APIRequestRespons
     return await request("GET", `/munics/cantons/${canton}`)
 }
 
-export async function getNationalHolidays(): Promise<APIRequestResponseType> {
-    return await request("GET", "/holidays/national")
+export async function getNationalHolidays(year: number | null = null): Promise<APIRequestResponseType> {
+    const payload = { year }
+    const headers = { "Content-Type": "application/json" }
+
+    return await request("GET", "/holidays/national", payload, headers)
 }
 
-export async function getCantonHolidays(cantonID: string): Promise<APIRequestResponseType> {
-    return await request("GET", `/holidays/cantons/${cantonID}`)
+export async function getCantonHolidays(
+    cantonID: string,
+    year: number | null = null
+): Promise<APIRequestResponseType> {
+    const payload = { canton: cantonID, year }
+    const headers = { "Content-Type": "application/json" }
+    return await request("GET", `/holidays/cantons/${cantonID}`, payload, headers)
 }
 
-export async function getMunicHolidays(cantonID: string, municID: string): Promise<APIRequestResponseType> {
-    return await request("GET", `/holidays/cantons/${cantonID}/munics/${municID}`)
+export async function getMunicHolidays(
+    cantonID: string,
+    municID: string,
+    year: number | null = null
+): Promise<APIRequestResponseType> {
+    const payload = { canton: cantonID, munic: municID, year }
+    const headers = { "Content-Type": "application/json" }
+    return await request("GET", `/holidays/cantons/${cantonID}/munics/${municID}`, payload, headers)
 }
