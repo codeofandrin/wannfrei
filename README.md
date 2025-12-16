@@ -19,6 +19,7 @@ Visit: [wannfrei.ch](https://wannfrei.ch)
 <br>
 
 ## Tech Stack
+
 - NextJS
 - TypeScript
 - TailwindCSS
