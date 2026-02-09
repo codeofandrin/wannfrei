@@ -1,11 +1,10 @@
-# used to update static pages in year range, so that static pages are
-# always from -1 year, current year, +3 years
+# used to update static pages so that they're always in the correct year range
 
 name: Yearly Rebuild Cron
 
 on:
   schedule:
-    - cron: "0 12 1 1 0" # runs every 1st January at 12:00 (12 p.m.)
+    - cron: "0 12 1 1 *" # At 12:00 on day-of-month 1 in January.
   workflow_dispatch:
 
 jobs:
