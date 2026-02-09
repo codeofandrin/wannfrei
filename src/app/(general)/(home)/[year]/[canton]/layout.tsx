@@ -1,7 +1,4 @@
-import { redirect } from "next/navigation"
-
 import { cantons } from "@/utils/constants"
-import { isCantonParamValid } from "@/utils/helpers"
 
 type StaticParamsType = { params: { year: string } }
 
@@ -15,15 +12,8 @@ export async function generateStaticParams({ params: { year } }: StaticParamsTyp
 
 interface CantonPropsType {
   children: React.ReactNode
-  params: Promise<{ year: string; canton: string }>
 }
 
-export default async function CantonLayout({ children, params }: CantonPropsType) {
-  const { canton } = await params
-
-  if (!isCantonParamValid(canton)) {
-    redirect("/")
-  }
-
+export default async function CantonLayout({ children }: CantonPropsType) {
   return <>{children}</>
 }

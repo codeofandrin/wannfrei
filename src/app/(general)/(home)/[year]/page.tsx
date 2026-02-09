@@ -1,9 +1,11 @@
 import { Suspense } from "react"
 import type { Metadata } from "next"
+import { redirect } from "next/navigation"
 
 import Hero from "@/components/home/Hero"
 import NationalHolidays from "@/components/home/NationalHolidays"
 import HolidaysFallback from "@/components/home/HolidaysFallback"
+import { isYearParamValid } from "@/utils/helpers"
 
 type MetadataParamsType = { params: Promise<{ year: string }> }
 
@@ -24,6 +26,10 @@ interface YearPropsType {
 }
 export default async function Year({ params }: YearPropsType) {
   const { year } = await params
+
+  if (!isYearParamValid(year)) {
+    redirect("/")
+  }
 
   return (
     <div>

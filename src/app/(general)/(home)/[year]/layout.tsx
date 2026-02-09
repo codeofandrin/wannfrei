@@ -1,5 +1,4 @@
-import { redirect } from "next/navigation"
-import { getYearRange, isYearParamValid } from "@/utils/helpers"
+import { getYearRange } from "@/utils/helpers"
 
 export async function generateStaticParams() {
   let params: { year: string }[] = []
@@ -12,15 +11,8 @@ export async function generateStaticParams() {
 
 interface YearPropsType {
   children: React.ReactNode
-  params: Promise<{ year: string }>
 }
 
-export default async function YearLayout({ children, params }: YearPropsType) {
-  const { year } = await params
-
-  if (!isYearParamValid(year)) {
-    redirect("/")
-  }
-
+export default async function YearLayout({ children }: YearPropsType) {
   return <>{children}</>
 }

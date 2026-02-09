@@ -3,7 +3,13 @@ import type { Metadata } from "next"
 import { redirect } from "next/navigation"
 
 import { munics, cantonAbbrs } from "@/utils/constants"
-import { isMunicEqCantAndCity, isMunicEqCant, isMunicParamValid } from "@/utils/helpers"
+import {
+  isMunicEqCantAndCity,
+  isMunicEqCant,
+  isMunicParamValid,
+  isYearParamValid,
+  isCantonParamValid
+} from "@/utils/helpers"
 import Hero from "@/components/home/Hero"
 import MunicHolidays from "@/components/home/MunicHolidays"
 import HolidaysFallback from "@/components/home/HolidaysFallback"
@@ -44,7 +50,7 @@ interface MunicPropsType {
 export default async function Munic({ params }: MunicPropsType) {
   const { year, canton, munic } = await params
 
-  if (!isMunicParamValid(canton, munic)) {
+  if (!isYearParamValid(year) || !isCantonParamValid(canton) || !isMunicParamValid(canton, munic)) {
     redirect("/")
   }
 
