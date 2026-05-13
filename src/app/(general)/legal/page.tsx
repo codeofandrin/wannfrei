@@ -4,7 +4,7 @@ import MarkdownContent from "@/components/common/MarkdownContent"
 import MdLegalNotice from "@/content/legal-notice.md"
 
 export const metadata: Metadata = {
-  title: "Impressum - wannfrei.ch"
+  title: "Impressum - wannfrei"
 }
 
 export default function LegalNotice() {

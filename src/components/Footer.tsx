@@ -12,7 +12,7 @@ export default function Footer() {
     <div className="mt-28 sm:mt-40">
       <LogoShort />
       <div className="mt-3 text-sm text-neutral-400 sm:mt-5 dark:text-neutral-500">
-        <p>© {currentYear} wannfrei.ch</p>
+        <p>© {currentYear} wannfrei</p>
         <p>Alle Rechte vorbehalten.</p>
         <div className="mt-2">
           <Link

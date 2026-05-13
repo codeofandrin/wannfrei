@@ -2,7 +2,7 @@
     <div align="center">
         <img src="src/app/icon.png" width="50px">
     </div>
-    <h1 align="center"><a href="https://wannfrei.ch" alt="wannfrei.ch" >wannfrei.ch</a></h1>
+    <h1 align="center"><a href="https://wannfrei.andrin.software" alt="wannfrei.andrin.software" >wannfrei.andrin.software</a></h1>
     <p align="center">
         Get an overview of national, cantonal, statutory and optional public holidays in Switzerland.
     </p>
@@ -10,7 +10,7 @@
 
 </br>
 
-Visit: [wannfrei.ch](https://wannfrei.ch)
+Visit: [wannfrei.andrin.software](https://wannfrei.andrin.software)
 
 </br>
 

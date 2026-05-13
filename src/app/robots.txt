@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://www.wannfrei.ch/sitemap_index.xml
+Sitemap: https://www.wannfrei.andrin.software/sitemap_index.xml

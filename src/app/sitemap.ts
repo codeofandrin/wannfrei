@@ -15,14 +15,14 @@ export default function sitemap({ id }: ParamsType): MetadataRoute.Sitemap {
     switch (id) {
         case "home":
             entries.push({
-                url: "https://www.wannfrei.ch",
+                url: "https://www.wannfrei.andrin.software",
                 lastModified: new Date(),
                 changeFrequency: "weekly",
                 priority: 1
             })
             yearRange.forEach((year) => {
                 entries.push({
-                    url: `https://www.wannfrei.ch/${year}`,
+                    url: `https://www.wannfrei.andrin.software/${year}`,
                     lastModified: new Date(),
                     changeFrequency: "weekly",
                     priority: 0.8
@@ -32,7 +32,7 @@ export default function sitemap({ id }: ParamsType): MetadataRoute.Sitemap {
 
         case "legal":
             entries.push({
-                url: "https://www.wannfrei.ch/legal",
+                url: "https://www.wannfrei.andrin.software/legal",
                 lastModified: new Date(),
                 changeFrequency: "weekly",
                 priority: 0.5
@@ -42,7 +42,7 @@ export default function sitemap({ id }: ParamsType): MetadataRoute.Sitemap {
         default:
             yearRange.forEach((year) => {
                 entries.push({
-                    url: `https://www.wannfrei.ch/${year}/${id}`,
+                    url: `https://www.wannfrei.andrin.software/${year}/${id}`,
                     lastModified: new Date(),
                     changeFrequency: "weekly",
                     priority: 0.8
@@ -50,7 +50,7 @@ export default function sitemap({ id }: ParamsType): MetadataRoute.Sitemap {
 
                 for (const municID of Object.keys(munics[id as keyof typeof munics])) {
                     entries.push({
-                        url: `https://www.wannfrei.ch/${year}/${id}/${municID}`,
+                        url: `https://www.wannfrei.andrin.software/${year}/${id}/${municID}`,
                         lastModified: new Date(),
                         changeFrequency: "weekly",
                         priority: 0.8

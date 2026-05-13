@@ -7,7 +7,7 @@ export async function GET() {
     for (const idObj of idObjects) {
         sitemaps.push(`
             <sitemap>
-                <loc>https://www.wannfrei.ch/sitemap/${idObj.id}.xml</loc>
+                <loc>https://www.wannfrei.andrin.software/sitemap/${idObj.id}.xml</loc>
                 <lastmod>${new Date().toISOString()}</lastmod>
             </sitemap>`)
     }
