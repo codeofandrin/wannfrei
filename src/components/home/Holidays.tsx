@@ -3,11 +3,12 @@
 import MiniSearch from "minisearch"
 import { useQueryState } from "nuqs"
 
-import { Email } from "@/utils/constants"
+import { EmailObfuscated } from "@/utils/constants"
 import { getWeekdayStr, sortByDateField } from "@/utils/helpers"
 import { HolidayType } from "@/utils/enums"
 import type { HolidayRowType } from "@/utils/types"
 import HolidaysFilter from "./HolidaysFilter"
+import { useObfuscatedEmail } from "@/hooks/useObfuscatedEmail"
 
 function getHolidayRows(
   holidays: HolidayRowType[],
@@ -130,6 +131,31 @@ function getTypeBadge(type: HolidayType): React.ReactElement {
   )
 }
 
+function ObfuscatedAnchor({
+  encodedEmail,
+  className,
+  children
+}: {
+  encodedEmail: string
+  className?: string
+  children: React.ReactNode
+}) {
+  const { href, reveal, isRevealed } = useObfuscatedEmail(encodedEmail)
+
+  function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    if (!isRevealed) {
+      e.preventDefault()
+      reveal(e)
+    }
+  }
+
+  return (
+    <a href={href} onFocus={reveal} onMouseEnter={reveal} onClick={handleClick} className={className}>
+      {children}
+    </a>
+  )
+}
+
 interface HolidaysPropsType {
   holidaysRowsData: HolidayRowType[]
   cantonID?: string | null
@@ -203,11 +229,11 @@ export default function Holidays({
         </div>
         {/* Report bug */}
         <div className="mt-3 w-full text-right">
-          <a
-            href={`mailto:${Email.general}`}
+          <ObfuscatedAnchor
+            encodedEmail={EmailObfuscated.general}
             className="hover:text-primary-600 dark:hover:text-primary-500 text-xs text-neutral-400 transition-colors duration-300 dark:text-neutral-500">
             Fehler melden
-          </a>
+          </ObfuscatedAnchor>
         </div>
       </div>
     </div>
