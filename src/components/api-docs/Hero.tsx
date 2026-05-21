@@ -1,6 +1,7 @@
+import { URL } from "@/utils/constants"
 import CopyButton from "./CopyButton"
 
-export const BASE_URL = "https://api.wannfrei.andrin.software"
+export const BASE_URL = URL.apiBaseUrl
 
 export default function Hero() {
   return (

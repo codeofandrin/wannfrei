@@ -2,6 +2,8 @@ import axios, { AxiosResponse } from "axios"
 
 import { URL } from "@/utils/constants"
 
+const BUILD_TOKEN: string | undefined = process.env.BUILD_TOKEN
+
 interface APIErrorDataType {
     status_code: number
     msg: string
@@ -23,6 +25,14 @@ async function request(
     data?: Record<string, any>,
     headers?: Record<string, any>
 ): Promise<APIRequestResponseType> {
+    if (BUILD_TOKEN) {
+        if (headers) {
+            headers["X-Build-Token"] = BUILD_TOKEN
+        } else {
+            headers = { "X-Build-Token": BUILD_TOKEN }
+        }
+    }
+
     const config = { method, url, data, headers }
 
     let isError = false
