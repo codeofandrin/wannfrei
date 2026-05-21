@@ -6,8 +6,8 @@ import { useParams } from "next/navigation"
 
 import { isInAlphabet } from "@/utils/helpers"
 import useClickOutsideAction from "@/hooks/useClickOutsideAction"
-import SVGAngleDown from "@/assets/icons/AngleDown.svg"
-import SVGCross from "@/assets/icons/Cross.svg"
+
+import { ChevronDown, X } from "lucide-react"
 
 interface DropdownPropsType {
   theme?: string
@@ -114,14 +114,14 @@ export default function Dropdown({
           {areLinks ? (
             <div className="cursor-pointer rounded-full bg-red-600 p-1.5 transition-colors duration-300 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600">
               <Link href={`/${params.year}/${params.canton}`} scroll={false}>
-                <SVGCross className="h-4 w-4 text-white dark:text-neutral-950" />
+                <X className="h-4 w-4 text-white dark:text-neutral-950" />
               </Link>
             </div>
           ) : (
             <div
               className="cursor-pointer rounded-full bg-red-600 p-1.5 transition-colors duration-300 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600"
               onClick={resetValue ? () => resetValue() : () => {}}>
-              <SVGCross className="h-4 w-4 text-white dark:text-neutral-950" />
+              <X className="h-4 w-4 text-white dark:text-neutral-950" />
             </div>
           )}
         </div>
@@ -130,7 +130,7 @@ export default function Dropdown({
           onClick={handleDropdownToggle}
           className={`${className} ${buttonThemeClasses} flex max-h-[50px] w-full ${disabled ? "cursor-not-allowed" : "cursor-pointer"} items-center justify-between rounded-full border-1 py-3 pr-3 pl-5 font-medium transition-colors duration-300 sm:max-h-[42px] sm:w-68 sm:py-2`}>
           <p>{placeholder}</p>
-          <SVGAngleDown className="ml-2 h-5 w-5" />
+          <ChevronDown className="ml-2 h-5 w-5" />
         </div>
       )}
       {/* Dropdown list */}

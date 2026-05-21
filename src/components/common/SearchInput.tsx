@@ -1,6 +1,6 @@
 import { InputHTMLAttributes, type Ref } from "react"
 
-import SVGSearch from "@/assets/icons/Search.svg"
+import { Search } from "lucide-react"
 
 interface SearchInputPropsType extends InputHTMLAttributes<HTMLInputElement> {
   value?: string | number | readonly string[] | undefined
@@ -14,7 +14,7 @@ export default function SearchInput({ value, placeholder = "Suchen", ref, ...pro
       <div className="relative">
         <div className="text-neutral-700 dark:text-inherit">
           <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center pl-4 sm:pl-3.25">
-            <SVGSearch className="text-secondary-600 h-4 w-4" />
+            <Search className="text-secondary-600 h-4 w-4" />
           </div>
           <input
             ref={ref}

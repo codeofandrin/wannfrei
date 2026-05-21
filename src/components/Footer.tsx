@@ -14,11 +14,16 @@ export default function Footer() {
       <div className="mt-3 text-sm text-neutral-400 sm:mt-5 dark:text-neutral-500">
         <p>© {currentYear} wannfrei</p>
         <p>Alle Rechte vorbehalten.</p>
-        <div className="mt-2">
+        <div className="mt-2 flex flex-col gap-1">
           <Link
             href="/legal"
             className="hover:text-primary-600 dark:hover:text-primary-500 underline transition-colors duration-300">
             Impressum
+          </Link>
+          <Link
+            href="/api-docs"
+            className="hover:text-primary-600 dark:hover:text-primary-500 underline transition-colors duration-300">
+            API
           </Link>
         </div>
         <div className="mt-10 flex items-center justify-between">

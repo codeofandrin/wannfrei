@@ -4,10 +4,8 @@ import { useState, useEffect, useRef } from "react"
 import { useTheme } from "next-themes"
 
 import useClickOutsideAction from "@/hooks/useClickOutsideAction"
-import SVGMoon from "@/assets/icons/Moon.svg"
-import SVGSun from "@/assets/icons/Sun.svg"
-import SVGComputer from "@/assets/icons/Computer.svg"
-import SVGAngleDown from "@/assets/icons/AngleDown.svg"
+
+import { Moon, Sun, LaptopMinimal, ChevronDown } from "lucide-react"
 
 function ThemeDropdownFallback() {
   return (
@@ -38,21 +36,21 @@ export default function ThemeDropdown() {
   if (theme === "system") {
     placeholder = (
       <>
-        <SVGComputer className="h-4 w-4" />
+        <LaptopMinimal className="h-3 w-3" />
         <p className="ml-1">System</p>
       </>
     )
   } else if (theme === "dark") {
     placeholder = (
       <>
-        <SVGMoon className="h-3 w-3" />
+        <Moon className="h-3 w-3" />
         <p className="ml-1">Dunkel</p>
       </>
     )
   } else if (theme === "light") {
     placeholder = (
       <>
-        <SVGSun className="h-3 w-3" />
+        <Sun className="h-3 w-3" />
         <p className="ml-1">Hell</p>
       </>
     )
@@ -73,15 +71,15 @@ export default function ThemeDropdown() {
         <div className="absolute z-10 -mt-34 w-full overflow-hidden rounded-2xl shadow-lg">
           <ul className="max-h-80 overflow-y-auto bg-neutral-200 py-1 sm:max-h-50 dark:bg-neutral-900">
             <li onClick={() => handleSelect("dark")} className={dropdownItemClass}>
-              <SVGMoon className="h-3 w-3" />
+              <Moon className="h-3 w-3" />
               <p className="ml-1">Dunkel</p>
             </li>
             <li onClick={() => handleSelect("light")} className={dropdownItemClass}>
-              <SVGSun className="h-3 w-3" />
+              <Sun className="h-3 w-3" />
               <p className="ml-1">Hell</p>
             </li>
             <li onClick={() => handleSelect("system")} className={dropdownItemClass}>
-              <SVGComputer className="h-4 w-4" />
+              <LaptopMinimal className="h-3 w-3" />
               <p className="ml-1">System</p>
             </li>
           </ul>
@@ -91,7 +89,7 @@ export default function ThemeDropdown() {
         onClick={handleDropdownToggle}
         className="flex max-h-[50px] w-full cursor-pointer items-center justify-between rounded-full border-1 border-neutral-300 py-1 pr-2 pl-3 font-medium transition-colors duration-300 sm:max-h-[42px] dark:border-neutral-800">
         <div className="flex items-center">{placeholder}</div>
-        <SVGAngleDown className="h-3 w-3" />
+        <ChevronDown className="h-3 w-3" />
       </div>
     </div>
   )
